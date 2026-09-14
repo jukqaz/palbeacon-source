@@ -66,3 +66,13 @@ config/local/
 *.key
 .env*
 !cloudflare/.env.example
+
+# Local-only game resources, archived evidence, and production bindings.
+/assets/
+/docs/
+/tests/fixtures/
+/cloudflare/wrangler*.toml
+/tools/*/contracts/
+/tools/*/calibration/
+/apps/palbeacon-desktop/src-tauri/gen/
+/apps/palbeacon-desktop/src-tauri/icons/

@@ -38,20 +38,17 @@ Describe 'Release mutation boundaries' {
         }
     }
 
-    It 'tests an installed current-run bundle after the complete Windows build job' {
+    It 'keeps private resource builds and deployment out of public source CI' {
         $workflow = Get-Content -LiteralPath (
-            Join-Path $RepoRoot '.github\workflows\palbeacon-svelte-tauri.yml'
+            Join-Path $RepoRoot '.github\workflows\source-snapshot.yml'
         ) -Raw
-        $workflow | Should -Match 'windows-desktop-build:'
-        $workflow | Should -Match 'needs: windows-desktop-build'
-        $installIndex = $workflow.IndexOf('- name: Install the real bundle and verify WebView2')
-        $interactionIndex = $workflow.IndexOf('- name: Run native Windows interaction gate')
-        $installIndex | Should -BeGreaterThan -1
-        $interactionIndex | Should -BeGreaterThan $installIndex
-        $workflow | Should -Match 'name: palbeacon-windows-unsigned-\$\{\{ github.sha \}\}'
+        $workflow | Should -Match 'publication-and-dependencies:'
+        $workflow | Should -Match 'run: node verify-repository.mjs'
+        $workflow | Should -Match 'run: pnpm quality:security'
+        $workflow | Should -Match 'contents: read'
+        $workflow | Should -Match 'persist-credentials: false'
         $workflow | Should -Not -Match 'continue-on-error: true|--no-sandbox'
-        $workflow | Should -Not -Match 'run-id:|windows-native-diagnostic'
-        $workflow | Should -Match 'run: ./scripts/invoke-palbeacon-ci-native.ps1'
+        $workflow | Should -Not -Match 'cf:deploy|desktop:build|upload-artifact|secrets\.'
     }
 
     It 'keeps bundle installation limited to CI without deleting existing directories' {
@@ -89,15 +86,18 @@ Describe 'Release mutation boundaries' {
         Get-WebView2RuntimeVersion | Should -Be '152.0.4191.66'
     }
 
-    It 'prepares real Tauri resources before native compiler gates on a clean runner' {
-        $workflow = Get-Content -LiteralPath (
-            Join-Path $RepoRoot '.github\workflows\palbeacon-svelte-tauri.yml'
+    It 'requires explicit bundle validation and every packaged native runtime resource' {
+        $gate = Get-Content -LiteralPath (
+            Join-Path $RepoRoot 'scripts\verify-palbeacon-cutover.ps1'
         ) -Raw
-        $buildIndex = $workflow.IndexOf('- name: Build local Tauri bundle')
-        $gateIndex = $workflow.IndexOf('- name: Run Tauri Rust gates')
-        $buildIndex | Should -BeGreaterThan -1
-        $gateIndex | Should -BeGreaterThan $buildIndex
-        $workflow | Should -Match 'if \(\$LASTEXITCODE -ne 0\) \{ exit \$LASTEXITCODE \}'
+        $gate | Should -Match '\[switch\] \$RequireWindowsBundle'
+        $gate | Should -Match 'if \(\$RequireWindowsBundle -or \$RequireSignedWindowsBundle\)'
+        $gate | Should -Match 'The Tauri NSIS bundle is missing'
+        $gate | Should -Match 'The self-contained Windows runtime is incomplete'
+        $gate | Should -Match 'pal-core\.exe'
+        $gate | Should -Match 'pal-overlay\.exe'
+        $gate | Should -Match 'pal-fullscreen-overlay-dx11\.dll'
+        $gate | Should -Match 'pal-fullscreen-overlay-dx12\.dll'
     }
 
     It 'rejects leftover files before packaging the approved map snapshot' {

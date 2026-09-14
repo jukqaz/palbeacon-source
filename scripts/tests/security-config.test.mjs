@@ -4,6 +4,7 @@ import { createRequire } from "node:module";
 import { resolve } from "node:path";
 import test from "node:test";
 import { fileURLToPath, pathToFileURL } from "node:url";
+import { isPrivatePath } from "../../verify-repository.mjs";
 
 const root = fileURLToPath(new URL("../../", import.meta.url));
 const uiRequire = createRequire(resolve(root, "apps/palbeacon-ui/package.json"));
@@ -80,7 +81,7 @@ test("active lockfile cannot restore retired vulnerable tool chains", () => {
   assert.match(workspace, /^strictPeerDependencies: true$/m);
 });
 
-test("the archived prototype stays a reference, not an installable dependency graph", () => {
+test("private design references stay excluded, not an installable dependency graph", () => {
   const prototype = resolve(
     root,
     "docs/archive/legacy-2026-08-24/payload/docs/design/palbeacon-atlas-matrix-2026-08-24/prototype",
@@ -94,14 +95,14 @@ test("the archived prototype stays a reference, not an installable dependency gr
   ]) {
     assert.equal(existsSync(resolve(prototype, name)), false, name);
   }
-  assert.equal(existsSync(resolve(prototype, "implementation-1440x1024.png")), true);
+  assert.equal(isPrivatePath("docs/archive/prototype/implementation.png"), true);
 });
 
 test("CI audits all dependency severities without an advisory ignore list", () => {
   const pkg = JSON.parse(readFileSync(resolve(root, "package.json"), "utf8"));
   assert.equal(pkg.scripts["quality:security"], "pnpm audit --audit-level low");
   const workflow = readFileSync(
-    resolve(root, ".github/workflows/palbeacon-svelte-tauri.yml"),
+    resolve(root, ".github/workflows/source-snapshot.yml"),
     "utf8",
   );
   assert.match(workflow, /run: pnpm quality:security/);

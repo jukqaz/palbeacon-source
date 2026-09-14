@@ -32,15 +32,16 @@ test('CI isolates heavy browser journeys without relaxing assertions', () => {
   assert.match(config, /timeout: 60_000/);
 });
 
-test('CI checks real PWA installation and retains the full browser evidence', () => {
-  const workflow = readFileSync(
-    new URL('../../.github/workflows/palbeacon-svelte-tauri.yml', import.meta.url),
-    'utf8',
+test('the local release gate checks real PWA installation and retains browser evidence', () => {
+  const packageJson = JSON.parse(
+    readFileSync(new URL('../../apps/palbeacon-ui/package.json', import.meta.url), 'utf8'),
   );
   const runner = readFileSync(
     new URL('../../apps/palbeacon-ui/scripts/run-pwa-e2e.mjs', import.meta.url),
     'utf8',
   );
-  assert.match(workflow, /run: pnpm --filter @palbeacon\/ui test:pwa/);
+  assert.match(packageJson.scripts['test:pwa'], /^pnpm build && node scripts\/run-pwa-e2e\.mjs$/);
+  assert.match(runner, /PALBEACON_PWA_E2E: 'true'/);
+  assert.match(runner, /'e2e\/pwa.spec.ts'/);
   assert.match(runner, /--output=test-results\/pwa/);
 });

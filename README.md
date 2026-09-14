@@ -17,6 +17,8 @@ pnpm install --frozen-lockfile 및 pnpm quality:security로 의존성을 확인�
 자동 다운로드로 대체하지 않습니다. 공개 CI는 비공개 자료의 혼입 방지와 JavaScript/Rust
 의존성 보안을 검사합니다. 데이터가 필요한 UI·게임·Windows 검증은 자료를 갖춘 로컬에서
 실행하며, 공개 CI 통과만으로 제품 전체 테스트를 대체하지 않습니다.
+공개 CI는 게임 자료가 필요 없는 유지관리·보안·PWA 실행 설정 테스트도 수행합니다.
+`pnpm quality:config` 전체 검증에는 로컬 게임 자료의 해시 검사가 포함됩니다.
 마무리 유지관리 중에는 일반 버전 업데이트 PR을 생성하지 않고 보안 업데이트와 알림은
 유지합니다. PUBLICATION.json은 최초 코드 이전의 출처 기록이며 이후 수정을 제한하지 않습니다.
 

@@ -20,6 +20,8 @@ jobs:
       - run: node --test verify-repository.test.mjs
       - run: node verify-repository.mjs
       - run: pnpm install --frozen-lockfile
+      - name: Check source-only maintenance and release configuration
+        run: node --test scripts/tests/maintenance-config.test.mjs scripts/tests/security-config.test.mjs scripts/tests/web-release-config.test.mjs
       - run: pnpm quality:security
       - name: Restore pinned audit binary
         id: audit-cache

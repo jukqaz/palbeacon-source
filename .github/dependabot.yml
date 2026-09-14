@@ -6,7 +6,7 @@ updates:
       interval: monthly
       time: "03:00"
       timezone: Asia/Seoul
-    # Frozen source snapshot: security updates stay enabled; routine PRs do not.
+    # Final maintenance: security updates stay enabled; routine version PRs do not.
     open-pull-requests-limit: 0
     groups:
       javascript-security:

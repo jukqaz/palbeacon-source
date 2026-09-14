@@ -1,9 +1,9 @@
-name: Public source snapshot
+name: Public repository security
 on: [push, pull_request, workflow_dispatch]
 permissions:
   contents: read
 jobs:
-  source-integrity-and-dependencies:
+  publication-and-dependencies:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -17,12 +17,20 @@ jobs:
       - uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e
         with:
           node-version: 24.19.0
-      - run: node verify-publication.mjs
+      - run: node --test verify-repository.test.mjs
+      - run: node verify-repository.mjs
       - run: pnpm install --frozen-lockfile
       - run: pnpm quality:security
+      - name: Restore pinned audit binary
+        id: audit-cache
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+        with:
+          path: ~/.cargo/bin/cargo-audit
+          key: public-audit-linux-x64-rust-1.97.1-audit-0.22.2
       - name: Install pinned Rust audit tool on the Linux runner
+        if: steps.audit-cache.outputs.cache-hit != 'true'
         run: |
           rustup toolchain install 1.97.1 --profile minimal
           cargo +1.97.1 install cargo-audit --version 0.22.2 --locked --target x86_64-unknown-linux-gnu
       - name: Audit the shared Rust workspace lockfile
-        run: cargo +1.97.1 audit --file Cargo.lock
+        run: '"$HOME/.cargo/bin/cargo-audit" audit --file Cargo.lock'

@@ -19,7 +19,7 @@ prost-build = "=0.14.4"
 protoc-bin-vendored = "=3.2.0"
 reqwest = { version = "0.12", default-features = false, features = ["http2", "json", "rustls-tls"] }
 ring = "=0.17.14"
-rusqlite = { version = "=0.40.1", features = ["bundled"] }
+rusqlite = { version = "=0.40.2", features = ["bundled"] }
 secrecy = "=0.10.3"
 serde = { version = "1", features = ["derive"] }
 serde_json = { version = "1", features = ["arbitrary_precision"] }
@@ -29,7 +29,7 @@ ssh2 = "=0.9.6"
 subtle = "2"
 thiserror = "2"
 tokio = { version = "1", features = ["macros", "net", "rt-multi-thread", "sync", "time"] }
-tokio-util = { version = "=0.7.18", features = ["rt"] }
+tokio-util = { version = "=0.7.19", features = ["rt"] }
 tonic = "=0.14.6"
 tonic-prost = "=0.14.6"
 tonic-prost-build = "=0.14.6"

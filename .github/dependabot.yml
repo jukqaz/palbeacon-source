@@ -6,7 +6,8 @@ updates:
       interval: monthly
       time: "03:00"
       timezone: Asia/Seoul
-    open-pull-requests-limit: 1
+    # Frozen source snapshot: security updates stay enabled; routine PRs do not.
+    open-pull-requests-limit: 0
     groups:
       javascript-security:
         applies-to: security-updates
@@ -29,7 +30,7 @@ updates:
       interval: monthly
       time: "03:15"
       timezone: Asia/Seoul
-    open-pull-requests-limit: 1
+    open-pull-requests-limit: 0
     groups:
       rust-security:
         applies-to: security-updates
@@ -46,7 +47,7 @@ updates:
       interval: monthly
       time: "03:30"
       timezone: Asia/Seoul
-    open-pull-requests-limit: 1
+    open-pull-requests-limit: 0
     groups:
       tauri-security:
         applies-to: security-updates
@@ -63,7 +64,7 @@ updates:
       interval: monthly
       time: "03:45"
       timezone: Asia/Seoul
-    open-pull-requests-limit: 1
+    open-pull-requests-limit: 0
     groups:
       actions-security:
         applies-to: security-updates

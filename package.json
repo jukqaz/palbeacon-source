@@ -1,0 +1,39 @@
+{
+  "name": "palworld-overlay-workspace",
+  "private": true,
+  "scripts": {
+    "ui:dev": "pnpm --filter @palbeacon/ui dev",
+    "ui:format:check": "pnpm --filter @palbeacon/ui format:check",
+    "ui:check": "pnpm --filter @palbeacon/ui check",
+    "ui:lint": "pnpm --filter @palbeacon/ui lint",
+    "ui:test": "pnpm --filter @palbeacon/ui test",
+    "ui:test:coverage": "pnpm --filter @palbeacon/ui test:coverage",
+    "ui:test:e2e": "pnpm --filter @palbeacon/ui test:e2e",
+    "ui:test:usability": "pnpm --filter @palbeacon/ui test:usability",
+    "ui:build": "pnpm --filter @palbeacon/ui build",
+    "desktop:dev": "pnpm --filter @palbeacon/desktop dev",
+    "desktop:check": "pnpm --filter @palbeacon/desktop check",
+    "desktop:test": "pnpm --filter @palbeacon/desktop test",
+    "desktop:test:e2e:windows": "pnpm --filter @palbeacon/desktop test:e2e:windows",
+    "desktop:build": "pnpm --filter @palbeacon/desktop build",
+    "quality:config": "node --test scripts/tests/*-config.test.mjs",
+    "quality:security": "pnpm audit --audit-level low",
+    "quality:dead-code": "pnpm --filter @palbeacon/ui exec svelte-kit sync && knip --no-progress --treat-config-hints-as-errors",
+    "quality:duplicates": "jscpd --config .jscpd.json",
+    "quality:clean": "pnpm quality:config && pnpm quality:dead-code && pnpm quality:duplicates",
+    "quality:design-contract": "node scripts/verify-palbeacon-design-contract.mjs",
+    "quality:usability-contract": "node scripts/verify-palbeacon-usability-contract.mjs",
+    "quality:usability": "pnpm quality:usability-contract && pnpm ui:test:usability",
+    "quality:design-review": "pnpm quality:design-contract && pnpm quality:usability-contract && pnpm ui:test && pnpm ui:test:e2e",
+    "cutover:verify": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/verify-palbeacon-cutover.ps1"
+  },
+  "devDependencies": {
+    "jscpd": "5.0.16",
+    "knip": "6.32.2"
+  },
+  "engines": {
+    "node": "24.19.x",
+    "pnpm": "11.19.x"
+  },
+  "packageManager": "pnpm@11.19.0"
+}

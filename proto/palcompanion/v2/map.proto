@@ -1,0 +1,67 @@
+syntax = "proto3";
+
+package palcompanion.v2;
+
+enum MapSpaceV1 {
+  MAP_SPACE_V1_UNSPECIFIED = 0;
+  MAP_SPACE_V1_PALPAGOS = 1;
+  MAP_SPACE_V1_WORLD_TREE = 2;
+}
+
+enum MapViewUpdateStatusV1 {
+  MAP_VIEW_UPDATE_STATUS_V1_UNSPECIFIED = 0;
+  MAP_VIEW_UPDATE_STATUS_V1_APPLIED = 1;
+  MAP_VIEW_UPDATE_STATUS_V1_NO_OP = 2;
+  MAP_VIEW_UPDATE_STATUS_V1_REVISION_CONFLICT = 3;
+  MAP_VIEW_UPDATE_STATUS_V1_MANIFEST_MISMATCH = 4;
+  MAP_VIEW_UPDATE_STATUS_V1_VALIDATION_REJECTED = 5;
+}
+
+message MapCameraV1 {
+  double center_x = 1;
+  double center_y = 2;
+  double zoom = 3;
+}
+
+message MapViewStateSnapshotV1 {
+  uint64 revision = 1;
+  bytes manifest_sha256 = 2;
+  MapSpaceV1 map_space = 3;
+  repeated string enabled_layer_ids = 4;
+  optional string selected_poi_id = 5;
+  MapCameraV1 camera = 6;
+}
+
+message MapReplaceLayersV1 {
+  repeated string enabled_layer_ids = 1;
+}
+
+message MapSelectPoiV1 {
+  optional string poi_id = 1;
+}
+
+message MapMoveCameraV1 {
+  MapSpaceV1 map_space = 1;
+  MapCameraV1 camera = 2;
+}
+
+message MapRequestResyncV1 {}
+
+message MapViewIntentV1 {
+  bytes trace_id = 1;
+  uint64 expected_revision = 2;
+  bytes manifest_sha256 = 3;
+  oneof action {
+    MapReplaceLayersV1 replace_layers = 10;
+    MapSelectPoiV1 select_poi = 11;
+    MapMoveCameraV1 move_camera = 12;
+    MapRequestResyncV1 request_resync = 13;
+  }
+}
+
+message MapViewStateUpdateV1 {
+  bytes trace_id = 1;
+  MapViewUpdateStatusV1 status = 2;
+  MapViewStateSnapshotV1 snapshot = 3;
+  optional string rejected_field = 4;
+}

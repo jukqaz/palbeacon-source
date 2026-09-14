@@ -1,0 +1,290 @@
+syntax = "proto3";
+
+package palcompanion.v1;
+
+// Immutable, public catalog records. User-owned state belongs in profile.proto.
+message CatalogIdentity {
+  uint32 schema_major = 1;
+  string game_build_id = 2;
+  bytes dataset_manifest_id = 3;
+}
+
+enum DistributionScope {
+  DISTRIBUTION_SCOPE_UNSPECIFIED = 0;
+  DISTRIBUTION_SCOPE_LOCAL_ONLY = 1;
+  DISTRIBUTION_SCOPE_PRIVATE_TENANT_CANDIDATE = 2;
+}
+
+enum DatasetCapabilityStatus {
+  DATASET_CAPABILITY_STATUS_UNSPECIFIED = 0;
+  DATASET_CAPABILITY_STATUS_COMPLETE = 1;
+  DATASET_CAPABILITY_STATUS_UNSUPPORTED_BY_BUILD = 2;
+  DATASET_CAPABILITY_STATUS_FAILED = 3;
+}
+
+enum AcquisitionKind {
+  ACQUISITION_KIND_UNSPECIFIED = 0;
+  ACQUISITION_KIND_PAL_DROP = 1;
+  ACQUISITION_KIND_GATHER = 2;
+  ACQUISITION_KIND_CRAFT = 3;
+  ACQUISITION_KIND_MERCHANT = 4;
+  ACQUISITION_KIND_RANCH = 5;
+  ACQUISITION_KIND_EXPEDITION = 6;
+  ACQUISITION_KIND_FISHING = 7;
+  ACQUISITION_KIND_SALVAGE = 8;
+  ACQUISITION_KIND_CHEST = 9;
+  ACQUISITION_KIND_BOSS = 10;
+  ACQUISITION_KIND_CAPTURED_CAGE = 11;
+}
+
+message DataSourceV1 {
+  string source_id = 1;
+  string source_kind = 2;
+  string reference = 3;
+  bytes source_sha256 = 4;
+  bool verified = 5;
+}
+
+message DatasetCapabilityV1 {
+  string capability_id = 1;
+  DatasetCapabilityStatus status = 2;
+  repeated string source_ids = 3;
+  repeated string diagnostic_codes = 4;
+}
+
+message CatalogSpeciesRecord {
+  string species_id = 1;
+  optional uint32 breeding_power = 2;
+  repeated string work_type_ids = 3;
+  repeated string element_ids = 4;
+  optional uint32 hp = 5;
+  optional uint32 attack = 6;
+  optional uint32 defense = 7;
+  optional uint32 ride_sprint_speed = 8;
+  optional uint32 stamina = 9;
+}
+
+message CatalogSkillRecord {
+  string skill_id = 1;
+  string skill_kind = 2;
+  optional string element_id = 3;
+  optional uint32 power = 4;
+  optional uint32 cooldown_ms = 5;
+}
+
+message CatalogItemRecord {
+  string item_id = 1;
+  optional uint32 rarity = 2;
+  optional uint64 buy_price = 3;
+  optional uint64 sell_price = 4;
+  optional uint32 technology_level = 5;
+}
+
+message CatalogRecipeIngredientV1 {
+  string item_id = 1;
+  uint64 quantity = 2;
+}
+
+message CatalogRecipeRecord {
+  string recipe_id = 1;
+  string output_item_id = 2;
+  uint64 output_quantity = 3;
+  repeated CatalogRecipeIngredientV1 ingredients = 4;
+  repeated string station_ids = 5;
+}
+
+message CatalogBuildingRecord {
+  string building_id = 1;
+  optional string technology_id = 2;
+}
+
+message CatalogTechnologyRecord {
+  string technology_id = 1;
+  uint32 level = 2;
+  repeated string prerequisite_ids = 3;
+}
+
+message CatalogLocationRecord {
+  string location_id = 1;
+  optional string region_id = 2;
+}
+
+message CatalogPoiRecord {
+  string poi_id = 1;
+  string location_id = 2;
+  string poi_kind = 3;
+  optional sint64 world_x_milli = 4;
+  optional sint64 world_y_milli = 5;
+}
+
+message CatalogAliasRecord {
+  string entity_kind = 1;
+  string entity_id = 2;
+  string language = 3;
+  string alias = 4;
+}
+
+message CatalogLocalizationRecord {
+  string entity_kind = 1;
+  string entity_id = 2;
+  string language = 3;
+  string short_name = 4;
+  optional string local_only_description = 5;
+}
+
+message AcquisitionTargetV1 {
+  oneof target {
+    string item_id = 1;
+    string species_id = 2;
+  }
+}
+
+message PalDropMethodV1 {
+  string pal_id = 1;
+  uint64 minimum_quantity = 2;
+  uint64 maximum_quantity = 3;
+  uint32 probability_ppm = 4;
+}
+
+message GatherMethodV1 {
+  string gatherable_id = 1;
+  uint64 minimum_quantity = 2;
+  uint64 maximum_quantity = 3;
+  uint32 probability_ppm = 4;
+  repeated string requirement_ids = 5;
+}
+
+message CraftMethodV1 {
+  string recipe_id = 1;
+}
+
+message MerchantMethodV1 {
+  string merchant_id = 1;
+  uint64 unit_price = 2;
+  optional string currency_item_id = 3;
+}
+
+message RanchMethodV1 {
+  string species_id = 1;
+  uint64 minimum_quantity = 2;
+  uint64 maximum_quantity = 3;
+  uint32 probability_ppm = 4;
+}
+
+message ExpeditionMethodV1 {
+  string expedition_id = 1;
+  uint64 minimum_quantity = 2;
+  uint64 maximum_quantity = 3;
+  uint32 probability_ppm = 4;
+  uint64 duration_ms = 5;
+}
+
+message FishingMethodV1 {
+  string fishing_spot_id = 1;
+  uint64 minimum_quantity = 2;
+  uint64 maximum_quantity = 3;
+  uint32 probability_ppm = 4;
+}
+
+message SalvageMethodV1 {
+  string method_id = 1;
+  string pool_id = 2;
+  optional string location_id = 3;
+  string item_id = 4;
+  uint64 minimum_quantity = 5;
+  uint64 maximum_quantity = 6;
+  uint32 probability_ppm = 7;
+  repeated string requirement_ids = 8;
+}
+
+message ChestMethodV1 {
+  string pool_id = 1;
+  uint64 minimum_quantity = 2;
+  uint64 maximum_quantity = 3;
+  uint32 probability_ppm = 4;
+}
+
+message BossMethodV1 {
+  string boss_id = 1;
+  uint64 minimum_quantity = 2;
+  uint64 maximum_quantity = 3;
+  uint32 probability_ppm = 4;
+}
+
+message CapturedCageMethodV1 {
+  string method_id = 1;
+  string cage_id = 2;
+  string location_id = 3;
+  string species_id = 4;
+  uint32 minimum_level = 5;
+  uint32 maximum_level = 6;
+  uint32 source_weight = 7;
+  optional uint32 probability_ppm = 8;
+  string probability_provenance = 9;
+}
+
+message AcquisitionMethodV1 {
+  uint32 schema_major = 1;
+  string game_build_id = 2;
+  string source_id = 3;
+  string entity_version = 4;
+  string method_id = 5;
+  AcquisitionKind kind = 6;
+  AcquisitionTargetV1 target = 7;
+  optional string location_id = 8;
+  oneof method {
+    PalDropMethodV1 pal_drop = 20;
+    GatherMethodV1 gather = 21;
+    CraftMethodV1 craft = 22;
+    MerchantMethodV1 merchant = 23;
+    RanchMethodV1 ranch = 24;
+    ExpeditionMethodV1 expedition = 25;
+    FishingMethodV1 fishing = 26;
+    SalvageMethodV1 salvage = 27;
+    ChestMethodV1 chest = 28;
+    BossMethodV1 boss = 29;
+    CapturedCageMethodV1 captured_cage = 30;
+  }
+}
+
+message BreedingRuleV1 {
+  string rule_id = 1;
+  string parent_a_species_id = 2;
+  string parent_b_species_id = 3;
+  string child_species_id = 4;
+  string source_id = 5;
+}
+
+message CatalogFactV1 {
+  string source_id = 1;
+  string entity_version = 2;
+  oneof fact {
+    CatalogSpeciesRecord species = 10;
+    CatalogSkillRecord skill = 11;
+    CatalogItemRecord item = 12;
+    CatalogRecipeRecord recipe = 13;
+    AcquisitionMethodV1 acquisition = 14;
+    BreedingRuleV1 breeding = 15;
+    CatalogTechnologyRecord technology = 16;
+    CatalogBuildingRecord building = 17;
+    CatalogLocationRecord location = 18;
+    CatalogPoiRecord poi = 19;
+    CatalogAliasRecord alias = 20;
+    CatalogLocalizationRecord localization = 21;
+  }
+}
+
+message NormalizedCatalogPackageV1 {
+  CatalogIdentity identity = 1;
+  DistributionScope distribution_scope = 2;
+  repeated DataSourceV1 sources = 3;
+  repeated DatasetCapabilityV1 capabilities = 4;
+  repeated CatalogFactV1 facts = 5;
+}
+
+message CatalogDataset {
+  CatalogIdentity identity = 1;
+  repeated CatalogSpeciesRecord species = 2;
+  repeated CatalogItemRecord items = 3;
+  repeated CatalogBuildingRecord buildings = 4;
+}

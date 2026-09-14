@@ -1,0 +1,17 @@
+{
+  "$schema": "https://unpkg.com/knip@6/schema-jsonc.json",
+  "ignoreFiles": ["docs/**"],
+  "workspaces": {
+    ".": {
+      "entry": ["scripts/*.mjs"],
+      "ignoreDependencies": ["@playwright/test"],
+    },
+    "apps/palbeacon-ui": {
+      "entry": ["scripts/*.mjs"],
+    },
+    "apps/palbeacon-desktop": {
+      "entry": ["e2e/**/*.e2e.ts"],
+      "ignoreDependencies": ["@wdio/local-runner", "@wdio/tauri-service"],
+    },
+  },
+}

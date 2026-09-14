@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "states": [
+    { "id": "loading", "label_ko": "불러오는 중", "live": true, "action": null },
+    {
+      "id": "empty",
+      "label_ko": "표시할 정보가 없습니다",
+      "live": false,
+      "action": "reset_or_create"
+    },
+    {
+      "id": "stale",
+      "user_visibility": "hidden",
+      "effect": "hide_stale_value",
+      "action": "refresh"
+    },
+    { "id": "error", "user_visibility": "action_only", "live": true, "action": "retry" },
+    {
+      "id": "unsupported",
+      "user_visibility": "hidden",
+      "live": false,
+      "effect": "hide_feature",
+      "action": null
+    },
+    {
+      "id": "offline",
+      "user_visibility": "action_only",
+      "live": false,
+      "action": "retry_when_online"
+    },
+    {
+      "id": "build_mismatch",
+      "user_visibility": "hidden",
+      "effect": "hide_dependent_feature",
+      "action": "update_data"
+    },
+    {
+      "id": "unverified",
+      "user_visibility": "hidden",
+      "effect": "hide_unverified_value",
+      "action": null
+    }
+  ]
+}

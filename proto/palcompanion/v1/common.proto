@@ -1,0 +1,111 @@
+syntax = "proto3";
+
+package palcompanion.v1;
+
+enum RotationMode {
+  ROTATION_MODE_UNSPECIFIED = 0;
+  ROTATION_MODE_NORTH_UP = 1;
+  ROTATION_MODE_HEADING_UP = 2;
+}
+
+enum InputMode {
+  INPUT_MODE_UNSPECIFIED = 0;
+  INPUT_MODE_LOCKED = 1;
+  INPUT_MODE_TEMPORARY_INTERACTIVE = 2;
+  INPUT_MODE_PINNED_INTERACTIVE = 3;
+  INPUT_MODE_LAYOUT_EDIT = 4;
+}
+
+enum DisplayMode {
+  DISPLAY_MODE_UNSPECIFIED = 0;
+  DISPLAY_MODE_MINI_MAP = 1;
+  DISPLAY_MODE_EXPANDED_MAP = 2;
+}
+
+enum FpsProfile {
+  FPS_PROFILE_UNSPECIFIED = 0;
+  FPS_PROFILE_AUTO = 1;
+  FPS_PROFILE_THIRTY = 2;
+  FPS_PROFILE_SIXTY = 3;
+}
+
+enum Freshness {
+  FRESHNESS_UNSPECIFIED = 0;
+  FRESHNESS_LIVE = 1;
+  FRESHNESS_DELAYED = 2;
+  FRESHNESS_STALE = 3;
+  FRESHNESS_OFFLINE = 4;
+}
+
+message PoiFilters {
+  bool fast_travel = 1;
+  bool boss = 2;
+  bool dungeon = 3;
+  bool wanted = 4;
+  // Stable map-layer IDs from the exact-build map layer manifest.
+  repeated string enabled_layer_ids = 5;
+  // Stable internal Pal species IDs selected in the shared map search.
+  repeated string selected_pal_ids = 6;
+  bool night_only = 7;
+}
+
+message HotkeyModifiers {
+  bool control = 1;
+  bool alt = 2;
+  bool shift = 3;
+  bool windows = 4;
+}
+
+message HotkeyChord {
+  HotkeyModifiers modifiers = 1;
+  uint32 virtual_key = 2;
+}
+
+message HotkeyBindings {
+  optional HotkeyChord overlay_visibility = 1;
+  optional HotkeyChord expanded_map = 2;
+  optional HotkeyChord temporary_interaction = 3;
+  optional HotkeyChord interaction_lock = 4;
+}
+
+message OverlaySettings {
+  bool enabled = 1;
+  bool auto_show = 2;
+  RotationMode rotation_mode = 3;
+  InputMode input_mode = 4;
+  DisplayMode display_mode = 5;
+  float opacity = 6;
+  uint32 diameter_px = 7;
+  float zoom = 8;
+  float normalized_x = 9;
+  float normalized_y = 10;
+  FpsProfile fps_profile = 11;
+  PoiFilters poi_filters = 12;
+  HotkeyBindings hotkey_bindings = 13;
+}
+
+message WindowSnapshot {
+  uint32 process_id = 1;
+  sint32 client_left = 2;
+  sint32 client_top = 3;
+  uint32 client_width = 4;
+  uint32 client_height = 5;
+  uint32 dpi = 6;
+  bool visible = 7;
+  bool active = 8;
+  bool minimized = 9;
+}
+
+message PositionData {
+  string world_alias = 1;
+  bytes subject_id = 2;
+  bytes source_boot_id = 3;
+  uint64 source_connection_generation = 4;
+  uint64 sequence = 5;
+  double x = 6;
+  double y = 7;
+  double z = 8;
+  optional float heading_degrees = 9;
+  uint64 age_at_receive_upper_bound_ms = 10;
+  uint64 received_at_monotonic_ms = 11;
+}

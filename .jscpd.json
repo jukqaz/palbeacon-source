@@ -1,0 +1,17 @@
+{
+  "path": [
+    "apps/palbeacon-ui/src",
+    "apps/palbeacon-ui/scripts",
+    "apps/palbeacon-ui/e2e",
+    "apps/palbeacon-desktop/src-tauri/src",
+    "apps/palbeacon-desktop/e2e"
+  ],
+  "minTokens": 80,
+  "minLines": 10,
+  "mode": "strict",
+  "crossFormats": "js-ts",
+  "ignore": ["**/generated/**", "**/*.fixture.ts"],
+  "reporters": ["console-full", "threshold"],
+  "threshold": 1,
+  "noTips": true
+}

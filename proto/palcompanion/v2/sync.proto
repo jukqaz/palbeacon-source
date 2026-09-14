@@ -1,0 +1,347 @@
+syntax = "proto3";
+
+package palcompanion.v2;
+
+import "palcompanion/v2/catalog.proto";
+import "palcompanion/v2/profile.proto";
+
+// This file is the redacted cloud projection contract.  It intentionally has
+// no names, account identifiers, paths, coordinates, notes, diagnostics, or
+// raw save data.
+enum ProjectionSectionKind {
+  PROJECTION_SECTION_KIND_UNSPECIFIED = 0;
+  PROJECTION_SECTION_KIND_CHARACTER = 1;
+  PROJECTION_SECTION_KIND_INVENTORY = 2;
+  PROJECTION_SECTION_KIND_EQUIPMENT = 3;
+  PROJECTION_SECTION_KIND_PALS = 4;
+  PROJECTION_SECTION_KIND_BASES = 5;
+  PROJECTION_SECTION_KIND_PROGRESSION = 6;
+}
+
+enum ProjectionCompleteness {
+  PROJECTION_COMPLETENESS_UNSPECIFIED = 0;
+  PROJECTION_COMPLETENESS_COMPLETE = 1;
+  PROJECTION_COMPLETENESS_PARTIAL = 2;
+  PROJECTION_COMPLETENESS_UNAVAILABLE = 3;
+  PROJECTION_COMPLETENESS_UNKNOWN = 4;
+}
+
+enum CloudProgressionUnlockKind {
+  CLOUD_PROGRESSION_UNLOCK_KIND_UNSPECIFIED = 0;
+  CLOUD_PROGRESSION_UNLOCK_KIND_TECHNOLOGY = 1;
+  CLOUD_PROGRESSION_UNLOCK_KIND_FAST_TRAVEL = 2;
+  CLOUD_PROGRESSION_UNLOCK_KIND_TOWER = 3;
+  CLOUD_PROGRESSION_UNLOCK_KIND_BOSS = 4;
+  CLOUD_PROGRESSION_UNLOCK_KIND_MISSION = 5;
+  CLOUD_PROGRESSION_UNLOCK_KIND_PALDEX_CAPTURE = 6;
+  CLOUD_PROGRESSION_UNLOCK_KIND_MAP_REGION = 7;
+  CLOUD_PROGRESSION_UNLOCK_KIND_COLLECTIBLE = 8;
+  CLOUD_PROGRESSION_UNLOCK_KIND_BASE_RESEARCH = 9;
+}
+
+message ProjectionSectionStateV1 {
+  ProjectionCompleteness completeness = 1;
+  uint32 source_expected_record_count = 2;
+  uint32 source_observed_record_count = 3;
+  uint32 projected_entry_count = 4;
+}
+
+message CloudCharacterEntryV1 {
+  uint32 level = 1;
+  uint64 experience = 2;
+  uint32 allocated_hp = 3;
+  uint32 allocated_stamina = 4;
+  uint32 allocated_attack = 5;
+  uint32 allocated_defense = 6;
+  uint32 allocated_work_speed = 7;
+  uint32 allocated_carry_weight = 8;
+  uint32 technology_points = 9;
+  uint32 ancient_technology_points = 10;
+}
+
+message CloudInventoryEntryV1 {
+  InventoryContainerKind container_kind = 1;
+  uint32 container_ordinal = 2;
+  uint32 slot_index = 3;
+  string item_id = 4;
+  uint64 quantity = 5;
+  optional uint32 durability = 6;
+  optional uint32 rarity = 7;
+}
+
+message CloudEquipmentEntryV1 {
+  EquipmentSlotKind slot_kind = 1;
+  uint32 slot_index = 2;
+  string item_id = 3;
+  optional uint32 durability = 4;
+  optional uint32 rarity = 5;
+  optional uint64 ammunition = 6;
+}
+
+message CloudPalEntryV1 {
+  bytes pal_instance_id = 1;
+  string species_id = 2;
+  uint32 level = 3;
+  PalGender gender = 4;
+  optional uint32 iv_hp = 5;
+  optional uint32 iv_attack = 6;
+  optional uint32 iv_defense = 7;
+  repeated string passive_ids = 8;
+  repeated string active_skill_ids = 9;
+  uint32 condensation_rank = 10;
+  uint32 soul_hp = 11;
+  uint32 soul_attack = 12;
+  uint32 soul_defense = 13;
+  uint32 soul_work_speed = 14;
+  PalContainerKind container_kind = 15;
+  repeated string learned_skill_ids = 16;
+  uint32 trust = 17;
+  bool is_lucky = 18;
+  bool is_boss = 19;
+  bool is_alpha = 20;
+  bool is_awakened = 21;
+  bool is_mutated = 22;
+  uint32 container_ordinal = 23;
+  uint32 slot_index = 24;
+  optional bytes base_id = 25;
+}
+
+message CloudBaseFacilityV1 {
+  string building_id = 1;
+  uint32 count = 2;
+}
+
+message CloudBaseStorageItemV1 {
+  string item_id = 1;
+  uint64 quantity = 2;
+}
+
+message CloudBaseEntryV1 {
+  bytes base_id = 1;
+  string location_id = 2;
+  uint32 level = 3;
+  repeated CloudBaseFacilityV1 facilities = 4;
+  repeated bytes assigned_pal_instance_ids = 5;
+  repeated CloudBaseStorageItemV1 storage_items = 6;
+}
+
+message CloudProgressionUnlockV1 {
+  CloudProgressionUnlockKind kind = 1;
+  string unlock_id = 2;
+}
+
+message CloudCharacterProjectionContentV1 {
+  ProjectionSectionStateV1 state = 1;
+  CloudCharacterEntryV1 character = 2;
+}
+
+message CloudInventoryProjectionContentV1 {
+  ProjectionSectionStateV1 state = 1;
+  repeated CloudInventoryEntryV1 entries = 2;
+}
+
+message CloudEquipmentProjectionContentV1 {
+  ProjectionSectionStateV1 state = 1;
+  repeated CloudEquipmentEntryV1 entries = 2;
+}
+
+message CloudPalProjectionContentV1 {
+  ProjectionSectionStateV1 state = 1;
+  repeated CloudPalEntryV1 entries = 2;
+}
+
+message CloudBaseProjectionContentV1 {
+  ProjectionSectionStateV1 state = 1;
+  repeated CloudBaseEntryV1 entries = 2;
+}
+
+message CloudProgressionProjectionContentV1 {
+  ProjectionSectionStateV1 state = 1;
+  repeated CloudProgressionUnlockV1 entries = 2;
+}
+
+message CloudProfileProjectionContentV1 {
+  uint32 schema_version = 1;
+  bytes dataset_manifest_id = 2;
+  string game_build_id = 3;
+  CloudCharacterProjectionContentV1 character = 10;
+  CloudInventoryProjectionContentV1 inventory = 11;
+  CloudEquipmentProjectionContentV1 equipment = 12;
+  CloudPalProjectionContentV1 pals = 13;
+  CloudBaseProjectionContentV1 bases = 14;
+  CloudProgressionProjectionContentV1 progression = 15;
+}
+
+message CloudProfileSectionIdentityV1 {
+  ProjectionSectionKind section = 1;
+  ProjectionSectionStateV1 state = 2;
+  bytes section_content_sha256 = 3;
+}
+
+message CloudProfileProjectionIdentityV1 {
+  uint32 schema_version = 1;
+  bytes dataset_manifest_id = 2;
+  string game_build_id = 3;
+  repeated CloudProfileSectionIdentityV1 sections = 4;
+}
+
+message CloudProfileProjectionCaptureV1 {
+  string world_id = 1;
+  bytes source_install_id = 2;
+  uint64 source_generation = 3;
+  uint64 source_sequence = 4;
+  uint64 observed_at_unix_ms = 5;
+  bytes source_personal_snapshot_id = 6;
+  optional bytes base_active_projection_id = 7;
+  uint64 base_commit_revision = 8;
+  bytes projection_id = 9;
+}
+
+message CloudCharacterProjectionPageV1 {
+  repeated CloudCharacterEntryV1 entries = 1;
+}
+
+message CloudInventoryProjectionPageV1 {
+  repeated CloudInventoryEntryV1 entries = 1;
+}
+
+message CloudEquipmentProjectionPageV1 {
+  repeated CloudEquipmentEntryV1 entries = 1;
+}
+
+message CloudPalProjectionPageV1 {
+  repeated CloudPalEntryV1 entries = 1;
+}
+
+message CloudBaseProjectionPageV1 {
+  repeated CloudBaseEntryV1 entries = 1;
+}
+
+message CloudProgressionProjectionPageV1 {
+  repeated CloudProgressionUnlockV1 entries = 1;
+}
+
+message CloudProfileProjectionPageV1 {
+  bytes projection_id = 1;
+  ProjectionSectionKind section = 2;
+  uint32 page_index = 3;
+  oneof payload {
+    CloudCharacterProjectionPageV1 character = 10;
+    CloudInventoryProjectionPageV1 inventory = 11;
+    CloudEquipmentProjectionPageV1 equipment = 12;
+    CloudPalProjectionPageV1 pals = 13;
+    CloudBaseProjectionPageV1 bases = 14;
+    CloudProgressionProjectionPageV1 progression = 15;
+  }
+}
+
+message CloudProfileProjectionPageDescriptorV1 {
+  ProjectionSectionKind section = 1;
+  uint32 page_index = 2;
+  uint32 entry_count = 3;
+  uint32 encoded_length = 4;
+  bytes sha256 = 5;
+  bytes first_sort_key = 6;
+  bytes last_sort_key = 7;
+}
+
+message CloudProfileProjectionSectionDescriptorV1 {
+  ProjectionSectionKind section = 1;
+  ProjectionSectionStateV1 state = 2;
+  bytes section_content_sha256 = 3;
+  uint32 page_count = 4;
+  uint64 total_encoded_length = 5;
+  repeated CloudProfileProjectionPageDescriptorV1 pages = 6;
+}
+
+message CloudProfileProjectionDescriptorV1 {
+  bytes projection_id = 1;
+  uint32 section_count = 2;
+  uint32 total_page_count = 3;
+  uint32 total_entry_count = 4;
+  uint64 total_encoded_length = 5;
+  repeated CloudProfileProjectionSectionDescriptorV1 sections = 6;
+}
+
+message CloudProfileProjectionV1 {
+  CloudProfileProjectionContentV1 content = 1;
+  CloudProfileProjectionCaptureV1 capture = 2;
+  CloudProfileProjectionDescriptorV1 descriptor = 3;
+}
+
+message PrivateSourceProvenanceV1 {
+  string source_id = 1;
+  string source_kind = 2;
+  bytes source_hash = 3;
+  bool verified = 4;
+}
+
+message PrivateCloudFileDescriptorV1 {
+  string relative_path = 1;
+  uint32 ordinal = 2;
+  uint64 encoded_length = 3;
+  uint32 row_count = 4;
+  bytes first_stable_key = 5;
+  bytes last_stable_key = 6;
+  bytes sha256 = 7;
+}
+
+message PrivateCatalogFactV1 {
+  string source_id = 1;
+  string entity_version = 2;
+  oneof fact {
+    CatalogSpeciesRecord species = 10;
+    CatalogSkillRecord skill = 11;
+    CatalogItemRecord item = 12;
+    CatalogRecipeRecord recipe = 13;
+    AcquisitionMethodV1 acquisition = 14;
+    BreedingRuleV1 breeding = 15;
+    CatalogTechnologyRecord technology = 16;
+    CatalogBuildingRecord building = 17;
+    CatalogLocationRecord location = 18;
+    CatalogPoiRecord poi = 19;
+    CatalogAliasRecord alias = 20;
+    CatalogLocalizationRecord localization = 21;
+  }
+}
+
+message PrivateCloudCatalogManifestV1 {
+  uint32 schema_major = 1;
+  string game_build_id = 2;
+  bytes dataset_manifest_id = 3;
+  bytes projection_id = 4;
+  DistributionScope distribution_scope = 5;
+  repeated PrivateSourceProvenanceV1 sources = 6;
+  repeated DatasetCapabilityV1 capabilities = 7;
+  repeated PrivateCloudFileDescriptorV1 files = 8;
+  repeated string enforced_exclusions = 9;
+  bytes logical_fact_hash = 10;
+}
+
+message PrivateCloudCatalogPageV1 {
+  bytes projection_id = 1;
+  uint32 page_index = 2;
+  repeated PrivateCatalogFactV1 facts = 3;
+}
+
+message PrivateCloudBreedingGraphV1 {
+  bytes projection_id = 1;
+  repeated BreedingRuleV1 rules = 2;
+}
+
+message PrivateCloudAcquisitionGraphV1 {
+  bytes projection_id = 1;
+  repeated AcquisitionMethodV1 methods = 2;
+}
+
+message PrivateProgressionEdgeV1 {
+  string prerequisite_id = 1;
+  string unlocked_id = 2;
+}
+
+message PrivateCloudProgressionGraphV1 {
+  bytes projection_id = 1;
+  repeated CatalogTechnologyRecord technologies = 2;
+  repeated CatalogBuildingRecord buildings = 3;
+  repeated PrivateProgressionEdgeV1 edges = 4;
+}

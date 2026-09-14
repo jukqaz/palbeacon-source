@@ -1,0 +1,3044 @@
+{
+  "schemaVersion": 1,
+  "sourceCommit": "5b7d4bf05160f744e64b48725003f330aba67355",
+  "scope": "source-only; no original history, game assets, private operations, or binary artifacts",
+  "files": [
+    {
+      "path": ".cargo/config.toml",
+      "sha256": "b30e5a93f3ee1e18d93d09516eb08d9ccccdda15027615c61d58be7264185711"
+    },
+    {
+      "path": ".config/PSScriptAnalyzerSettings.psd1",
+      "sha256": "18e559e88d68142106f0271f35ea7f708e53a0ad4414b712336db26d30678f6d"
+    },
+    {
+      "path": ".config/nextest.toml",
+      "sha256": "05bd72c7bcc35fc74491aa55904a83a28c3f51dc45ff093bd2a87e30b1d17b3b"
+    },
+    {
+      "path": ".editorconfig",
+      "sha256": "590aff2264e9ac2efdc62118b510018bb817192fc4889e568f808c039bc1ebc8"
+    },
+    {
+      "path": ".gitattributes",
+      "sha256": "63478d4ea27e78c5885517af9d38d63181003885f1787d65a0cfa00db608f840"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "c2d47b751fb6f8a74c0523879f63c665d98bf8bc64c6cf9ebb30db03dcbab916"
+    },
+    {
+      "path": ".jscpd.json",
+      "sha256": "02f0aa6a97209bba90654b76121fc253643f8ef6be8f81bb93e311c960298920"
+    },
+    {
+      "path": ".node-version",
+      "sha256": "7e8a2fa94951112b894a3dbe3d05efef5e9263741fa49125f0a70f40fedab4cc"
+    },
+    {
+      "path": "Cargo.lock",
+      "sha256": "7a933df6fcaf09b76bd9654f9422b1b735b2123451f6e72bf62c1f6736bcb4a0"
+    },
+    {
+      "path": "Cargo.toml",
+      "sha256": "15343faf42da2ea986160df4604454bf1ed40e04317a21e0f349362dccfaea3d"
+    },
+    {
+      "path": "apps/palbeacon-desktop/.gitignore",
+      "sha256": "8393b1b5e997b58c9d08f8fec2f12b850261a8c2acecbdb582d7da1bd0f487e6"
+    },
+    {
+      "path": "apps/palbeacon-desktop/README.md",
+      "sha256": "3f363d580602e64032e5013fd13edb16827c0d168caf6b9c95574535269fec2e"
+    },
+    {
+      "path": "apps/palbeacon-desktop/e2e/app.e2e.ts",
+      "sha256": "df020431722a20c4805284b925113f7d7ffa55bcd7027a085f7a367c1aa59b8f"
+    },
+    {
+      "path": "apps/palbeacon-desktop/e2e/webview-session.mjs",
+      "sha256": "f6441fbcb730cd276bd1235801c175efe4c887290359e1e317e25849efb0f108"
+    },
+    {
+      "path": "apps/palbeacon-desktop/package.json",
+      "sha256": "fd43ad06f8cf64efab0a95315725647c03346dbb8a2a7cbf1935ecf4a7d4adca"
+    },
+    {
+      "path": "apps/palbeacon-desktop/src-tauri/Cargo.lock",
+      "sha256": "b57def2a329224a9b3049a260c1d1008904c01b95902fa36b312ed72ea2359ad"
+    },
+    {
+      "path": "apps/palbeacon-desktop/src-tauri/Cargo.toml",
+      "sha256": "eb1c29688376f4c6136d094634751b396e2b64fbebcc3e252c0fb543298139f1"
+    },
+    {
+      "path": "apps/palbeacon-desktop/src-tauri/build.rs",
+      "sha256": "6aeeab41bc35efde4e3c2b644a6248f7fc06d24ae30b75c0d33491cbb0c1fa31"
+    },
+    {
+      "path": "apps/palbeacon-desktop/src-tauri/capabilities/default.json",
+      "sha256": "1f92bbde4f6cb64ff994919d114416ba9b5d6728b01bb4dbb4c39f115769019c"
+    },
+    {
+      "path": "apps/palbeacon-desktop/src-tauri/src/lib.rs",
+      "sha256": "3934c1a2c96431b098c5ae9c8e9ce6778cbf18b8d76793b831cb1e35f3c07c55"
+    },
+    {
+      "path": "apps/palbeacon-desktop/src-tauri/src/main.rs",
+      "sha256": "a9c065941ed847fa17690380e84126f37c32af5392ab90a850257d26eb85fa8a"
+    },
+    {
+      "path": "apps/palbeacon-desktop/src-tauri/tauri.conf.json",
+      "sha256": "bf98e67753f1504ffc576c64eeabeaa276a15562ba188a49f27d53b893885158"
+    },
+    {
+      "path": "apps/palbeacon-desktop/wdio.conf.ts",
+      "sha256": "ab91736979bd8cb310b1d20b58a271b7aa3210404e68c7eac26b1a467590a421"
+    },
+    {
+      "path": "apps/palbeacon-ui/.gitignore",
+      "sha256": "7ff1bfa83f74973f6077946268062d9e440adc4c2b1f92c54e90d0a9afad2015"
+    },
+    {
+      "path": "apps/palbeacon-ui/.oxfmtrc.json",
+      "sha256": "4ec57aba627c67fcd3b722c6989cdbedd8eeb835d676d5a588399142097748c6"
+    },
+    {
+      "path": "apps/palbeacon-ui/.oxlintrc.json",
+      "sha256": "b7666e163ac7cd7edeaa3a585e402681504daaea172432819a22d993d8882a6c"
+    },
+    {
+      "path": "apps/palbeacon-ui/README.md",
+      "sha256": "1c5348e45e4dba1846d73eb307efd3fb9502bc4d24142608459abd8cf2d3b606"
+    },
+    {
+      "path": "apps/palbeacon-ui/e2e/accessibility.spec.ts",
+      "sha256": "91043e9de764a92c7c5acbcf980a2eebd741a5044bdd114ad2ab4c275df898a7"
+    },
+    {
+      "path": "apps/palbeacon-ui/e2e/catalog-relations.spec.ts",
+      "sha256": "799e752c7537eae5725a01df24eb9b0b726f5e9d3e37ae7db30ae88e20f6fc93"
+    },
+    {
+      "path": "apps/palbeacon-ui/e2e/fan-notice.spec.ts",
+      "sha256": "754893ecda4909dacac0679caf4f8af98d6cb92d8eaeb3458eae71dfa399a453"
+    },
+    {
+      "path": "apps/palbeacon-ui/e2e/map.spec.ts",
+      "sha256": "0bc0b6b8e102193d52956ef9462f8f95a6538b56a595fba1d804483979abbdb5"
+    },
+    {
+      "path": "apps/palbeacon-ui/e2e/motion.spec.ts",
+      "sha256": "ed81bedfef234fab42f6212496975652483cc93cb7c485cb8d88d82e51924007"
+    },
+    {
+      "path": "apps/palbeacon-ui/e2e/pwa.spec.ts",
+      "sha256": "67ae7992fdc752c1a32194d2662af53754adbcfa5520e5a1ce16574a455c5591"
+    },
+    {
+      "path": "apps/palbeacon-ui/e2e/technology.spec.ts",
+      "sha256": "7e761258cd9c775db529668e4b1877ddbc946d0ee9108e9abc2f4a4bae233f0b"
+    },
+    {
+      "path": "apps/palbeacon-ui/e2e/usability.spec.ts",
+      "sha256": "32da2ab20aa6d35e9e5d2da624310cdcf757da44fb18991d6e892be0b129c898"
+    },
+    {
+      "path": "apps/palbeacon-ui/package.json",
+      "sha256": "6222560e630fa181d3a3dec61514003b45c1be5179479ceea6fa3a365c8a20a2"
+    },
+    {
+      "path": "apps/palbeacon-ui/playwright.config.ts",
+      "sha256": "5ceaf7c8bf78e782fabbace9a25136b45563577ec7be46aed7ce5463a442f959"
+    },
+    {
+      "path": "apps/palbeacon-ui/scripts/capture-flow-qa.mjs",
+      "sha256": "ffad01471b92ef20cb5f14162362688e79af4383dc598e5fb7ad2d2f8bcfa6af"
+    },
+    {
+      "path": "apps/palbeacon-ui/scripts/run-child-with-cleanup.mjs",
+      "sha256": "11dc813e41af7f08ad572e16479a68c7da39018bfaac10bca249630ae0f807da"
+    },
+    {
+      "path": "apps/palbeacon-ui/scripts/run-e2e.mjs",
+      "sha256": "caa085219c66d818fad73f50c60ed7a3617047af67b1f5364d28d52e8721b2b4"
+    },
+    {
+      "path": "apps/palbeacon-ui/scripts/run-pwa-e2e.mjs",
+      "sha256": "162b959c9b5b26369dd1a241fd0ee7de92fa1f1c24bc9b180e1c0caaeda3ced0"
+    },
+    {
+      "path": "apps/palbeacon-ui/scripts/sync-exact-data.mjs",
+      "sha256": "4e2f64c60d9bf47a2e19c455f203895109729b09b587e5d5d2c47a0a9f06a8b9"
+    },
+    {
+      "path": "apps/palbeacon-ui/scripts/verify-web-release.mjs",
+      "sha256": "ce5aee094d1824c884d12a3d29078fb2a981c2fb266fe5026ba9ea3c3b3bff0a"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/app.css",
+      "sha256": "c8ae75faaecdc00e5b80d8fd5087b49e6a2d013c25f3b4561fbf0bd983af99f9"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/app.d.ts",
+      "sha256": "da8b0b4a65653fc843f3fd165e12325bae31e83fb919786e389b7ab8c3cc2d46"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/app.html",
+      "sha256": "09b1b9c6b0cadc3fd62301d3ed0161b036315e20316279f44cd67b089d8c102a"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/README.md",
+      "sha256": "ea9194765dbaec95cbad517107ce471e58d8a500ce0544e6ef9ad733d99bacba"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/app/architecture.test.ts",
+      "sha256": "69243a77fafc618f0bb37d1e67dbcf9a5358016e9ae5051f161d3bace0156b93"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/app/data/runtime-contracts.test.ts",
+      "sha256": "1e4f83751da5c63f143e62953fe9985033d898051bf07ceb6ce7634791c5454b"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/app/navigation/routes.test.ts",
+      "sha256": "282db0dbef1f8b12426ec2092853d6f8e557926380bf5eda072c94717e8aa480"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/app/navigation/routes.ts",
+      "sha256": "6e7b60adc65b5981c2bef8195f7f59a2071a8b85f99e65ef6a612fa50593250a"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/app/platform/desktop-window.test.ts",
+      "sha256": "070cee6e26e49bb54f5fb061eb82b838db9886c6678a9452537d39261d17ac1b"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/app/platform/runtime.ts",
+      "sha256": "5ef02665986860bcfdfee1f110978ac958b128b6670abeaff3ab959a1934fbee"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/app/pwa/PwaExperience.svelte",
+      "sha256": "2e93d38c322f739e7feb532f89758440cbb952b73343b6a107d6b92201527f29"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/app/pwa/PwaExperience.test.ts",
+      "sha256": "cb87038ff7df9f3b571e19dacb7ae18f3fc77a6cf34de973a51ec98a46388b74"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/app/pwa/precache.test.ts",
+      "sha256": "957d1e8b51aaf7224a3524dbaf86d9c1b82889e0b2c382405f0b18825a3d0689"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/app/pwa/precache.ts",
+      "sha256": "a8476b5f82c3e94e497a43cdd518593b6d63215f9ce0c303f4c131668c609550"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/app/seo/seo.test.ts",
+      "sha256": "c8219cffe0e514a120f3aca610673ff1ebedd56d1b34f1f5844dadf9839679d1"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/app/seo/seo.ts",
+      "sha256": "1aa3a90a71c212331e8ad03dde0a1b53540aa77ffb056f2b47d932f114ee6e3e"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/app/shell/AppShell.svelte",
+      "sha256": "47f0e21a24a913c6beb8676f1b7ae99cad01ecf93ad9eb22a2188cc9c37e18eb"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/app/shell/NotFoundState.svelte",
+      "sha256": "d7b184f472abd43815d8804ba8b6b35fdd3e2b89f3c085b8d6672155143ae72b"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/app/shell/PixelMark.svelte",
+      "sha256": "2a8e98a0a6647ebaccee87575f1ce4ad84df8d36c39b01dbdcd205c67b613796"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/app/shell/StatusBadge.svelte",
+      "sha256": "ac43ddbed2bc280851dffc7dc91f7e25831cbc1150acb8da611e32d30ecb321a"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/catalog/BuildingCatalogBoard.svelte",
+      "sha256": "b1c2b842c7f2f064e54cc63d64de9fcc99ddb00f6aaf72118a7eeee0f3404f89"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/catalog/BuildingCatalogBoard.test.ts",
+      "sha256": "85b5d4acd265de50e74cf0173cebe55a397943f93d93b4693abc350ce88a8062"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/catalog/CatalogBoard.svelte",
+      "sha256": "7ed0440a936375db293d4214096d2f44771a9c63d0df303da692d10e7848edf4"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/catalog/CatalogBoard.test.ts",
+      "sha256": "e5ad95a92392601fb4a5d76f75342c75096a20290551104c9359c8a74051f739"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/catalog/CatalogPage.svelte",
+      "sha256": "44e2822d7ec955dea81c79467f089888232bbda59bd7a2ec6e978fc96fb74cfa"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/catalog/ItemCatalogBoard.svelte",
+      "sha256": "e775bd5b31d9bdfa5a42502f54f90c6b143a9913dc990726bb929c612e70a793"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/catalog/ItemCatalogBoard.test.ts",
+      "sha256": "533e07e1d8dacac2af3f4d9b25cd222538b3828232d59dfdba6073b6cb7c862c"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/catalog/PalCatalogBoard.svelte",
+      "sha256": "09979f2c3cd6b51b72fae3042c79f788dce3520fd51a7542f27a79d8354cf924"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/catalog/PalCatalogBoard.test.ts",
+      "sha256": "e032828e682930ec7221dc3aecae5a0aede46f9b6b4b50c1a5ea25b1bf03001b"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/catalog/SkillTypeNavigation.svelte",
+      "sha256": "4de766a4dd792b3ad2a63cedc0d7da84efe34fca1d02b9eaad6a22a04f5186f5"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/catalog/building-catalog.test.ts",
+      "sha256": "1ae79befd052a114d7ccf348102e9bc9fbc16d820b191c569dde1abfe0c4316d"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/catalog/building-catalog.ts",
+      "sha256": "2bf945ea5d8ec74721998c8e7fe14abf5873f2ef04b517c62daec4a7353c7c0e"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/catalog/catalog.fixture.ts",
+      "sha256": "f40fa965a8681e70293b26e3e5cd5debc50de47f0bd42320ce5935ed921edf98"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/catalog/catalog.test.ts",
+      "sha256": "dbdc44ef204ce9e74fcd8a5ccefcb1d12ac65e549c69e07c16322691390db67c"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/catalog/catalog.ts",
+      "sha256": "6c6e60e5bd4c4362036c60199d40b86c5a3e76d71bb6ac3eb73f4fefb361f03b"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/catalog/generated-catalog.test.ts",
+      "sha256": "9ee6d355f2f42423a738714c6ddccc139c5fd47e1609bf26346e47c20affb620"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/catalog/runtime-schema.ts",
+      "sha256": "9093895b71f610f30cd5f9c13f1930cddfed361dc04c9bb3729b70c360bae187"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/catalog/types.ts",
+      "sha256": "d3a46ca251b75cbe0f788ca3c6a4626840751f80b4ac56b33b6307788b70d9c4"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/connection/ConnectionProfileBoard.svelte",
+      "sha256": "97ced42b97eb71416fa5788870de7415149fd2ddf402afde52bac516348514d7"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/connection/ConnectionProfileBoard.test.ts",
+      "sha256": "c01a62be2da99255dada0aa574af28c44e555f33a474e2f5378335ff6b6b90d6"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/connection/OverlayBoard.svelte",
+      "sha256": "ab4665372aa5b327509e610478a480dbb7a42f66db9747ffd255633aaf5b496b"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/connection/OverlayBoard.test.ts",
+      "sha256": "1eaab39ce70f419d736fe5249174012cfd6c66304f1e3ad2aa0ae494bed1a52e"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/connection/OwnedPalPanel.svelte",
+      "sha256": "6e1e5dc7281f21de999e5cc45ca54cbfdd1aafa90426cf620c0561395684fffa"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/connection/OwnedPalPanel.test.ts",
+      "sha256": "cc70cdbae85b986fc7f9b686e32c2abf71ba3ed75418c4a792bfed924dba8061"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/connection/ServerProfilesBoard.svelte",
+      "sha256": "c9d3869a0a3eb3947026eec1804d6c9dcde8a756c6cbecb0571fd2acde34774a"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/connection/ServerProfilesBoard.test.ts",
+      "sha256": "e737b29aa7f5e9a582795e0bf89c5c6ed5263d1d09269b1b247959f52e57d63b"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/connection/SettingsBoard.svelte",
+      "sha256": "5ae7be54492afb63f16e55c96bb73a981982a7151851dbb5d37c8a27251baede"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/connection/SettingsBoard.test.ts",
+      "sha256": "2ad2238f51866f3b2b36030f2e19229d7edeb85e0799ab80b8b019288ffc9786"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/connection/connection.fixture.ts",
+      "sha256": "23d5668334c1354ae1f1ecc0f3f8b4be7f05a616325f34c575f18881513557c4"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/connection/generated/native-command-contract.ts",
+      "sha256": "33268200c95a7cee271e7367fdc32aa5f2d85a9918131a9caa5bc7694157ebe8"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/connection/native.ts",
+      "sha256": "b9e6bd354a4cfc69e21d5c13d5bb1e4db982d6743b6462e901e38b107fed536a"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/connection/types.ts",
+      "sha256": "59d67a9b77172c66943afb477256011f9ffcd4fdfa0f186edc06aa280dbf840c"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/map/MapBoard.svelte",
+      "sha256": "babdb42dbeee46960e9bae48e1a37c635001e8b98ed8b070479f1433c1de8967"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/map/MapBoard.test.ts",
+      "sha256": "262bbebfeba6375fa12afe644f71dcd566fdc34fab0b3444975f2c71854b799d"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/map/MapPage.svelte",
+      "sha256": "4a9d8e46c959cff0c781a3d1f3c95999a1120f473bfee225909dade76ce09f70"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/map/MapPage.test.ts",
+      "sha256": "06d28e47c083eafd1634fde3d6ea1569ead4367f486da4d3536a82b099eb7ce8"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/map/data.ts",
+      "sha256": "269ec8d2568ba9e622261e80d171f11e01c48d52598f9ab05cdb308daa0973e7"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/map/map.fixture.ts",
+      "sha256": "a27b386b657dbe486b44dd4838050bf4aa55d7b90dc21c35755c8a06301be80b"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/map/map.test.ts",
+      "sha256": "0d535ba9615b241eee30be38b5bcfe0a63b16defa2072aaed4d621bad0382e51"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/map/map.ts",
+      "sha256": "032431edf055b79e0ab72ee1064c64cc6d41d78735b8df5c923fcb184b3be352"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/map/overlay-filters.test.ts",
+      "sha256": "b10f9ce5e702593884e9b6186cc18344a1ba4586ef52a6fd955f3eeec85c2221"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/map/overlay-filters.ts",
+      "sha256": "1c6fd466214c86d609761ddd97094e241c4116cfdbe27a8ad937d7154b52bc7d"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/map/runtime-schema.ts",
+      "sha256": "63060b7a43ae37c695ae344127f9a177427738ad9812af934dac76f553882d93"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/map/types.ts",
+      "sha256": "7311e10d5190d41071e67c00f0c4acc2309031ab716cde5b0e7c874a5a10adfa"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/personal/PersonalDataBridge.svelte",
+      "sha256": "62a2b1cdda5073354e410cc040c52152bf1d32f3c21da87cb0aeab1112c13dcc"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/personal/personal-data.test.ts",
+      "sha256": "e946660e03b8181a14dc9cf5cca402dcf5dd34fc225f5bfccde587e8397fda52"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/personal/personal-data.ts",
+      "sha256": "52638c2b44d214d649a6210e3fe8b2c0ef435947cda07a12990141957f4345f2"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/shared/data/display-text.ts",
+      "sha256": "63803db78c920af8af46e81d15e3270ba746186c563148929740b1ec7a2b3161"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/shared/data/parse-runtime-payload.ts",
+      "sha256": "906ae50892ee346affce701cc4703cc4b0c599788dd1328d2a25584e24d61e5e"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/shared/format/user-number.test.ts",
+      "sha256": "6a76060d5c925603cebea849d48853abd1718a483c7390dc0703474b198b5495"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/shared/format/user-number.ts",
+      "sha256": "47f57fdda1469f5332534e8800b1513e0e3c22557c47e56e57cb4472c80fc11f"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/shared/navigation/query-state.ts",
+      "sha256": "70ed5a5afedc492307503f981cf54dbdecbbc4a8cf9e7e46a09117f7aa4d64de"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/shared/platform/tauri.test.ts",
+      "sha256": "773ce0a20bb705adfe67ad65fb37edbe62130a20287e7813da0dfade1379034c"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/shared/platform/tauri.ts",
+      "sha256": "9e20b553ee2c6758684743d6cff5696553e17d1fabca354986cbba1080b4e2df"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/shared/search/search-core.property.test.ts",
+      "sha256": "6af26c6edcf477eedf52ab9b63ebfff4a30bb3d563d0c32f3e87fcc6af786b80"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/shared/search/search-core.test.ts",
+      "sha256": "5297df1bf6b2f206b975bf5dd14ecb3bbd7eefcfc0b3acb2a15951f7f10d3a5c"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/shared/search/search-core.ts",
+      "sha256": "306218c883f3b1690872a551f878d718951e4f65def88525a391175d824dbfc8"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/shared/ui/AsyncRouteState.svelte",
+      "sha256": "f9a6bd49909e4dce8e22312dd2f19c68e01968937b29d7621cb5e418ea6576e1"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/shared/ui/AsyncRouteState.test.ts",
+      "sha256": "d0039cf8d3af49710cc8b7ace4e78c98f4009f0e804defbf30ef6a20ebe20fa5"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/shared/ui/PalCheckbox.svelte",
+      "sha256": "dd2eb7020793530773f9b08e33e825fac2a4c6638ddc170d625a08e5d797d299"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/shared/ui/PalControls.test.ts",
+      "sha256": "070661db4d869132a8f0ab4a54804b59b4fe83f17f9291bb875c89370ce05270"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/shared/ui/PalSlider.svelte",
+      "sha256": "b94c95c0050896a1b5c45920139f84b718d814b0915b6c9117a9acdcd89c6bdb"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/shared/ui/PalSwitch.svelte",
+      "sha256": "403cf575f06f01ea06e01ef5c6e062447e298139757faf7cbb7eb1bf17bba2d1"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/shared/ui/design-tokens.test.ts",
+      "sha256": "326e49f2b60f22feaf259d67b9e47063218721954916b7506baa5eee137ccfbe"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/shared/workspace/RecentWorkspace.svelte",
+      "sha256": "d9607fc00ae06a06923b3e96756c48e8fb96c87f2f9580b7d9035de43c1d0cf1"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/shared/workspace/WorkspaceAction.svelte",
+      "sha256": "98616cf95e0cdd050b75dc3a0ee846f6995133d0a44defd42c1994808ff77554"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/shared/workspace/WorkspaceTray.svelte",
+      "sha256": "d5e093ad9610b6c6e15382ccf4f03ff803f419864ef4d556238186733f2e847f"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/shared/workspace/workspace.test.ts",
+      "sha256": "413e252fb1458235d12d44a59ca613490d7de59b976300f7086f8622b0a7a6ee"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/shared/workspace/workspace.ts",
+      "sha256": "084cd9af66e1017fde32a7ad27b0dcccb3695df1d76f7c6d2d0ae5c5894972d6"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/technology/TechnologyBoard.svelte",
+      "sha256": "572fdb6f2b4f749503395c017825e27d5523f9562b2575f69953ec35203c63bb"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/technology/TechnologyBoard.test.ts",
+      "sha256": "7cb82521121051a6c3e5e5113735971eb58fde9e5ae6522df82f2b54609a545a"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/technology/TechnologyCard.svelte",
+      "sha256": "f3bd7686a5024f6bfafa9bf60aeec8921a79843ea20e3bc4ca3d030d07310032"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/technology/TechnologyInspector.svelte",
+      "sha256": "3082a62081401131a9a27132e1034da4080294d341037799d9ce05af2bdef579"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/technology/catalog.test.ts",
+      "sha256": "6054d2b48de2a2fe63be1518b0e43e8e5cfcebc909a4a920e545271f99fc6247"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/technology/catalog.ts",
+      "sha256": "d6909779eb9965607e32331019f9ba685e7eac196e56e526986be3fdfa487397"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/technology/runtime-schema.ts",
+      "sha256": "115d74f548c6bedefa4cabee61aa1a08552d47a65f0cb664ea24917042fee55a"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/technology/types.ts",
+      "sha256": "110eabb8a3018975ac76197262679b858fde30950711a83caec9b55088a9610a"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/tools/PlanTransfer.svelte",
+      "sha256": "8aef8295dee161e59b1e3ffda6f258f6f58fde218e9d8b22277d3ced727729d8"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/tools/ToolsBoard.svelte",
+      "sha256": "8f5bdad2c758a7856dea97b0b2f40251e459d007df2670b2e1efa5623b5f1f1d"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/tools/ToolsBoard.test.ts",
+      "sha256": "357d475b161808fded270921e86968f5587a638e1b4d09c6de0b55c357877811"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/tools/ToolsPage.svelte",
+      "sha256": "8c75e930fa44ce2f5a9c60a8805165e7beb897f3a623886957083122c67b00bf"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/tools/plan-workspace.test.ts",
+      "sha256": "8c67b846e84a173c6c3a49d5424c1abca8fdd4bf3f469cfd008e76f0935a1a7b"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/tools/plan-workspace.ts",
+      "sha256": "d9eafbb08cc3484d35a91721c1d9d3d7acd1fe21b0a7e531ec88e2cfcce88744"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/tools/runtime-schema.ts",
+      "sha256": "89c776e3001f9013459f301b66f134edd030c4970f164e84797a8a1a12fe5f29"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/tools/tools.fixture.ts",
+      "sha256": "a6957332f5262f65e4b08a86366dda4b3f9aa80fb0600f822495a6c0f4b2b56e"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/tools/tools.test.ts",
+      "sha256": "fe7a3261a135f8a2516530b84d979a4a1d597154b06225f1e1c368608a5a1cd9"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/tools/tools.ts",
+      "sha256": "a39a93ac0ab9d81b8696aa3ad215dd3acff72e63536e9f86290ad4afea415bcd"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/lib/tools/types.ts",
+      "sha256": "8df72a799270f1e64c50554dfe1c0d1b6936355c82518345291beafe4c4176d1"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/panzoom-es.d.ts",
+      "sha256": "f5e78bc803192cc5ec9da4f278f8d1c42cec2ad04ad9f17eb9051400f2b19b93"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/routes/+error.svelte",
+      "sha256": "2e12ecc65e4c1dd9b1e2b38a4b6136e146f33735f816e24c3ca1979ef68fa130"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/routes/+layout.svelte",
+      "sha256": "b54d804b93a861eff1b6d53638b954a6f2ee72347f38f761fe09bcf99326cf2e"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/routes/+layout.ts",
+      "sha256": "c187aa2ff5f22a506619676c9adaa70bbf6bea1ca7e369f6a7477393cf9a2b4e"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/routes/+page.svelte",
+      "sha256": "5e7f2e17dee8d4f324a4a752670d8f7b0a7dc07cf57db84ff864e9ec5f185122"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/routes/[...path]/+page.svelte",
+      "sha256": "4447db97c7df8541f1c11a9254d8c69ce1ecfc7d17c98f58e271c651ccac8f67"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/routes/[...path]/+page.ts",
+      "sha256": "864987402608429717bfccb7bbc0e157c1193ff34e273216c8ef8a37b76fb8cb"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/routes/buildings/+page.svelte",
+      "sha256": "978a97ef821ca383e7bccd9a5f4cd78160630519a33540fb9e7a6389d50fdf83"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/routes/connection/overlay/+page.svelte",
+      "sha256": "1fd9bfa978d1672a0cb4d6ae5d44379c60cd1d4e8ea5d70e7be31106f9a1bd3a"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/routes/connection/profile/+page.svelte",
+      "sha256": "fc82a5ff68181a199d7708f2fea16dd044cd05a3cd674bd6cfda9f1176deb84d"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/routes/connection/servers/+page.svelte",
+      "sha256": "2c93fbc586473c83624c727afb0ed1fd7d0b0032eb21c1be4ea1ee3609ffd0aa"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/routes/error.test.ts",
+      "sha256": "bec6dc9407e32842621209d87edd24458ed816c1efb119cfa62a555cac1e3eba"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/routes/fan-content-notice/+page.svelte",
+      "sha256": "6dea6f01e0800f0b5b0a188a494283cd0aef48988d43bc08b614066749e29f87"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/routes/items/+page.svelte",
+      "sha256": "be89305221522a21613ea3ce027924ad9cd456e7bc2347ef8aeb5cf03710a9e4"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/routes/map/+page.svelte",
+      "sha256": "0e11ce3e19f3248e348893f0c09183c13a857f570c783003e0e257571912ee32"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/routes/pals/+page.svelte",
+      "sha256": "e52e373c99343ae2fbbb121b98f3f53684604a4f028e63c647be58a427411f07"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/routes/plan/+page.svelte",
+      "sha256": "f61c1d609b2dc44a5399b499222ed5d56593d268f63beb15139cf7788e99a8d2"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/routes/plan/breeding/+page.svelte",
+      "sha256": "8b9891ee25c677eafc6240686a8baa944337a60cf6d3d01cf19831a42f202aa8"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/routes/plan/compare/+page.svelte",
+      "sha256": "42adb42d47d0a2f579c654af63c8a89dc3860d0e6c4bd460a2f8391dc02a0e0f"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/routes/plan/materials/+page.svelte",
+      "sha256": "1742b4b55d64a7d2ce3beffab60fa76eb8c0b1832282394d9a734d9b1cf63cf7"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/routes/robots.txt/+server.ts",
+      "sha256": "05c4da5915d2586963c554ec68db27813b90a36f9d087c113fb69c8a1df0e6ea"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/routes/search/+page.svelte",
+      "sha256": "162a470a3a02a55938dc761164f9dbf0ed7096581c20b716c2f9c8a54b3e0567"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/routes/settings/+page.svelte",
+      "sha256": "360603b2971ac93f21229a0b656a44946cf834c8ffa45ad1de992182e09fab89"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/routes/sitemap.xml/+server.ts",
+      "sha256": "79d04916971fa53b03cb431e022c2253f72ea86fde76d97585068668e9dfb7b5"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/routes/skills/active/+page.svelte",
+      "sha256": "82662c4493a734881e9cc0619f336c4b75e88dd8ea523470b0f148b731b5b3e6"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/routes/skills/passive/+page.svelte",
+      "sha256": "3ea652ac8b56c23d5b2eb8d37da5219f016d7af467393504a3db3ab53c0f133d"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/routes/technology/+page.svelte",
+      "sha256": "442125c0d68fab090892fae483cfecf9232175c620f9e857eba5ede8a7512390"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/service-worker.ts",
+      "sha256": "edf583c8ecedd8a353af6ec177cb7b5935bc11a26b9420d7a89d1f7952b2301e"
+    },
+    {
+      "path": "apps/palbeacon-ui/src/test/setup.ts",
+      "sha256": "136eaa9df7a3b4663329692b4996c6a0aa021fed52fcd54776e8552dd74bd7c9"
+    },
+    {
+      "path": "apps/palbeacon-ui/static/_headers",
+      "sha256": "3269fa71a991c104e4750a5678d3d94bfdca00c1f74785b3c089c7088539a21a"
+    },
+    {
+      "path": "apps/palbeacon-ui/static/manifest.webmanifest",
+      "sha256": "20779d5a97e89d7c23da3efa449bd231aebd1b709f23a085426116d5bb895f2d"
+    },
+    {
+      "path": "apps/palbeacon-ui/svelte.config.js",
+      "sha256": "d4494081efde06f7b156b880c28802005946b21f855b413d9e2c9caee62fc4ab"
+    },
+    {
+      "path": "apps/palbeacon-ui/tsconfig.json",
+      "sha256": "d2ebfdd37c47b5e863cf3bf1b1060b0c42744715e52d9ef3095e831e08fcec9e"
+    },
+    {
+      "path": "apps/palbeacon-ui/vite.config.ts",
+      "sha256": "3d0d0d047047a123ac588f8b78c0667e18b8bb7a436082799fbbac68fa7ce0b1"
+    },
+    {
+      "path": "buf.yaml",
+      "sha256": "cda77ecb967cfa30c9ecfcbf9708190c9d159fcc1c8a7f44d16bb0c847f04e89"
+    },
+    {
+      "path": "cloudflare/README.md",
+      "sha256": "ea0b7c024a15f37f6f0959579d837e3b0a7a35361a9106cce4995553e166e83d"
+    },
+    {
+      "path": "cloudflare/fixtures/projection.demo.json",
+      "sha256": "fc784c4844d932fd9ff8340ea3355d63dabeb87e15013aef896dd3ae1dad9cac"
+    },
+    {
+      "path": "cloudflare/migrations/0001_private_companion.sql",
+      "sha256": "3a010c0e7fa92ed15c7f8e0b4c80a5facf05a9c03030cb864ab1abd0f9a0d73c"
+    },
+    {
+      "path": "cloudflare/migrations/0002_catalog_search.sql",
+      "sha256": "2c5ee2d358dca25a6f3f2ba6ca32867c156449fbc7077b22404e19ff790e0b9a"
+    },
+    {
+      "path": "cloudflare/migrations/0003_catalog_species_detail.sql",
+      "sha256": "1dc3b4c3bfb27da1276b07eaac0fc9ef4156842bc7fe52fadc2b50afe6eb1a5a"
+    },
+    {
+      "path": "cloudflare/migrations/0004_catalog_skills.sql",
+      "sha256": "5c0f7a5609e454db8aaf57fcd10d87bb2dd047b14023dff93aa3c63d9b46f669"
+    },
+    {
+      "path": "cloudflare/migrations/0005_catalog_items_detail.sql",
+      "sha256": "b7502ebe45010dee97f007e732b2449e0be9f9a416fea63001fc8c7a9cdb06a2"
+    },
+    {
+      "path": "cloudflare/migrations/0006_game_build_compatibility.sql",
+      "sha256": "1a45c132dc86b361f3c5a1f818f9cab491969aad6b0ff431176b45884086451d"
+    },
+    {
+      "path": "cloudflare/migrations/0007_knowledge_graph_wiki.sql",
+      "sha256": "10c163b1185ae4505f6ab045af872106cf911d94362a1c33060ce32aa5934080"
+    },
+    {
+      "path": "cloudflare/migrations/0008_knowledge_operations.sql",
+      "sha256": "dfad5afec03a43b0c0f09ed0ffa02f5f52206dd4765710c911f0c54c6ef78779"
+    },
+    {
+      "path": "cloudflare/migrations/0009_knowledge_operator_review.sql",
+      "sha256": "7bc4f082d3a3c1d3eba56d2c3d4ba0322c58ec4d113ac656ae36e4681c7f8244"
+    },
+    {
+      "path": "cloudflare/migrations/0010_knowledge_review_pagination.sql",
+      "sha256": "5b9f95998e6afc22567dbaef1d7d10091bdc0032421d68c64483b1479b85c277"
+    },
+    {
+      "path": "cloudflare/migrations/0011_dataset_scope.sql",
+      "sha256": "c7c684c30e450bd76b428e0c3ff7ace4d55009d4d3a13d1ce1afcc90da23a67f"
+    },
+    {
+      "path": "cloudflare/package.json",
+      "sha256": "a180b3b94f0a40a6896ceca460244dd02050f7268806063438c56535ea75a566"
+    },
+    {
+      "path": "cloudflare/public-media-policy.json",
+      "sha256": "d3b8f3fa383c79ab0b1a5a9852f5570d4e5c8a2d36e98725600fd3795879c1e7"
+    },
+    {
+      "path": "cloudflare/schema/post_migration_triggers.sql",
+      "sha256": "02ceccc042d6778008c4e2707ac863d09f82e3d23e049425081ff974284ed62e"
+    },
+    {
+      "path": "contracts/map/v1/README.md",
+      "sha256": "0a0fa4e5517d22f1500f2fe4ad949174ff43394edfd59c6b2ea25137939a8c6a"
+    },
+    {
+      "path": "contracts/map/v1/manifest.json",
+      "sha256": "d137ad02d373e48528233c2f8171368ab7fde9cda71556c1ba79334a4ae42932"
+    },
+    {
+      "path": "contracts/palbeacon/cutover.v1.json",
+      "sha256": "34693dcbacc1b66ea2dd494b6d830e9ce699fe63750b894d0dd589800aecaf07"
+    },
+    {
+      "path": "contracts/palbeacon/design-qa.v1.json",
+      "sha256": "b3f566a6eb65c8bdb16c5c090e5c98c7c5716086e8d243a6e96209a00caac880"
+    },
+    {
+      "path": "contracts/palbeacon/platform-capabilities.v1.json",
+      "sha256": "9d810e95405ac75e9b9e5d49b20cb90fc459dcb8d59201fa04f40547db2142ac"
+    },
+    {
+      "path": "contracts/palbeacon/routes.v1.json",
+      "sha256": "e23afb09e4553c0eb209c75904a845da8d09856aab2267d50b28ef5fee53ea6d"
+    },
+    {
+      "path": "contracts/palbeacon/ui-states.v1.json",
+      "sha256": "3cfc4350dae7fd624e83571ba67e17467b67a5708fc31fb66dbd77eccdd94f07"
+    },
+    {
+      "path": "contracts/palbeacon/ui.tokens.json",
+      "sha256": "84c65119d1060f969ed7c87379809b8836d8eb0f29f004cfb73f72c8ae47f06d"
+    },
+    {
+      "path": "contracts/palbeacon/usability-qa.v1.json",
+      "sha256": "3c7c5300f7ba1798f75e4eed1c18a99249e726ab5873dff54e164b964338abf0"
+    },
+    {
+      "path": "contracts/runtime-builds.json",
+      "sha256": "977339275d73d015006643a63ffa6694a148d45c68733bedb719d0a27c68d575"
+    },
+    {
+      "path": "crates/pal-agent/Cargo.toml",
+      "sha256": "155a43e76505e38704f1ae3c8357eecc10ca65c5095bb10d5158d5786babe428"
+    },
+    {
+      "path": "crates/pal-agent/src/config.rs",
+      "sha256": "8622028dc8839dfa1d4f5c95432bc6e7390a862d2cfaeee5771b46b872dd205d"
+    },
+    {
+      "path": "crates/pal-agent/src/gate_profile.rs",
+      "sha256": "40cab0a80c51806586505a4ab493f1af2827a6e7e5511fe9d69de8384ec57a77"
+    },
+    {
+      "path": "crates/pal-agent/src/health.rs",
+      "sha256": "e16f3880203affc86bbbae28f9eccce03eb270765fcd25804a1ca43abcb9cbc9"
+    },
+    {
+      "path": "crates/pal-agent/src/lib.rs",
+      "sha256": "87e1252b009dc56f994cecd8ef83e24836cba24ca3ec81bff1f8a18c5d88c4c4"
+    },
+    {
+      "path": "crates/pal-agent/src/live_process.rs",
+      "sha256": "1062c1fb2c4927572d47c60221a542b35c187759d383f8372e07ac72cfb52761"
+    },
+    {
+      "path": "crates/pal-agent/src/main.rs",
+      "sha256": "6bec87445d8afecba52ad7e40c117475fc85bc785e70ca53834e769efb51a9ea"
+    },
+    {
+      "path": "crates/pal-agent/src/metrics.rs",
+      "sha256": "626fed5b38da7dd7d9e82a765e8b7c087fdd468c13f73421a2671e25e9262d22"
+    },
+    {
+      "path": "crates/pal-agent/src/pipeline.rs",
+      "sha256": "95c7e88b2a66b0ddb057c6efe8928c59861fd65d4685dccf7df02c989352b6eb"
+    },
+    {
+      "path": "crates/pal-agent/src/poller.rs",
+      "sha256": "ddad15336bcc39c421edfae222626dabb9d2adb7fc4446a98702afd5af8b3ed3"
+    },
+    {
+      "path": "crates/pal-agent/src/single_instance.rs",
+      "sha256": "acec26d2bc29bc3751d4716c86b1cac800fa569e4dfae8bdc842188d8f8eaf47"
+    },
+    {
+      "path": "crates/pal-agent/tests/gate_profile.rs",
+      "sha256": "b6f9acbb771e86ac3cc0c941686ae5f133e1ad811aca2e85b6d1b3453ee8da9a"
+    },
+    {
+      "path": "crates/pal-agent/tests/live_process.rs",
+      "sha256": "e79875c8fbbcb7483d34c3264f18d624418bb6422f7ee912b41e518d87613d69"
+    },
+    {
+      "path": "crates/pal-agent/tests/poll_no_overlap.rs",
+      "sha256": "d4c06ab75eed9ffedf770da86dc45e7912f1915962262c1820b938e0cea9be3a"
+    },
+    {
+      "path": "crates/pal-agent/tests/privacy.rs",
+      "sha256": "4004956693acc669dd5fd438ccaae92905629f74b093641ff6227389fd98d849"
+    },
+    {
+      "path": "crates/pal-agent/tests/production_startup.rs",
+      "sha256": "4eb37c9e5dd6e86efb04d8a1d9d817703b4b83b0fe6b1368310e6a01a984696c"
+    },
+    {
+      "path": "crates/pal-agent/tests/rest_to_stream.rs",
+      "sha256": "a16a801c9cf5519166244f5ca1993a4f0497cfd769dd3dc9c6ba8549ec2d6893"
+    },
+    {
+      "path": "crates/pal-app-settings/Cargo.toml",
+      "sha256": "fd808ced44079cce2d0d62fbbcfdbcc2fdabd9a2f6809cd36a02d1516f226421"
+    },
+    {
+      "path": "crates/pal-app-settings/src/lib.rs",
+      "sha256": "10d08709c86de68326c997cc35e382bae7c66f8e1e7e951590f8e14e9660a191"
+    },
+    {
+      "path": "crates/pal-app-settings/src/server_profiles.rs",
+      "sha256": "c5217c4d9fd302dcb76b7f89a4a49a4f2743fd7ef8af136aad9852d91bcc1d6f"
+    },
+    {
+      "path": "crates/pal-build-contract/Cargo.toml",
+      "sha256": "7aa9a9ae7e555fb71b39362a928765acbd64377bcc4b8faf31bc92c54f45f028"
+    },
+    {
+      "path": "crates/pal-build-contract/build.rs",
+      "sha256": "98f650393cee7d5eec77890d6373c8de15839381f74dd20e7bfac5f7f3638c64"
+    },
+    {
+      "path": "crates/pal-build-contract/src/lib.rs",
+      "sha256": "57d59e3a30a28f8882c3367dc2c6348715b78d403d5344acbce1f7418395f1b3"
+    },
+    {
+      "path": "crates/pal-catalog-worker/Cargo.toml",
+      "sha256": "ede5d945f079cb7a4799f8ca9fceb45fc25ff9d22183d29a69934c1307eb17e5"
+    },
+    {
+      "path": "crates/pal-catalog-worker/src/main.rs",
+      "sha256": "ed2d77dbd213cff09c42d22482198a616afc8a32e92e831e102ed2f34407b68e"
+    },
+    {
+      "path": "crates/pal-cloud-client/Cargo.toml",
+      "sha256": "65018732ecd61ae8392e72b652da233c1bc529ce0323179775f41ca36e97bf37"
+    },
+    {
+      "path": "crates/pal-cloud-client/src/access_auth.rs",
+      "sha256": "f586f04159d7251790557daebc3ebd890ac99a4ffa558ed0741e1f183ff3fce3"
+    },
+    {
+      "path": "crates/pal-cloud-client/src/cloud_error.rs",
+      "sha256": "a27c03546394496118d046eeef9f00b1e1282465f5504f876e5cb1961591b3db"
+    },
+    {
+      "path": "crates/pal-cloud-client/src/http_client.rs",
+      "sha256": "3fe335aeb41062a1bba13d0bf59fd304eff959db0bbab4e5a9cd51f971991d72"
+    },
+    {
+      "path": "crates/pal-cloud-client/src/lib.rs",
+      "sha256": "04cb53b6b841d9f23af8e7d5eb93b6ecd179e6399ff4baa7593feec4f9d23d64"
+    },
+    {
+      "path": "crates/pal-cloud-client/src/loopback_callback.rs",
+      "sha256": "e647e0044941c0a617edd0187f4dd88e4d04a5565001fdef54d17b97142e265d"
+    },
+    {
+      "path": "crates/pal-cloud-client/src/oauth_discovery.rs",
+      "sha256": "5e2939eb889626e4a1cce58297a36ccd0d801db89fe98fa4385a85a619704541"
+    },
+    {
+      "path": "crates/pal-cloud-client/src/oauth_metadata.rs",
+      "sha256": "1a6b1c2b1a1b7d28ee5524458d1a7d421aa674d07d30ec79450badd4573c46e1"
+    },
+    {
+      "path": "crates/pal-cloud-client/src/oauth_registration.rs",
+      "sha256": "51638f83d8f7c2b768ec61d1657a5ad595311e3a0f66b1296e9c9618cd4e84d3"
+    },
+    {
+      "path": "crates/pal-cloud-client/src/oauth_tokens.rs",
+      "sha256": "389356afbbe3945ff7fa1e57b57dccf3481ada97867497241747bd7fcbe802dc"
+    },
+    {
+      "path": "crates/pal-cloud-client/src/pkce.rs",
+      "sha256": "77e3dc635631cb65ca301d86e51b5360eed0568049ceeb72caa8dd0398b00cd2"
+    },
+    {
+      "path": "crates/pal-cloud-client/src/system_browser.rs",
+      "sha256": "9f3ce27444867aa28d25d17953eba4ad7b7bff04057a94b3be4f86a5fa6a6091"
+    },
+    {
+      "path": "crates/pal-cloud-seed/Cargo.toml",
+      "sha256": "376dffee1f49a082fe4c87c59ba11199f23c13e37dd1aa4cfd5e7def33c95ae3"
+    },
+    {
+      "path": "crates/pal-cloud-seed/src/knowledge.rs",
+      "sha256": "b9c1e6f7829d54ac7d5320dccd39a2f66e40c940b9a10f0c745db5c32598eb12"
+    },
+    {
+      "path": "crates/pal-cloud-seed/src/main.rs",
+      "sha256": "7e0672e4db2197d9bfaac2452712a1e793c643ede79dd0101922989b5de86dc8"
+    },
+    {
+      "path": "crates/pal-cloud-seed/src/quality.rs",
+      "sha256": "72677bc6bfaea3ad8a9d374927c25d55d4e0fe1a2a43f817408b19a851b2403b"
+    },
+    {
+      "path": "crates/pal-cloud-worker/Cargo.toml",
+      "sha256": "d69a3cca740bcc9370fc313a186724229ae03c7b222037daff83b14ac367c2da"
+    },
+    {
+      "path": "crates/pal-cloud-worker/src/access_token.rs",
+      "sha256": "db601cc2ecf70beb284a6aa4c6f855ffc4400a38ed65badd4e79b04f0d8de772"
+    },
+    {
+      "path": "crates/pal-cloud-worker/src/build_policy.rs",
+      "sha256": "6aad107109e107d9e0dc88153557ea41654708ff2a1c2720153034467b080738"
+    },
+    {
+      "path": "crates/pal-cloud-worker/src/lib.rs",
+      "sha256": "fc4f0c71315949502a52154f6b6098f9dc0ef1b85fc1080b9a9ec88c103372a0"
+    },
+    {
+      "path": "crates/pal-cloud-worker/src/list_pagination.rs",
+      "sha256": "304b23489f2f5a3bdc72f8a1e86c6706c092ff567148b7f4ddac3bbdd2b59c46"
+    },
+    {
+      "path": "crates/pal-cloud-worker/src/public_cache.rs",
+      "sha256": "be76aa3dd3c44f184c9cb90d7b8ab91e09dafb9a2e8dd2657b708a2341c408b7"
+    },
+    {
+      "path": "crates/pal-cloud-worker/src/public_catalog.rs",
+      "sha256": "43aefd0573709e35eb1f8b78ed2effca727d9e4b494e38b679fe717d22c5eb60"
+    },
+    {
+      "path": "crates/pal-cloud-worker/src/public_media.rs",
+      "sha256": "dfde9da90ebc3a9bdc79da0f98ea6100ccbffe2417d5b818b3358f425025a2bc"
+    },
+    {
+      "path": "crates/pal-cloud-worker/src/runtime.rs",
+      "sha256": "a0589eb20329e16e56a96d8f6a6e69c8262178721c28b4722e923206bad87aa1"
+    },
+    {
+      "path": "crates/pal-cloud-worker/src/runtime/knowledge.rs",
+      "sha256": "9ace0d5cc91d34ba847c317072bf84221e6e5144c14eb16ac9eac042a1970af1"
+    },
+    {
+      "path": "crates/pal-cloud-worker/src/runtime/ops_knowledge.rs",
+      "sha256": "1f2b8318f69a14121ee8bb5bdf1c86390158966b594587f0ce6c53a78ee25511"
+    },
+    {
+      "path": "crates/pal-cloud-worker/src/web_visibility.rs",
+      "sha256": "e4701ebefdfef0faed91b89bdf8ad10845282189cccc71222e655b5d2ffebed6"
+    },
+    {
+      "path": "crates/pal-cloud-worker/tests/d1_migration.rs",
+      "sha256": "b0b87e20988fa8b9d327fa2034da261db4ae31264555a8be4c6f3c19a3904c9e"
+    },
+    {
+      "path": "crates/pal-cloud-worker/tests/knowledge_graph_migration.rs",
+      "sha256": "03067f5db8ffa773099572107f315ee89132d2fe2fce72241523f7590e9a4f33"
+    },
+    {
+      "path": "crates/pal-cloud-worker/tests/projection_fixture.rs",
+      "sha256": "a1f6fc91ea86437e55860459cd8b1d4287f3221e404c4e04c19edb18650cda7d"
+    },
+    {
+      "path": "crates/pal-companion-service/Cargo.toml",
+      "sha256": "3559bb9ca00cedf8478c1f5796e9992ce27461a5d45b9cf9af6860f2df91c290"
+    },
+    {
+      "path": "crates/pal-companion-service/src/access.rs",
+      "sha256": "aa26114ab8fa1cb2cc5dd9b5c584bff156cc41d07d83bd79beaef96331a5eeaa"
+    },
+    {
+      "path": "crates/pal-companion-service/src/assistant.rs",
+      "sha256": "a7311532d584e351677704b6b4f596ed2efb97e5d2bd21fd7c20115b3535385e"
+    },
+    {
+      "path": "crates/pal-companion-service/src/breeding.rs",
+      "sha256": "3cf018dc16350fef2d3638c89299863931df50712a74abac7b20dcc57f42b33f"
+    },
+    {
+      "path": "crates/pal-companion-service/src/lib.rs",
+      "sha256": "06644132df2793ebbda316ba86500f5f0a81e6862d4f85487b1524383fed7103"
+    },
+    {
+      "path": "crates/pal-core-win/Cargo.toml",
+      "sha256": "98fbc1f3cd66d8c600e5175bbea0e14b795f409ae3bdfefdb37f709b9b2a6ea6"
+    },
+    {
+      "path": "crates/pal-core-win/src/approved_map_pack.rs",
+      "sha256": "ce6fe24690c1a0e1a4963c7e434cb3476f004923278ddf9eba99141ff982a986"
+    },
+    {
+      "path": "crates/pal-core-win/src/control_session.rs",
+      "sha256": "42c094c6544077c4ef4bc797efe486ba95bafd40cca6b74d2e0280c367c8522a"
+    },
+    {
+      "path": "crates/pal-core-win/src/ipc_runtime.rs",
+      "sha256": "98ea4e5d810baa0f3710b939ee1c95409be0d293c980a9726ed5817617cb9ea4"
+    },
+    {
+      "path": "crates/pal-core-win/src/lib.rs",
+      "sha256": "04e5573629ef796e564f5a9cb7e15f50d86b92035ec19bea1c0d0bf11c907339"
+    },
+    {
+      "path": "crates/pal-core-win/src/main.rs",
+      "sha256": "06c62cf0adac365da23956a4fd1b377232e25c1f5e162f419b688fa1324a007c"
+    },
+    {
+      "path": "crates/pal-core-win/src/overlay_supervisor.rs",
+      "sha256": "785a73cc634a613be2821d798eb8a3df8d569dac48b82f9a5a64983a81fcf9de"
+    },
+    {
+      "path": "crates/pal-core-win/src/settings_persistence.rs",
+      "sha256": "f694c42329fb3e999a66edc89211243ba04f5ee6af29fbb2c5b52d34cb2a2118"
+    },
+    {
+      "path": "crates/pal-core-win/src/settings_store.rs",
+      "sha256": "d7bbcff22b5c5060c3254c2b05f7031be2262634f98a416c42c57bbcdd99f357"
+    },
+    {
+      "path": "crates/pal-core-win/tests/approved_map_pack.rs",
+      "sha256": "29c5136cdd3e5f91d23ae6425f26d6ad453ff956a496a1ec559eadc38764a1c0"
+    },
+    {
+      "path": "crates/pal-core-win/tests/control_session.rs",
+      "sha256": "1f33db73630b45fa405833dda25ae2b95610f796751059be614c0bebc470d132"
+    },
+    {
+      "path": "crates/pal-core-win/tests/ipc_runtime.rs",
+      "sha256": "1c9223cfc69d11852c62ab40dd4e617242a0d7203528d3db9ef0faa1c67810f0"
+    },
+    {
+      "path": "crates/pal-core-win/tests/overlay_actions.rs",
+      "sha256": "97ec9057ea5c0f62e329f2fe0336dec9bddc40680bf42e2dfa98837201aa478f"
+    },
+    {
+      "path": "crates/pal-core-win/tests/process.rs",
+      "sha256": "8a65fc7f778c111a0be323049b15cc8abdbc9e51adaf9d0a386fe7a7e60595be"
+    },
+    {
+      "path": "crates/pal-core-win/tests/settings_persistence.rs",
+      "sha256": "bb026456c929c80e727909687bf1800e257da92b4c4372a3fd58fef9e05438c4"
+    },
+    {
+      "path": "crates/pal-core-win/tests/settings_version.rs",
+      "sha256": "2b78ceaa3f5eb263c4a52076f762e512bcf2157abca58aad1c20cf3e90441f4d"
+    },
+    {
+      "path": "crates/pal-data-types/Cargo.toml",
+      "sha256": "6bd0413e2a2151768a6626d072333e61283e61478b5d4250b2e92f3c8b5c8a4f"
+    },
+    {
+      "path": "crates/pal-data-types/src/build.rs",
+      "sha256": "7cce012e56ca964abb5ebce5233b0971da33ff9f6c7bdb0c0dafa625a4a51766"
+    },
+    {
+      "path": "crates/pal-data-types/src/ids.rs",
+      "sha256": "ff442a26f42da4196446080a4890f6249feafb11d17b1c1d5d36160321c5c689"
+    },
+    {
+      "path": "crates/pal-data-types/src/lib.rs",
+      "sha256": "0c57dfaf5297afa63a74adbb4a26767414b18cbb094c384403236727e9678fad"
+    },
+    {
+      "path": "crates/pal-data-types/tests/ids.rs",
+      "sha256": "040c67f8b4196f3d87302db955870f55a566e76859e426b7dd71ed8cdfca4b46"
+    },
+    {
+      "path": "crates/pal-domain/Cargo.toml",
+      "sha256": "6acd800400295124c857663392e5f20f3fa8d030f7816fde2b9543257193ac62"
+    },
+    {
+      "path": "crates/pal-domain/src/lib.rs",
+      "sha256": "810ee865aa4d2467cc2031a28a3618c1953900fcab7920efaa835c39bbc1b274"
+    },
+    {
+      "path": "crates/pal-domain/src/position.rs",
+      "sha256": "ac230613c55d4cbcaa515dd537eeaffb77e18fd42c0520eb08a8c4434092fc62"
+    },
+    {
+      "path": "crates/pal-domain/src/position_source_policy.rs",
+      "sha256": "b69648d88f875041c05a981ce4a192b956f1df305a0887511800b0c3c6242944"
+    },
+    {
+      "path": "crates/pal-domain/src/settings.rs",
+      "sha256": "a6c5de6db16eaa5327f675939837b78f7b57fdbd9cf50f7cda3862f46052972c"
+    },
+    {
+      "path": "crates/pal-domain/src/view.rs",
+      "sha256": "abac5d1998d5bfb2b933793bc310130eb947a9f577c56359df2c2e8e4de1a6a7"
+    },
+    {
+      "path": "crates/pal-domain/src/window.rs",
+      "sha256": "73283089fa4b5c8932fd422542161e74111ce68fc6b69caf3eb4adc87d8df839"
+    },
+    {
+      "path": "crates/pal-domain/tests/position_math.rs",
+      "sha256": "0d0e63c83abaae7e40f33f3d5aac7913921a0f15a99c454ae985b405a96ad1cd"
+    },
+    {
+      "path": "crates/pal-domain/tests/settings_validation.rs",
+      "sha256": "46e535073b0d9c82552d6335e1c75df3724ca16f9f8341e1526a7250e7cf6d12"
+    },
+    {
+      "path": "crates/pal-domain/tests/workspace_smoke.rs",
+      "sha256": "7b2b8f381255a4f0e69255d7bc9a13dfa394d2dbb4924117bce66ac06e1f0edd"
+    },
+    {
+      "path": "crates/pal-evidence-worker/Cargo.toml",
+      "sha256": "b30df3592f19c594f24ebd467d00d5e18166de5ae44324d69ed78bf0c02b0914"
+    },
+    {
+      "path": "crates/pal-evidence-worker/src/main.rs",
+      "sha256": "ae9ab39111eae53e874855d53459faa6e3dc8cdc1b44b81a63a2b84081729ea8"
+    },
+    {
+      "path": "crates/pal-fullscreen-bridge/Cargo.toml",
+      "sha256": "fcdd25354bcd88855b9364d994293ad284828308267d26f938fd0f3f4f5efaae"
+    },
+    {
+      "path": "crates/pal-fullscreen-bridge/src/lib.rs",
+      "sha256": "24df8b465dd7b479a09f77b14c5f9bfd91a06487e53d5d8035d47469019993c3"
+    },
+    {
+      "path": "crates/pal-fullscreen-injector/Cargo.toml",
+      "sha256": "71ffcc4780c3c81018fd51b9354ff90c22b8d54422193762ae4f6739c2aa3800"
+    },
+    {
+      "path": "crates/pal-fullscreen-injector/src/main.rs",
+      "sha256": "b350e10be112ace98df36e8075e15f375209fefebf42153b595934ff8cfe452f"
+    },
+    {
+      "path": "crates/pal-fullscreen-overlay-dx11/Cargo.toml",
+      "sha256": "56cadb6ec2dabaa0c193a159702ecc34478ca97345f95fb90e5f7e8be88a1554"
+    },
+    {
+      "path": "crates/pal-fullscreen-overlay-dx11/src/lib.rs",
+      "sha256": "d2a9d0ad5f075283876b145a45757d8a519e4f002d5caed05f0226051e34fd55"
+    },
+    {
+      "path": "crates/pal-fullscreen-overlay-dx12/Cargo.toml",
+      "sha256": "14c155820a96465607f03e26016544e6b79799aaec1ea9261299df509ac7c6d2"
+    },
+    {
+      "path": "crates/pal-fullscreen-overlay-dx12/src/lib.rs",
+      "sha256": "d25027e29657a624e26331a9c4c8bb374c907d707d55dea5c24f182d9a9a5765"
+    },
+    {
+      "path": "crates/pal-fullscreen-render-loop/Cargo.toml",
+      "sha256": "7a21a93f4ed53cb01e688609bfe816610d7d3c70afc555e4ca6a2f42aea7501f"
+    },
+    {
+      "path": "crates/pal-fullscreen-render-loop/src/lib.rs",
+      "sha256": "0c992aa5daae62397594f6071feaa57c0129ba99c460709790556e4e19650508"
+    },
+    {
+      "path": "crates/pal-fullscreen-render-loop/tests/hudhook_dx12_patch_contract.rs",
+      "sha256": "91b700f71cbb4e8f3a90fdd9a41e5eb807dfa41599277125f87b743620b51b2c"
+    },
+    {
+      "path": "crates/pal-fullscreen-rhi-probe/Cargo.toml",
+      "sha256": "e56c914adcf47ea29d793d9ca1f005ae1a0a3a47ff23d1b904bdffd5cee6c84a"
+    },
+    {
+      "path": "crates/pal-fullscreen-rhi-probe/src/lib.rs",
+      "sha256": "025070324f87702778bfe5d43be61b5b8788edcf46f8adae277bff70ca8ae812"
+    },
+    {
+      "path": "crates/pal-fullscreen-rhi-protocol/Cargo.toml",
+      "sha256": "fc92ee026a6fdf0b90032e387f30878f7fe4855540b721af25881d44e0777e7b"
+    },
+    {
+      "path": "crates/pal-fullscreen-rhi-protocol/src/lib.rs",
+      "sha256": "f2a2a84c67edee8c994b18a2031fab9cb86dd480c4bbd8084cd67cb6ba3d2f40"
+    },
+    {
+      "path": "crates/pal-knowledge-graph/Cargo.toml",
+      "sha256": "24b246cbe488fd8262b06d69c06a987a7a9b62cdbbd3b159166630e2cd17b13d"
+    },
+    {
+      "path": "crates/pal-knowledge-graph/src/lib.rs",
+      "sha256": "5cc52ffedc87fa027286cf9dd45e354b048cf18e42eae58cc40879d1bac2f001"
+    },
+    {
+      "path": "crates/pal-map-contract/Cargo.toml",
+      "sha256": "bf335bfd475035e6a79696c3e7b3a05da7d3db4f5a41c71a3f67166bfe28d2ff"
+    },
+    {
+      "path": "crates/pal-map-contract/src/bin/generate-map-contract.rs",
+      "sha256": "459cbdbf670646e655b440737241c4dc197c44f2478bf1dd482309a6f7778279"
+    },
+    {
+      "path": "crates/pal-map-contract/src/lib.rs",
+      "sha256": "454eae6e602d28915c635954c9c926b2e46878578f0f12c025063eb8f4d06d39"
+    },
+    {
+      "path": "crates/pal-map-pack-store/Cargo.toml",
+      "sha256": "7670ed6d16f74cce4344681aa39da30c56d9ef774f342a323883cd57012fad1f"
+    },
+    {
+      "path": "crates/pal-map-pack-store/src/integrity.rs",
+      "sha256": "99c9a8c4d5ebfaecb387c9c61c29b0415f6274cd39e99871631a7117ee1b9bca"
+    },
+    {
+      "path": "crates/pal-map-pack-store/src/lib.rs",
+      "sha256": "6b1d02344b93faba5cddf1e570174b099dc315c6c20227b80b5f34113d69360d"
+    },
+    {
+      "path": "crates/pal-map-pack-store/src/manifest.rs",
+      "sha256": "d19e565e352895c03746c19e0ede28302a58cd2a7a4bed640bbabced4a0002a9"
+    },
+    {
+      "path": "crates/pal-map-pack-store/src/poi.rs",
+      "sha256": "3cf4cc23076c798dd8c24e02610a932f6352ab99a0da712ba4919f8945e808de"
+    },
+    {
+      "path": "crates/pal-map-pack-store/src/tile_index.rs",
+      "sha256": "cb53fbace5e369d85ee4501743df5e973a896b5fb64c3083a8b64f068d19e1ed"
+    },
+    {
+      "path": "crates/pal-map-pack-store/src/transform.rs",
+      "sha256": "7e192d21db0e609059f4ffb97307c75a35b512928a6e3efff41224dbdf9353ec"
+    },
+    {
+      "path": "crates/pal-map-pack-store/tests/bundled_runtime_pack.rs",
+      "sha256": "0f056c436238737d49c4327a3af190c5be7a5dd423706a3692f3d84fa4de292d"
+    },
+    {
+      "path": "crates/pal-map-pack-store/tests/coordinate_transform.rs",
+      "sha256": "53cc74fa6695f0ba3abbc4e2e35749424248c4b3acaea6b60164cff3c7a85705"
+    },
+    {
+      "path": "crates/pal-map-pack-store/tests/manifest_validation.rs",
+      "sha256": "18669dcb89599d3435b33fc0efe786798a905af8c078486ae193001062f1d952"
+    },
+    {
+      "path": "crates/pal-map-pack-store/tests/poi_index.rs",
+      "sha256": "6acb144576ef9fa0128c1d4fd8d7e3e4e9d9aa3c78c5b93f04958e2639b6b2f3"
+    },
+    {
+      "path": "crates/pal-map-pack-store/tests/region_pack.rs",
+      "sha256": "3f1aaf2948945f821de747cf9fc5a90894e684ff95019e1e3f391fc1d2b0e923"
+    },
+    {
+      "path": "crates/pal-map-pack-store/tests/support/mod.rs",
+      "sha256": "572c9b78f642be4cf04e89fb2ede51f7af17daca6056a64baa9d52d4ec724cca"
+    },
+    {
+      "path": "crates/pal-map-pack-store/tests/tile_index.rs",
+      "sha256": "a029061e6015c683ba4936bbb07f4ea36b9e2d384fb2040fe5333346cc150404"
+    },
+    {
+      "path": "crates/pal-map-pack-store/tests/transform_parity.rs",
+      "sha256": "6298fe718603ea8c416da12bd6dd546e166304dbf2cdf9fc378842b1e8d41d5a"
+    },
+    {
+      "path": "crates/pal-overlay-control/Cargo.toml",
+      "sha256": "427f097b586e5f75b38bf7edd84e27089c5ee3e85901a40cb3331e6e139dd197"
+    },
+    {
+      "path": "crates/pal-overlay-control/src/lib.rs",
+      "sha256": "7e46d6a19ae775b64ba12193a40c61bc3caa57ccc80fd5502307f20ec1e8d0ec"
+    },
+    {
+      "path": "crates/pal-overlay-win/Cargo.toml",
+      "sha256": "6913c1954fb479162ce24bef2e6ee162d445801fb903e8112cb636dfa7e2a8a2"
+    },
+    {
+      "path": "crates/pal-overlay-win/src/actual_map_preview.rs",
+      "sha256": "ba2a3babc14f1ef3afb9c6b87bd1a73042fe0131b014c9b49d883403549e3db7"
+    },
+    {
+      "path": "crates/pal-overlay-win/src/actual_map_runtime.rs",
+      "sha256": "e9a726402312201c426a57ce14d8ff2dc5daed8908126467249454707e8c65b2"
+    },
+    {
+      "path": "crates/pal-overlay-win/src/approved_map_surface.rs",
+      "sha256": "0c1ccecc7d98b40a6164cef99cd8ee19268318a9a4fbcbddc80b9e2d74cbd8cc"
+    },
+    {
+      "path": "crates/pal-overlay-win/src/bin/pal-overlay.rs",
+      "sha256": "d96b3e2d9ecbd88543c93ffd324b1d07fc71384da740280209f9cc9332222dde"
+    },
+    {
+      "path": "crates/pal-overlay-win/src/client_build_binding.rs",
+      "sha256": "ae3e2bf61728ddf419d7c7bbd6017f3e22a731b823fbfaa2e7fafe8d95e83cda"
+    },
+    {
+      "path": "crates/pal-overlay-win/src/control_client.rs",
+      "sha256": "97b4356e00ebd36ae23829206bffcd3c5ba5ed70c7cb912fba0c3443be79dac9"
+    },
+    {
+      "path": "crates/pal-overlay-win/src/control_intent.rs",
+      "sha256": "2ddc84e2722dd4fc021093071e043773d413d9bbb46cdc9ebe996c0994d5f149"
+    },
+    {
+      "path": "crates/pal-overlay-win/src/gdi_correctness_renderer.rs",
+      "sha256": "61c728e08cde4e1bf3fbda2494cf1804559335b33529d9a4aa674210d2f30fee"
+    },
+    {
+      "path": "crates/pal-overlay-win/src/host_model.rs",
+      "sha256": "54bb2887371c9b672e2dcddfc779556a6594cc397eb4673f0c2ae00b67ba2a10"
+    },
+    {
+      "path": "crates/pal-overlay-win/src/lib.rs",
+      "sha256": "93c1cdb43f3a168d17e6ab1f5f4a96dbe3ec7f810798b93854d7eda77722fd77"
+    },
+    {
+      "path": "crates/pal-overlay-win/src/live_agent_runtime.rs",
+      "sha256": "6bd64444f52424e99ff0255c076e07bcdd03360c53082d4265d93df1ae65d01b"
+    },
+    {
+      "path": "crates/pal-overlay-win/src/live_source_config.rs",
+      "sha256": "d4942ebbd1008cbbdc51dc8bb262d4bd522ddd6c800b49072bc31c4324975846"
+    },
+    {
+      "path": "crates/pal-overlay-win/src/local_alignment_diagnostic.rs",
+      "sha256": "47c0ac09f54d84cb6d85dfaf98ccf4abe21ddb7476d68f4781da3c4b054863a5"
+    },
+    {
+      "path": "crates/pal-overlay-win/src/local_alignment_runtime.rs",
+      "sha256": "0b594b4bf9ac1ece5ebda9019fb85fffeef29bd58778e9f3580f1575a8b23702"
+    },
+    {
+      "path": "crates/pal-overlay-win/src/local_overlay_control.rs",
+      "sha256": "7af504590b2f1391032aa0b76986f8087941ca08a64328073b670c4707a916df"
+    },
+    {
+      "path": "crates/pal-overlay-win/src/local_position_runtime.rs",
+      "sha256": "b073873b3002a53de0892afe23ade6a639b324f2a35c84719a4cce5678b22443"
+    },
+    {
+      "path": "crates/pal-overlay-win/src/local_position_source.rs",
+      "sha256": "20bcb2c9334acc8e22ef57b73b459d81b33bb11edaf844c370005c2c5a169c7b"
+    },
+    {
+      "path": "crates/pal-overlay-win/src/local_position_win32.rs",
+      "sha256": "9134af106d7667e079d0dbc166c6c93d3c8a441771e57d5419e27e2886987631"
+    },
+    {
+      "path": "crates/pal-overlay-win/src/mailbox.rs",
+      "sha256": "e5b1e29e12153e61a387fd1e9982249bebd3633a8dde5c4b3a689c378702b0dc"
+    },
+    {
+      "path": "crates/pal-overlay-win/src/placement.rs",
+      "sha256": "b47cde5f7b219dce2efa8c441c3db25bec2398156a5be41085484d4fad48cff3"
+    },
+    {
+      "path": "crates/pal-overlay-win/src/renderer.rs",
+      "sha256": "feb0c226b797ce3252dd5f54be8353f854d2d98ffbea8cededb84127ac3928b5"
+    },
+    {
+      "path": "crates/pal-overlay-win/src/runtime_signals.rs",
+      "sha256": "930938dea66e84d582fe2f75d1562678e8c141e143eb4edbaf884da04c284af8"
+    },
+    {
+      "path": "crates/pal-overlay-win/src/synthetic_preview.rs",
+      "sha256": "4011118f7a85a215832e7a06cfd67733caf02d3499e2f1c6d23f16b4afc8e6a9"
+    },
+    {
+      "path": "crates/pal-overlay-win/src/win32_host.rs",
+      "sha256": "430af820ab67c05cbcc953cb2c3ffba5c48d736cec4bdae47f9776304ed8fa7e"
+    },
+    {
+      "path": "crates/pal-overlay-win/tests/actual_map_preview.rs",
+      "sha256": "2de3370b6ade21fa0c08da3534f653f0602681a9e8e3c82d122d8221ce4dc79c"
+    },
+    {
+      "path": "crates/pal-overlay-win/tests/actual_map_replay.rs",
+      "sha256": "b101730e89a72504666a20ae2664d2681d51e0319c7dd6cb7bb3da6bbf80573b"
+    },
+    {
+      "path": "crates/pal-overlay-win/tests/actual_map_runtime_zero_alloc.rs",
+      "sha256": "b94bc087811a5f9a9b36e794734ed60846d3109e957b08eb77b521a4b7aa86a1"
+    },
+    {
+      "path": "crates/pal-overlay-win/tests/control_client.rs",
+      "sha256": "79d0c83f88a76e022999dabcd8f06aa9b351b4b2b307cbe8819d0ad445afda4c"
+    },
+    {
+      "path": "crates/pal-overlay-win/tests/control_intent_hotkey.rs",
+      "sha256": "41665717becae5f84b5c0c8ccba8afb267232fbe654e3a4855fa7a26ae43eaa2"
+    },
+    {
+      "path": "crates/pal-overlay-win/tests/gdi_visual_contract.rs",
+      "sha256": "220bd054b7f7dff60c93901974fbf81ea997d3f959a1da003b85f15623e4e8b9"
+    },
+    {
+      "path": "crates/pal-overlay-win/tests/host_model.rs",
+      "sha256": "1fbeca12fa12687e26ddf9d21661bdd35e0c5b036583b4fd67ffa849df162138"
+    },
+    {
+      "path": "crates/pal-overlay-win/tests/input_model.rs",
+      "sha256": "ff6f48a858ba44218e49d6ecdff068f2708a8ec89b7376ee355f5fdff346445e"
+    },
+    {
+      "path": "crates/pal-overlay-win/tests/live_agent_runtime.rs",
+      "sha256": "dcf1327fc80049ed4b5487e4186b99085b84eabdf41758bcd428a2b613ac75c0"
+    },
+    {
+      "path": "crates/pal-overlay-win/tests/local_alignment_diagnostic.rs",
+      "sha256": "bdc89a9b6c3299b4a4dda7cccde73f0a7b6a8f0070d8a6a110c7e68c4bdbd3a6"
+    },
+    {
+      "path": "crates/pal-overlay-win/tests/local_alignment_headless_dispatch.rs",
+      "sha256": "d541e7d9a0730afbaee926243b4a5c78a9b4fb02d62015ab19b630618e36d429"
+    },
+    {
+      "path": "crates/pal-overlay-win/tests/local_alignment_live_collection.rs",
+      "sha256": "696efdbf0af1edc39fbbe3fac001a687ab5bf90d97acf3ab878f24802cf5bbcd"
+    },
+    {
+      "path": "crates/pal-overlay-win/tests/local_alignment_preflight.rs",
+      "sha256": "a6c3cc3b18970511043106d7f19d6c33c67c5356e9a0c06b1ce2320f6d6fd7c7"
+    },
+    {
+      "path": "crates/pal-overlay-win/tests/local_position_diagnostic.rs",
+      "sha256": "be5719e472051a11b4a33107aaa07111037432ea66a6fdfdf2eaebf66c56840b"
+    },
+    {
+      "path": "crates/pal-overlay-win/tests/local_position_source.rs",
+      "sha256": "1b47a1ed577b0538ef4010778b64d19ab2077f05c501363d81e0042b5cf3776b"
+    },
+    {
+      "path": "crates/pal-overlay-win/tests/local_position_win32_source_audit.rs",
+      "sha256": "d1f51281edd5c2e8d1ed49c8d41f650a6f22cf6d24533c723042bde2d5e82b18"
+    },
+    {
+      "path": "crates/pal-overlay-win/tests/native_minimap_visual_qa.rs",
+      "sha256": "882d4f0fd25fadd1dcef125b23dfbc0e186ffc98c1137d4fa72fb8303cc98d77"
+    },
+    {
+      "path": "crates/pal-overlay-win/tests/overlay_cli.rs",
+      "sha256": "d7c36af999d17a7c22d038cc5a8e8c8d10e0ca2148fe7ea575754788bd86fd19"
+    },
+    {
+      "path": "crates/pal-overlay-win/tests/preview_paint.rs",
+      "sha256": "637631fc3e29dca904e418772d237c0d35431bcd2e60a85f8df05908dbd83493"
+    },
+    {
+      "path": "crates/pal-overlay-win/tests/product_cli.rs",
+      "sha256": "6ab0f37d78e75dbccb1dceff98bf7ed210a89f53cc9c1dc3a51bcd9a4c9b89ff"
+    },
+    {
+      "path": "crates/pal-overlay-win/tests/rounded_region_win32.rs",
+      "sha256": "46e6ee88f627a4f83e36402a06107b2147d8b0a3bbfdd0699dcaec6da6969c6f"
+    },
+    {
+      "path": "crates/pal-overlay-win/tests/snapshot_mailbox.rs",
+      "sha256": "674cd4059716647b5f0ddc096f2543c494e5d97c62ecf402e3558ab1bec2994d"
+    },
+    {
+      "path": "crates/pal-overlay-win/tests/synthetic_preview.rs",
+      "sha256": "ba549281867b5cbece0a1bda90b7313f056269a60d7f10eda3811b060434275c"
+    },
+    {
+      "path": "crates/pal-overlay-win/tests/top_left_layout.rs",
+      "sha256": "1e19f9331ecab76bf0493d1c716b42a69f0f75d769b0716d5f9aded93cf0e900"
+    },
+    {
+      "path": "crates/pal-overlay-win/tests/visual_regression_contract.rs",
+      "sha256": "dbb12d4e261645f567c46cf50a0d74b3519bc6eaccf3d3bf1669b12962cc21d9"
+    },
+    {
+      "path": "crates/pal-overlay-win/tests/win32_host.rs",
+      "sha256": "33ff7ba7cad71a33a0ccda8dbeb355860eb36f8d19f83d76e4482dda5baff938"
+    },
+    {
+      "path": "crates/pal-overlay-win/tests/win32_process.rs",
+      "sha256": "c0d0c52b977703dfc536af72ebf0d36c66d0b6bdd7b6bd352d6491ba90d36b2c"
+    },
+    {
+      "path": "crates/pal-protected-file/Cargo.toml",
+      "sha256": "bf131080124bb8706aa27f87cb4d3d0cc6bbb4e90b0302787bcb93506521c8ce"
+    },
+    {
+      "path": "crates/pal-protected-file/src/lib.rs",
+      "sha256": "1e1ff63bf87e1622f5796f34e02f81348333b93f1145e92982497a2659978163"
+    },
+    {
+      "path": "crates/pal-protocol/Cargo.toml",
+      "sha256": "113da7f2c7334e951a4fbeb867df0c891e8e7e6580ea5bc61aa9000a5804ae4b"
+    },
+    {
+      "path": "crates/pal-protocol/build.rs",
+      "sha256": "fe3ab24da7a4e641883c3448737793bedff37279e70801a856d3f22320459fc7"
+    },
+    {
+      "path": "crates/pal-protocol/src/framing.rs",
+      "sha256": "c52545b5fb4728bafde21a8748b29e147c57d6d03b847ed824c7d39ab0365e0a"
+    },
+    {
+      "path": "crates/pal-protocol/src/lib.rs",
+      "sha256": "e9e8284015ef9eeba03ff740fa621965564d3f382171d164f2e3444738fb0d4e"
+    },
+    {
+      "path": "crates/pal-protocol/tests/framing.rs",
+      "sha256": "f1492a73bd492f1a894d9981af5066f5655d1ea494ea84b2eda211de9cb0d8ba"
+    },
+    {
+      "path": "crates/pal-protocol/tests/schema_roundtrip.rs",
+      "sha256": "f567443c4dd9541216c1f73a7cbb27726f5ee5c62cd044003237fcc31844cdff"
+    },
+    {
+      "path": "crates/pal-render/Cargo.toml",
+      "sha256": "713648735b7656f836950fccf8babc7cae9263437b15fa6e630881a05991b56a"
+    },
+    {
+      "path": "crates/pal-render/src/culling.rs",
+      "sha256": "3087e256375c058c71336074963fadbab880a6cbfcc2952dee8aeaf7c5feefe1"
+    },
+    {
+      "path": "crates/pal-render/src/lib.rs",
+      "sha256": "b9dd1084cee74ae7c9194e7eed0c7eaffd68a1606ac7146663691a0faf4c8773"
+    },
+    {
+      "path": "crates/pal-render/src/overlay_visual.rs",
+      "sha256": "ec0eccf56510a8fc734372d897407e9e725c16a6a64a91fb9b68bcf9e080eb54"
+    },
+    {
+      "path": "crates/pal-render/src/render_commands.rs",
+      "sha256": "d5316fcbd5378d3d3852373e30b8c21e0e1852e66e8d4835220da3615f077c35"
+    },
+    {
+      "path": "crates/pal-render/src/snapshot.rs",
+      "sha256": "a3160073192a0113fe98a4f4543e42ae5bc84c20b75666919e96b8dae2b2d762"
+    },
+    {
+      "path": "crates/pal-render/src/viewport.rs",
+      "sha256": "34f3a0e77bcab42363893f28467bbba8bb657c3a52229e1f04ee41b541b3f4b9"
+    },
+    {
+      "path": "crates/pal-render/tests/culling.rs",
+      "sha256": "f8481c0e23b1c874f1e815c3535afe952b5343171553dd6b2163dac024ba9a19"
+    },
+    {
+      "path": "crates/pal-render/tests/overlay_visual.rs",
+      "sha256": "33a5c64d81d3ca9426f4e059d2ecc87207c044992087e93cddce2c530428e752"
+    },
+    {
+      "path": "crates/pal-render/tests/render_commands.rs",
+      "sha256": "6fdfaa06e0dd7d9a9e3e2d3533d087457b8dd097eec11040d71955b64e923931"
+    },
+    {
+      "path": "crates/pal-render/tests/snapshot.rs",
+      "sha256": "b42d0d8ceb55afdbc49e0bc672ea78172ca5c411c9291e2b5e78ef2448964444"
+    },
+    {
+      "path": "crates/pal-render/tests/viewport.rs",
+      "sha256": "20eef633f52a3fc14ab6a427c9f97fb2e2ec41398a9899f0d550c08f4ceaeb74"
+    },
+    {
+      "path": "crates/pal-render/tests/zero_alloc.rs",
+      "sha256": "87aecef69e6d235999bc270804d1c58c36ad416934bb118b356e886238eb8193"
+    },
+    {
+      "path": "crates/pal-rest-probe/Cargo.toml",
+      "sha256": "2898284da0efc38fb1044684f932212dbaf8ad981fd99a5de31ea795f2612ec7"
+    },
+    {
+      "path": "crates/pal-rest-probe/src/command.rs",
+      "sha256": "4de653e2607a6b52e4834bf5dc9e61843f1afcd200aeb24d203c50efeee8d80a"
+    },
+    {
+      "path": "crates/pal-rest-probe/src/evaluate.rs",
+      "sha256": "78395aa73b735be5278d61d505e35cb337e6eea6ab751542a00f708462e49ae4"
+    },
+    {
+      "path": "crates/pal-rest-probe/src/lib.rs",
+      "sha256": "def4cb1730a908bb973bbeb81fe1888924ab9837530eec1d8789161cd9e9dbe6"
+    },
+    {
+      "path": "crates/pal-rest-probe/src/main.rs",
+      "sha256": "28072e1f9fe03cbf244397e8c4a55a4e15eebfdd2483177debebba49c1f07c8f"
+    },
+    {
+      "path": "crates/pal-rest-probe/src/report.rs",
+      "sha256": "f2ce6a55140a3f8fc6d9cfe17595b67ef88b63753fe729e20d101976ef8c631f"
+    },
+    {
+      "path": "crates/pal-rest-probe/src/rest_adapter.rs",
+      "sha256": "59f6430d203331d5874dbc951802d676ba66730c5c373b1f122f2c1596122871"
+    },
+    {
+      "path": "crates/pal-rest-probe/src/runner.rs",
+      "sha256": "8e44fc17513137a90ff41f9a10401b43b6e846eb44bad06e96703b67941cb0e2"
+    },
+    {
+      "path": "crates/pal-rest-probe/src/stats.rs",
+      "sha256": "92bae8d708eabd539c980a42d1c1d6f266192a39da4d74222d340dca50fd1fdd"
+    },
+    {
+      "path": "crates/pal-rest-probe/tests/commands.rs",
+      "sha256": "7c5bc2d5c8007e2ad366798391429c08847f18491ba80ee79521fbbab2ed6220"
+    },
+    {
+      "path": "crates/pal-rest-probe/tests/evaluation.rs",
+      "sha256": "3f99618fb48ede733a526e97bdabe900e5a94094b1481c1d7934a2a10a8189d1"
+    },
+    {
+      "path": "crates/pal-rest-probe/tests/paired_load.rs",
+      "sha256": "029e8611736cb956431298a992c5a48ceb69145b9abd8f038333c995340b6a8f"
+    },
+    {
+      "path": "crates/pal-rest-probe/tests/report_redaction.rs",
+      "sha256": "d00de62c01d2b6ebebaf6c1da23de1e949113908378fb10a8ab3e51655aa9354"
+    },
+    {
+      "path": "crates/pal-rest-probe/tests/rest_adapter.rs",
+      "sha256": "5c5327378c787daf635c9f5ab6c26c135c262f3374b2ec7d9345960bc1ac29c8"
+    },
+    {
+      "path": "crates/pal-rest-probe/tests/stats.rs",
+      "sha256": "9bd8f55085567e48e404edfb885650878da5c0a7c33b1b0ed110c13386179762"
+    },
+    {
+      "path": "crates/pal-rest/Cargo.toml",
+      "sha256": "a310469a1062d7ac8c1162e2675ed0f536edd48744a9d73cc2ae9cd2848d1a5c"
+    },
+    {
+      "path": "crates/pal-rest/src/client.rs",
+      "sha256": "94756a219493ef4561b999c15b29c094c6b6380b3a5ead60d9ec273b6623bae3"
+    },
+    {
+      "path": "crates/pal-rest/src/error.rs",
+      "sha256": "9b9bebc54b7b6cb9f62323cf51f59c3e57c4c4b00c2056cfea952bde9a3f3d5d"
+    },
+    {
+      "path": "crates/pal-rest/src/lib.rs",
+      "sha256": "425a819fb73677c651d254c0cc88801946a3ae4caa18d338aa3292dfdafd3dbe"
+    },
+    {
+      "path": "crates/pal-rest/src/live.rs",
+      "sha256": "6a8dcb2431dcc529991c08786cc9c915d9c3e7d40d4a5c7c19b75fae2b3671c7"
+    },
+    {
+      "path": "crates/pal-rest/src/metrics.rs",
+      "sha256": "60b7f6e2e89cb565a266a4778f7b87511d6bc7154f07bb4ee0954e237fe17424"
+    },
+    {
+      "path": "crates/pal-rest/src/privacy.rs",
+      "sha256": "ad764bb380f615b4ac9087d28c0e46bb576e9e04f9f33cb5be22b64f199efcdc"
+    },
+    {
+      "path": "crates/pal-rest/src/settings.rs",
+      "sha256": "4f2f030cf5a6d1580b15041fd4bd6802e43b1b31429314607b3995aadc77a693"
+    },
+    {
+      "path": "crates/pal-rest/src/wire.rs",
+      "sha256": "b2d4d3674f045e8aac62c51070114d1c59b0ba922166666caa3d7ce0b17401d5"
+    },
+    {
+      "path": "crates/pal-rest/tests/client_http.rs",
+      "sha256": "401b236858a33697d98e2683510b5e5f1a15b741442a547eecc04e1a0bbfac3a"
+    },
+    {
+      "path": "crates/pal-rest/tests/client_safety.rs",
+      "sha256": "3d033f5315536221780549b6e3487b48e0388c776e7dc50e82cb41e64413389c"
+    },
+    {
+      "path": "crates/pal-rest/tests/game_data_decode.rs",
+      "sha256": "4ce00a8bb0eba4391ea75a9154936c1b2636b651b994ec5254f4b5d4e6e92dd5"
+    },
+    {
+      "path": "crates/pal-rest/tests/live_snapshot.rs",
+      "sha256": "e148f8487d9dadb0b776b97a18b7af403b69ed842d72f43f07119bbcf86af074"
+    },
+    {
+      "path": "crates/pal-rest/tests/privacy_fail_closed.rs",
+      "sha256": "fb1a9343941b5591c9e8b4e7687a1b31bebb829c7a6bee3c3942f0e7283a5684"
+    },
+    {
+      "path": "crates/pal-rest/tests/settings_decode.rs",
+      "sha256": "33fe0d078ab0cd9336431adc4e4bd2d54e81466f121bed8bac0cca6332a658b0"
+    },
+    {
+      "path": "crates/pal-rest/tests/verified_transport.rs",
+      "sha256": "c6dde5d3561365917c3465270172087834d982ac59f85efd5f3015a5b0215497"
+    },
+    {
+      "path": "crates/pal-rest/tests/wire_decode.rs",
+      "sha256": "bbd953114ec2447c041b618cbb95a5a2704cbed24fc7ddbe1fe901c43e108872"
+    },
+    {
+      "path": "crates/pal-save-ingest/Cargo.toml",
+      "sha256": "efff6a42aaf80a65bacf5600b58791bd991302bf2fcbb048ee0d0f1d94a948ac"
+    },
+    {
+      "path": "crates/pal-save-ingest/src/lib.rs",
+      "sha256": "529fae6c632dbbc2f5e470228bad52d9a8dd230297822b123abfe8ec21200d73"
+    },
+    {
+      "path": "crates/pal-sftp-sync/Cargo.toml",
+      "sha256": "e1738a1c671fb3a3061d1587f7276f4c21d5319fa729bfc1f18a0e475aad5cde"
+    },
+    {
+      "path": "crates/pal-sftp-sync/src/lib.rs",
+      "sha256": "ce07404021041668fd1143acb340606624e768705556dbefb2497348418d698c"
+    },
+    {
+      "path": "crates/pal-sftp-sync/src/main.rs",
+      "sha256": "36b9152d5cf45ec4da031018cb1c1130ed6eeed4f6adb76c7e447559a93beeb1"
+    },
+    {
+      "path": "crates/pal-state/Cargo.toml",
+      "sha256": "f9f04c029af11d6e5238ba4ceb2c537cfab71eae7a1b7974921ed9b5cb397f3c"
+    },
+    {
+      "path": "crates/pal-state/src/lib.rs",
+      "sha256": "20ca24c647076d40442609e9cf601f121d863f8d9dea7b15ba595964ec2e53d7"
+    },
+    {
+      "path": "crates/pal-state/src/position_source.rs",
+      "sha256": "04154378627e3d3122885ba99b662259e0fbbdb81d17c5fa7838b9ae5ea81d08"
+    },
+    {
+      "path": "crates/pal-state/src/reducer.rs",
+      "sha256": "8ce44adb5111762e1bb77ec6d0c6a0f5ef3a7472e2b1b0c20c5feb3c83e91b8f"
+    },
+    {
+      "path": "crates/pal-state/src/replay.rs",
+      "sha256": "20e336613588ff1b4df40e1968b1918e5138438cd971f4689824ff5f84d64167"
+    },
+    {
+      "path": "crates/pal-state/src/server_agent.rs",
+      "sha256": "930eb5ea5001109a76f2c77f5801bb63a0c9547fa52ff96d14bb337ac6270ad4"
+    },
+    {
+      "path": "crates/pal-state/tests/reducer.rs",
+      "sha256": "0f588fceed0791c9d602cf9f4a04648d8f054f2467c781a220531606d9bc1a2e"
+    },
+    {
+      "path": "crates/pal-state/tests/replay.rs",
+      "sha256": "f3b5f88d87bbc3a4530a8eeb80ef420c06df03dc18caabaaf1ef2276240e9aad"
+    },
+    {
+      "path": "crates/pal-state/tests/server_agent.rs",
+      "sha256": "f4e12fd8cb85bedffcb330198a8b1101ae1f455410e4f39cbd049f6c859ca30b"
+    },
+    {
+      "path": "crates/pal-telemetry/Cargo.toml",
+      "sha256": "c4899f0537578a24cf2e68cd733ee1798d6b553c7141a6cc6322d2e651f3635a"
+    },
+    {
+      "path": "crates/pal-telemetry/src/client.rs",
+      "sha256": "862870e87ca74c8fc7b41ce494f2eda7640bbbd13ecdcc173b0be80010e590de"
+    },
+    {
+      "path": "crates/pal-telemetry/src/clock.rs",
+      "sha256": "736d569f20a975c356bef0fd42025e13d8ace8f43766a85bcace536bbf23c2b5"
+    },
+    {
+      "path": "crates/pal-telemetry/src/cursor.rs",
+      "sha256": "d287635607557b1df4f688c38524aea9d01a23ecca6a81c46c2f1c0d5b35ee96"
+    },
+    {
+      "path": "crates/pal-telemetry/src/identity.rs",
+      "sha256": "7b50cb0b54c122d833793f1a400ee9263f7c6319330dc358ce9e8d9852fe0164"
+    },
+    {
+      "path": "crates/pal-telemetry/src/lib.rs",
+      "sha256": "22331b0518f3a9ff53568b16719d86cbcf4535f48678a964dfdca91730dbc5ca"
+    },
+    {
+      "path": "crates/pal-telemetry/src/server.rs",
+      "sha256": "4461ab3fd40c21455dfabc85315b2c47a30ea42e3a88dddb38165616be8bc200"
+    },
+    {
+      "path": "crates/pal-telemetry/src/wire.rs",
+      "sha256": "2073a0d357ff18ca408e66eff8264607cf672c91f390567987a2195cc2af9171"
+    },
+    {
+      "path": "crates/pal-telemetry/tests/clock_probe.rs",
+      "sha256": "7cbd5a59d8160a43770e15473b7fb18737e95ed9c1456cd257376215b6b2d45b"
+    },
+    {
+      "path": "crates/pal-telemetry/tests/latest_state.rs",
+      "sha256": "b456930c71d30bcacd821fd5a67d189fb909717f9231615caca7c714ba4a35ab"
+    },
+    {
+      "path": "crates/pal-telemetry/tests/mtls_loopback.rs",
+      "sha256": "f688e54378d55989f74c0432c3583c81a8c3cd14c1b9e433e57c9fd129053af2"
+    },
+    {
+      "path": "crates/pal-telemetry/tests/privacy.rs",
+      "sha256": "edd934a2864a54e456dad49ed071ec4267ba7950237bc798b167f05deb7b1b07"
+    },
+    {
+      "path": "crates/pal-telemetry/tests/wire_validation.rs",
+      "sha256": "e0b39ad18c4eda1e041bba6c72f22f092e204f7f0967bc3834a84b3ae5d22898"
+    },
+    {
+      "path": "crates/pal-test-window/Cargo.toml",
+      "sha256": "f7144682154127abb8b598614878b740e3cce96c0b3d71fc8b2f8b03be55e330"
+    },
+    {
+      "path": "crates/pal-test-window/src/bin/pal-test-rhi-host.rs",
+      "sha256": "c1378e6ed0036392eb0a6816cc25ad5d81c350420cb3998f2c466012876a9080"
+    },
+    {
+      "path": "crates/pal-test-window/src/lib.rs",
+      "sha256": "5b5a7bca5bb31a8733490e0a194bc96791dc33211a6d13631f843790189a5768"
+    },
+    {
+      "path": "crates/pal-test-window/src/main.rs",
+      "sha256": "c1378e6ed0036392eb0a6816cc25ad5d81c350420cb3998f2c466012876a9080"
+    },
+    {
+      "path": "crates/pal-test-window/src/windows_host.rs",
+      "sha256": "dcb890760c561019abad4f4be7cd22a08d243aa98e11c7bac425270496436e81"
+    },
+    {
+      "path": "crates/pal-windows-ipc/Cargo.toml",
+      "sha256": "6ac3f1d38f05741e0aa0b448a64d38870b966668945553477d121d1ae657779f"
+    },
+    {
+      "path": "crates/pal-windows-ipc/src/client.rs",
+      "sha256": "efe1a603322eb6ac635af03d33a654e00c21d0c85bc375328d2f60d67801c50b"
+    },
+    {
+      "path": "crates/pal-windows-ipc/src/framed_stream.rs",
+      "sha256": "5f1676c422d8c13243f0d0e0fb5f9a5c99d21e2c6142d46eb1c81a6ccb1e8f76"
+    },
+    {
+      "path": "crates/pal-windows-ipc/src/handshake.rs",
+      "sha256": "2a759639635dc440cc22def35c6d54571043c272a84714125a2c1017d75dbd52"
+    },
+    {
+      "path": "crates/pal-windows-ipc/src/lib.rs",
+      "sha256": "b02de0ec925235c719fae4f59beec5fcc716d711a103e73ee9dcf1cfdac52fee"
+    },
+    {
+      "path": "crates/pal-windows-ipc/src/security.rs",
+      "sha256": "7e6226d8d63334bd3c13d2649450e1f2fb1f765b2f08afa59133598047d48149"
+    },
+    {
+      "path": "crates/pal-windows-ipc/src/server.rs",
+      "sha256": "0bf02bd3631a83240de02296816eb1b96973059b664ae14e4ad307e58e612b2e"
+    },
+    {
+      "path": "crates/pal-windows-ipc/src/session.rs",
+      "sha256": "4bdb763cfb38a7d18bf30c85b050ad1bff0e87dac265e009092076fc86e22687"
+    },
+    {
+      "path": "crates/pal-windows-ipc/tests/abandoned_client.rs",
+      "sha256": "8ebdcf64c7bf52b4c8f5ff3ad2f8737ab31af58560f591a993ce851c1965dbe3"
+    },
+    {
+      "path": "crates/pal-windows-ipc/tests/current_user_acl.rs",
+      "sha256": "31a9045d25e387002a22b74ae2c0ddd34c672c53087a1d77acd6497d210c8bc1"
+    },
+    {
+      "path": "crates/pal-windows-ipc/tests/framed_stream.rs",
+      "sha256": "b6ea6e27262a802855d82e9e9c5193ca0979f20a425fb4dd8af71f3ec962da7b"
+    },
+    {
+      "path": "crates/pal-windows-ipc/tests/hello_gate.rs",
+      "sha256": "e6d3743b7f12a40746f628d1a1e00e49df024884a965331764c0b490247b8f33"
+    },
+    {
+      "path": "crates/pal-windows-ipc/tests/multiclient_loopback.rs",
+      "sha256": "15137d4f0156959e337c10fe75283123782978a54bb669071608b2a65c3f0d8f"
+    },
+    {
+      "path": "crates/pal-windows-ipc/tests/payload_policy.rs",
+      "sha256": "02dbd5c4adc84b3f858757788cb27015854d77980d321c17f410aaf6b85be356"
+    },
+    {
+      "path": "crates/pal-windows-ipc/tests/shutdown.rs",
+      "sha256": "74a21f5bf6588c0b7613ffd17561edf416e68609851e83d5a3a53c2ad4723e67"
+    },
+    {
+      "path": "crates/pal-windows-ipc/tests/slow_client.rs",
+      "sha256": "8ba84b33768ff82aebe50f87b045f2aba9ea1259119531866fafd554e78cfef5"
+    },
+    {
+      "path": "crates/pal-windows/Cargo.toml",
+      "sha256": "09fb4c9fbcaab4ec7dcfe9735d4ce91456a095f40b137bb5317d068f2c1711b1"
+    },
+    {
+      "path": "crates/pal-windows/src/backend.rs",
+      "sha256": "c7b0d06e14c4314d9d9d1a1818c33af355028ca7060452c717f18363a12d08a9"
+    },
+    {
+      "path": "crates/pal-windows/src/dpi.rs",
+      "sha256": "4cfebd3e2660b88548e5ff4729c6f8ab3f86dd7b7458c2842b823c5bb57ded63"
+    },
+    {
+      "path": "crates/pal-windows/src/hotkeys.rs",
+      "sha256": "e7accf0f7ee94b9843505c3e794f6d766bb5f777ec4dacc6615cce55fb9ad7c7"
+    },
+    {
+      "path": "crates/pal-windows/src/lib.rs",
+      "sha256": "7c4271220ad93c2af33a30612b8d9c3714d9490111b01fc61041ea2f47775196"
+    },
+    {
+      "path": "crates/pal-windows/src/process_memory.rs",
+      "sha256": "07c475eb1940c56a720910a4d5584abdd59276d7232c98e34bddb9ae0075ed0f"
+    },
+    {
+      "path": "crates/pal-windows/src/tracker.rs",
+      "sha256": "b3d0476b159c806f48c55ac5e77ea436003b77811d5ddbafac3813a613fdbb9d"
+    },
+    {
+      "path": "crates/pal-windows/src/win32.rs",
+      "sha256": "7a733e7c9f4efe91130e86fa6b91535804f6daf0637d71cbe2fa05cdc5495e5e"
+    },
+    {
+      "path": "crates/pal-windows/tests/hotkey_policy.rs",
+      "sha256": "fd1754f956ad40a044109fdfb810c180a5a22a1a7ec9cf5b776aa577341ae150"
+    },
+    {
+      "path": "crates/pal-windows/tests/process_memory_source_audit.rs",
+      "sha256": "8257269bc35a9f0416a77f77daa2aa0db284644db8062865422b3ad42bcbbcaa"
+    },
+    {
+      "path": "crates/pal-windows/tests/tracker_model.rs",
+      "sha256": "1d65f6edea4a7644aa568d151405095c70118570e588aa2fb91791d21a5191c4"
+    },
+    {
+      "path": "crates/pal-windows/tests/win32_boundary.rs",
+      "sha256": "af05e412a81d15cabf72339d4b0339867696f222d5db555833ec90401d55cbd4"
+    },
+    {
+      "path": "crates/pal-windows/tests/win32_tracker.rs",
+      "sha256": "de76e0ccaa7d6869f4042c02765cc87dddf9665e70c1f84869b7b61f26dda55a"
+    },
+    {
+      "path": "crates/pal-wire/Cargo.toml",
+      "sha256": "b48f160b484d8cb9186cf0d0171b0a2e83dde66cc4df41c85dd46858d23eb5e2"
+    },
+    {
+      "path": "crates/pal-wire/build.rs",
+      "sha256": "1ab79dbcf76a8cc2732f01ff48eada5e52dc9cdf497d68149b0891266802a731"
+    },
+    {
+      "path": "crates/pal-wire/src/bin/verify-local-fixture.rs",
+      "sha256": "d64010d30a39cae634f80b6d1ae3a392962ea8ecb4f88d61edfb95f869eac086"
+    },
+    {
+      "path": "crates/pal-wire/src/bin/write-wire-goldens.rs",
+      "sha256": "8a165dfe4df9abadd7c507d42b69099da45f375f0e73eda6ad3bf02ea75cee6e"
+    },
+    {
+      "path": "crates/pal-wire/src/canonical.rs",
+      "sha256": "ab60188c9f7bddd4c6c983dc81a9938ac56d24d7f67f9c7be1c41172c53bfb98"
+    },
+    {
+      "path": "crates/pal-wire/src/lib.rs",
+      "sha256": "27a04ab51ce1a74effa5285223873e1b6b64f3f0b7956968c79f0d1ebb5f4cba"
+    },
+    {
+      "path": "crates/pal-wire/tests/canonical_snapshot.rs",
+      "sha256": "301fdad3d0175a8d95ed85ffe6da4f3c24c97189e9b060d8de80fbefe502b859"
+    },
+    {
+      "path": "crates/pal-wire/tests/dependency_boundary.rs",
+      "sha256": "154b372171d91f49f7cc417c03e8350346ab64a49143f4615d4acb696d0a0ada"
+    },
+    {
+      "path": "crates/pal-wire/tests/native_v2.rs",
+      "sha256": "03a8efe410fef19c621e00b29b6d7c623ccb2f249c8b6e1792da4d499b25eb24"
+    },
+    {
+      "path": "deny.toml",
+      "sha256": "231d8b1fea1b9d4fbab70033622e614532c059546a7f66e4892c826b321896d5"
+    },
+    {
+      "path": "experimental/pal-save-parser-worker/Cargo.lock",
+      "sha256": "fdf06433debfe944d453e292b3548c1ef3475b8673f1185f4d48183fad70d6b9"
+    },
+    {
+      "path": "experimental/pal-save-parser-worker/Cargo.toml",
+      "sha256": "4739426f1d831dc1f62942913da598c4d771298ecd8af7fef1152c8c76e4930e"
+    },
+    {
+      "path": "experimental/pal-save-parser-worker/README.md",
+      "sha256": "16bb76d710b9f2d0de105bd8965b21c370388eebe704a6214160119cf4adf68b"
+    },
+    {
+      "path": "experimental/pal-save-parser-worker/src/main.rs",
+      "sha256": "d7270ff7ec7830084926d0478c5f256fa7dfe35df09fbf26d3fe388f44c14140"
+    },
+    {
+      "path": "global.json",
+      "sha256": "0588e32d44bdf884e0305ded21820b13a59b1518efd39976c34d909eff3b1044"
+    },
+    {
+      "path": "knip.jsonc",
+      "sha256": "a4d82f1f32bd41ffbcda819fc332539f4240eaee5c7eae284c766713f1c60385"
+    },
+    {
+      "path": "mise.toml",
+      "sha256": "c69c5cf949fea733cd17d7458f4b96786be77f6b24e3df9cf0b3ed7016ea74d9"
+    },
+    {
+      "path": "package.json",
+      "sha256": "c789ebc739fa7357b6f418e0f28d8f1344e466b9d57ee58ccc7bcb51183f9cbb"
+    },
+    {
+      "path": "patches/hudhook-0.9.2/Cargo.toml",
+      "sha256": "7c9c8e3a640121bf7cc05e0b16d3c29fa563b18872460f9544ad0aa9a08f70e6"
+    },
+    {
+      "path": "patches/hudhook-0.9.2/LICENSE",
+      "sha256": "81cb4d19bdd5b177933334ef5c42b92df6857136bd94892d8c443c347140ee6f"
+    },
+    {
+      "path": "patches/hudhook-0.9.2/PATCHES.md",
+      "sha256": "6de405299483a01a45d6f1734d8873771d0f87662b6c3557a3f84cfc12c2258d"
+    },
+    {
+      "path": "patches/hudhook-0.9.2/build.rs",
+      "sha256": "efc93cafc8b70b3d8b0050e5391e240da4ff82f5d48c9794879a9464f39955f0"
+    },
+    {
+      "path": "patches/hudhook-0.9.2/rustfmt.toml",
+      "sha256": "f8c87cbd50264e47d9a2e31ce41392c5fde81deddf9e1e4d9c731728afed75f8"
+    },
+    {
+      "path": "patches/hudhook-0.9.2/src/hooks/dx11.rs",
+      "sha256": "475a9297c887acfdffac024c0a0f5ea01c90b18a69d8bfef1dbd35465446b730"
+    },
+    {
+      "path": "patches/hudhook-0.9.2/src/hooks/dx12.rs",
+      "sha256": "2ac99ab1e2149eda57299ed92e23d6e1eaa9cb661cc4f20754e1b568b59d703a"
+    },
+    {
+      "path": "patches/hudhook-0.9.2/src/hooks/dx9.rs",
+      "sha256": "435ebc614a1563ccaa621a0e83ba91e426b4f7d03bfdeedbf51bf0d5229c3f40"
+    },
+    {
+      "path": "patches/hudhook-0.9.2/src/hooks/mod.rs",
+      "sha256": "eb2d5590daae6e358f26b7679412c1488960b236cbd685e9ba9458f72c846f2a"
+    },
+    {
+      "path": "patches/hudhook-0.9.2/src/hooks/opengl3.rs",
+      "sha256": "7251a0e6925d73e315273509a467542494902112a2d1d0e260baa8c601b3cc53"
+    },
+    {
+      "path": "patches/hudhook-0.9.2/src/inject.rs",
+      "sha256": "d8e94869c312cacb19b8178416ff29b15219879558fc05531c0f21fd7b58a0f0"
+    },
+    {
+      "path": "patches/hudhook-0.9.2/src/lib.rs",
+      "sha256": "9534c02166468c293250b813ffc1156c5d0d3560c5d04fdde37eff77c7ad89b4"
+    },
+    {
+      "path": "patches/hudhook-0.9.2/src/mh.rs",
+      "sha256": "bfe60b3d8f9d5aecd8c2680203d4066a905c7a2b2c208de6edfaf75e603ba89c"
+    },
+    {
+      "path": "patches/hudhook-0.9.2/src/renderer/backend/dx11.rs",
+      "sha256": "f9fb2e24dc41257831e76ee03efbbafe48986085de8ffa1fdd24fce075987cc5"
+    },
+    {
+      "path": "patches/hudhook-0.9.2/src/renderer/backend/dx12.rs",
+      "sha256": "5ad4127d65ade28dd3ba8326763e1a63dd90d1578d30320280806a369225b57a"
+    },
+    {
+      "path": "patches/hudhook-0.9.2/src/renderer/backend/dx9.rs",
+      "sha256": "26c294b32374f3bcb32982ff8b64b19522e77e369eaa651fee934fecc8893cfd"
+    },
+    {
+      "path": "patches/hudhook-0.9.2/src/renderer/backend/mod.rs",
+      "sha256": "74fdf368cd317b1acf907b44f24da981f358eca0b33e8ec88f3671305d89f55d"
+    },
+    {
+      "path": "patches/hudhook-0.9.2/src/renderer/backend/opengl3.rs",
+      "sha256": "115995dacfe21db82500a11cdd34a03f4d6509ade7442e1a4c2b3261e33de1e6"
+    },
+    {
+      "path": "patches/hudhook-0.9.2/src/renderer/input.rs",
+      "sha256": "ab02cbcb15027e4a439cf3c67671a3b1e69f05a4cdf946a437ed87f822c039f5"
+    },
+    {
+      "path": "patches/hudhook-0.9.2/src/renderer/keys.rs",
+      "sha256": "c558408074a9f8f7d242ef0c5cc941a91d22fd2c7d0f9c05aaa3b5640c45ceb6"
+    },
+    {
+      "path": "patches/hudhook-0.9.2/src/renderer/mod.rs",
+      "sha256": "c5bca91f2ae054fa1ea6f6aff472dc341c6782e61c8595077ca0c649c7ca54c1"
+    },
+    {
+      "path": "patches/hudhook-0.9.2/src/renderer/msg_filter.rs",
+      "sha256": "423865a1ce475944aa561a9712c9f9a56f977f8a9849f36759cb96bee4909aa1"
+    },
+    {
+      "path": "patches/hudhook-0.9.2/src/renderer/pipeline.rs",
+      "sha256": "948576d4e4221343c5d403f33b217016f559264ab6f8d6253a572d2fd698ecab"
+    },
+    {
+      "path": "patches/hudhook-0.9.2/src/util.rs",
+      "sha256": "5531f05571f5beedab63c0d9389224b3352553fe638f4d90cd5929cb4347ce24"
+    },
+    {
+      "path": "patches/hudhook-0.9.2/vendor/minhook/LICENSE.txt",
+      "sha256": "d5c2224982b0b95a16b098a561335fa93f3eaf4d0aa964b7843edb986df78dc8"
+    },
+    {
+      "path": "patches/hudhook-0.9.2/vendor/minhook/include/MinHook.h",
+      "sha256": "62dff05e63155c6bf8135c36a0d79dedbdcaaede9da26fe38daf0bea34323e38"
+    },
+    {
+      "path": "patches/hudhook-0.9.2/vendor/minhook/src/buffer.c",
+      "sha256": "0ab484d7870c3a8e7a3a1ee61e2070072cf445ed85b619d4c4207fed34356d99"
+    },
+    {
+      "path": "patches/hudhook-0.9.2/vendor/minhook/src/buffer.h",
+      "sha256": "9769702bd625249e59a19ede05c84365fcc7707e1fa0e5df08df42227cee13e3"
+    },
+    {
+      "path": "patches/hudhook-0.9.2/vendor/minhook/src/hde/hde32.c",
+      "sha256": "5da4941e9044f7b325c7f952b5840089e365f374740b7fe7318805d08c0d6c32"
+    },
+    {
+      "path": "patches/hudhook-0.9.2/vendor/minhook/src/hde/hde32.h",
+      "sha256": "5132de5be8ac7a9d054420f5caef0fb01437faa892f03b3cdc77f795973bf15a"
+    },
+    {
+      "path": "patches/hudhook-0.9.2/vendor/minhook/src/hde/hde64.c",
+      "sha256": "824eafa315322e6da105a7ce4ec1fc0e0adeee0106d32152fbb0b59e709bd15c"
+    },
+    {
+      "path": "patches/hudhook-0.9.2/vendor/minhook/src/hde/hde64.h",
+      "sha256": "e99aa4997bda14b534c614c3d8cb78a72c4aca91a1212c8b03ec605d1d75e36e"
+    },
+    {
+      "path": "patches/hudhook-0.9.2/vendor/minhook/src/hde/pstdint.h",
+      "sha256": "604d1cdf45c5a95bc9cf1bbf39ca05ef83013541101d34971c5cd7577e3d5247"
+    },
+    {
+      "path": "patches/hudhook-0.9.2/vendor/minhook/src/hde/table32.h",
+      "sha256": "43bf687a9fff071b5f46070db4d36c846f8e069cdc57485ee897c499aacdde23"
+    },
+    {
+      "path": "patches/hudhook-0.9.2/vendor/minhook/src/hde/table64.h",
+      "sha256": "b774446d2f110ce954fb0a710f4693c5562ddbd8d56fe84106f2ee80db8b50a2"
+    },
+    {
+      "path": "patches/hudhook-0.9.2/vendor/minhook/src/hook.c",
+      "sha256": "7a78e9f8b4a0b3d790aa2be45d2a188e0184585224b6980bbe048b04d97b0c2b"
+    },
+    {
+      "path": "patches/hudhook-0.9.2/vendor/minhook/src/trampoline.c",
+      "sha256": "6bc232a545d32ba565c53c0e8578055922314b2b4b219e3e6658a6f3451824a1"
+    },
+    {
+      "path": "patches/hudhook-0.9.2/vendor/minhook/src/trampoline.h",
+      "sha256": "53ed9934492320617a27bfd952ffe7f5b7a4a1d09963d4512447082fe7b727b4"
+    },
+    {
+      "path": "pnpm-lock.yaml",
+      "sha256": "8b8999f2c68a0c20a88729d69eecadd10b130e5af24aa6bcafe494168f2841ea"
+    },
+    {
+      "path": "pnpm-workspace.yaml",
+      "sha256": "6eb066c19cd07566f3f9d1359580f98680a324758d568fc61b3f0ff475a4c521"
+    },
+    {
+      "path": "proto/README.md",
+      "sha256": "f08691d2fc1ea009f907104f3539e5a637566a0f1899e328da0bc75d57e5e602"
+    },
+    {
+      "path": "proto/palcompanion/v1/analysis.proto",
+      "sha256": "c02c746e6e686cc12d675a6f1628c33e37db4ebed79c72dd0b342468d76db9e1"
+    },
+    {
+      "path": "proto/palcompanion/v1/catalog.proto",
+      "sha256": "e62c884efdba68fdbf08f882eda595c0a31d6c7dd97b1de8fd75f9bc7c5f3d2d"
+    },
+    {
+      "path": "proto/palcompanion/v1/common.proto",
+      "sha256": "2173e08b3642a51b9052637f0e8fc086821003bfce27d91bbd0f88a6e5708504"
+    },
+    {
+      "path": "proto/palcompanion/v1/local.proto",
+      "sha256": "056e7c6e0f390d108701ede364ee9357ac9ece8d2585cde5e11b8ebe2b212029"
+    },
+    {
+      "path": "proto/palcompanion/v1/map.proto",
+      "sha256": "c93a687ce2756f6ebbb69465ebe2beb18f6af7cfc42db723f97825fcf2de2e59"
+    },
+    {
+      "path": "proto/palcompanion/v1/profile.proto",
+      "sha256": "d9e34d1f9a03c5dbd2e05c6e5cb4fae7e1b2dc05267f5a4a5da157d6be3b90a0"
+    },
+    {
+      "path": "proto/palcompanion/v1/sync.proto",
+      "sha256": "c4f102f41589819ea09bba2370f9c68326e6b388c0c00dbff093bc3cce415de3"
+    },
+    {
+      "path": "proto/palcompanion/v1/telemetry.proto",
+      "sha256": "4c8ae567196de484aca6d8b60addfed7654e642078f929e23d527f006797a767"
+    },
+    {
+      "path": "proto/palcompanion/v2/analysis.proto",
+      "sha256": "ea330d7557056f3851212a59856208cc4f19971624396ec4e0c9b4542744b4f8"
+    },
+    {
+      "path": "proto/palcompanion/v2/catalog.proto",
+      "sha256": "93a37333f8da910f72f2501be6e0f1007bdb9f487e2747a5d0ef0da8885feefc"
+    },
+    {
+      "path": "proto/palcompanion/v2/common.proto",
+      "sha256": "1a7d338e54166e2351f5ebd2de0fdd8d2131945b2da518f800441232f6e9e3ae"
+    },
+    {
+      "path": "proto/palcompanion/v2/local.proto",
+      "sha256": "586e6412dde15b1840aa62fae4dfab9ec00562916d1eaf2a436bfc66803f00d7"
+    },
+    {
+      "path": "proto/palcompanion/v2/map.proto",
+      "sha256": "dcbfbaa22776e64472dd23cb8888f43e802b2425339f9d9d8bd19cf3990c801f"
+    },
+    {
+      "path": "proto/palcompanion/v2/profile.proto",
+      "sha256": "8fa405e6dc1376314dc32888b4866bd95c3f68e030a51448503cb3e90a463e93"
+    },
+    {
+      "path": "proto/palcompanion/v2/sync.proto",
+      "sha256": "2d89587083e7e6094caa5869b7b9f9093a0494e1efa044589b7960b1d0cdf609"
+    },
+    {
+      "path": "proto/palcompanion/v2/telemetry.proto",
+      "sha256": "594341c87dad660b055a32b54150e96cc642b7fdfc575d1fd0eca53c4d2199fb"
+    },
+    {
+      "path": "quality-tools.lock.json",
+      "sha256": "0ef9e451dd16d5b7a0e2cc370bef2a282204cb5321649daf6746b2e427a674ef"
+    },
+    {
+      "path": "rust-toolchain.toml",
+      "sha256": "08f0c27188522fc89689c52ae4b0a6afa7d0736d575b289cebf9162a572f1929"
+    },
+    {
+      "path": "scripts/audit-palbeacon-data.ps1",
+      "sha256": "1914d0f49a8d776001969e975e233ee18e3dcb75b799bd9bb62d4b179488948e"
+    },
+    {
+      "path": "scripts/build-cloudflare-worker.ps1",
+      "sha256": "e9a61590b14dba2a5b296ef2886d0beb94ee7a5f74647a1150e1b6314eda7121"
+    },
+    {
+      "path": "scripts/capture-palbeacon-overlay-qa.mjs",
+      "sha256": "34790099121687afbf89351015ee15050da173360adfd5ff7daeba051e77248b"
+    },
+    {
+      "path": "scripts/cloudflare/new-public-knowledge-seed.ps1",
+      "sha256": "95ef5ccc3d998155435ac4d33d7de4be0e11b90f566e71d86a84cd187b5e61ac"
+    },
+    {
+      "path": "scripts/cloudflare/publish-public-knowledge-seed.ps1",
+      "sha256": "17de3e02ad5a2fa16478ec54b39c0d82f3ecdfb2b88c425a372fde7afa3c8b33"
+    },
+    {
+      "path": "scripts/compare-map-data-opgg-reference.ps1",
+      "sha256": "cd42b016a597f9b3c0c2f2e4813b4ccf94c4b02119a28c066dfdbc3e0a293481"
+    },
+    {
+      "path": "scripts/dev-doctor.ps1",
+      "sha256": "b7343a017d0fc38c66744d481d0a42e441f3336c11bd16b837c0c9f80b01f916"
+    },
+    {
+      "path": "scripts/generate-sbom.ps1",
+      "sha256": "b0ae78065ec6899d88b1b06c16aa9f3e9a8e31e733841defbb777492ba5f8a39"
+    },
+    {
+      "path": "scripts/install-palbeacon-ci-bundle.ps1",
+      "sha256": "178a595c7e07cff8fd7b887e3e5866f6724ef6d1564490f40fa6bee12843e3cd"
+    },
+    {
+      "path": "scripts/install-quality-tools.ps1",
+      "sha256": "cd884ba667f3156643b418ea7760bdaa563414deb357976bd28fafbd6f3a0e8b"
+    },
+    {
+      "path": "scripts/install-rust-toolchain.ps1",
+      "sha256": "636cf6376694d0950a4366657f3d1c9ec1dfef00ce256c4d041d8698a57273b5"
+    },
+    {
+      "path": "scripts/invoke-palbeacon-ci-native.ps1",
+      "sha256": "139fdf1b38316716b2157f54aa3e846ee04457c2d96f36fe1bd2b06b4c6fb826"
+    },
+    {
+      "path": "scripts/new-cloudflare-public-catalog.ps1",
+      "sha256": "21256063f01b72f9dbd925eaf3621d636033be0bdf97c430f2695830c3e3f907"
+    },
+    {
+      "path": "scripts/new-cloudflare-public-map-data.ps1",
+      "sha256": "5b502785cfe96cf1ab294c2b860ccb8df31b0c1bad6489e93f73efac79c72836"
+    },
+    {
+      "path": "scripts/new-cloudflare-public-media.ps1",
+      "sha256": "1e731aa359f358d63e787ee1284a001fc9bbd93ab15be837072e611d1662bbd8"
+    },
+    {
+      "path": "scripts/prepare-local-map-preview.ps1",
+      "sha256": "38eb3356c145499d57a12687d14339e90cd99e60299254da69faed453671112c"
+    },
+    {
+      "path": "scripts/prepare-map-layer-pack.ps1",
+      "sha256": "d48d38c34ad05c6ec2bc61ca98a3c2400fc46f2933f3281f813a6e1359a24dc1"
+    },
+    {
+      "path": "scripts/prepare-overlay-pois.ps1",
+      "sha256": "c9b38b32954605a6de5033df1d63a3b4eba0a0db9db7f5d3279614a1e65d29cc"
+    },
+    {
+      "path": "scripts/prepare-palbeacon-desktop.ps1",
+      "sha256": "fe531964d6922323c57b25dc303a108c2e344e70def3cbe5c4b84bfa6bb1aa18"
+    },
+    {
+      "path": "scripts/publish-cloudflare-public-media.ps1",
+      "sha256": "3c4c7fb83c1742c9dab66a8afceb8cb11ebb656ef280eece9630343dd917ad83"
+    },
+    {
+      "path": "scripts/run-data-pack-gate.ps1",
+      "sha256": "1fa29b062179998baa8c12cb122d1e1ebede6f4af91460a7bd59e9008ac51a27"
+    },
+    {
+      "path": "scripts/run-foundation-gate.ps1",
+      "sha256": "03996d1675cfd374d524a7c38ec8994b9713a79d5a02c75d97e6ca24651dc4f4"
+    },
+    {
+      "path": "scripts/run-local-alignment-smoke.ps1",
+      "sha256": "86d9916b33cbbacbb7cc699a06eac883a26beab2368f2baa4895d47bd2685b6a"
+    },
+    {
+      "path": "scripts/run-map-gate.ps1",
+      "sha256": "d6c657ccd64634570529a4ffc6804995fdd5b0c0f2e0703bd2528d641cf0957b"
+    },
+    {
+      "path": "scripts/run-mise.ps1",
+      "sha256": "551407c72c20b6f6e245c1a318d6d9a42815d968e0c8834e68c044de0624a33a"
+    },
+    {
+      "path": "scripts/run-quality-static.ps1",
+      "sha256": "ff88c340f05885a2d4f0fc961e67bc3b3ad054a7a0a27b5550f7ee409f116ef7"
+    },
+    {
+      "path": "scripts/run-rustup.ps1",
+      "sha256": "74bc381c7eb9e4fb705cfb04f574e7e2678fa92ff6bd5451d3593c24a4c6c3a0"
+    },
+    {
+      "path": "scripts/run-windows-overlay-automation.ps1",
+      "sha256": "0deb83c944f67d362644513fc99538e297cb21f4bc278c17f48b472c0c50022a"
+    },
+    {
+      "path": "scripts/test-palworld-rest-origin.ps1",
+      "sha256": "bdd009c1e09ac20968e9f6bec6492d8e7cb38cb706488601f32ed4ea2d731d5b"
+    },
+    {
+      "path": "scripts/tests/catalog-assets-config.test.mjs",
+      "sha256": "e7019d32b974ab8ddae7ead378c02d4ba629023b20ed020b1e279d26490dd082"
+    },
+    {
+      "path": "scripts/tests/desktop-config.test.mjs",
+      "sha256": "7bf52dd94191cb8ed7246ed232107dd413232caebe50abd219de58990cad5128"
+    },
+    {
+      "path": "scripts/tests/dev-doctor-lock.Tests.ps1",
+      "sha256": "d23ce224f8e65138555cbd90c02d16bbeab12e4d383c7729a4732a1b45df3d13"
+    },
+    {
+      "path": "scripts/tests/new-cloudflare-public-media.Tests.ps1",
+      "sha256": "caea2146a89ec2bc9cd13757af3235d41dbbed5f4ea3604bb11b74dea49c0b63"
+    },
+    {
+      "path": "scripts/tests/new-public-knowledge-seed.Tests.ps1",
+      "sha256": "b1abd0f6e0f36dbec673855e88a04b64d33393522fd672f29acbcbc3a4b02750"
+    },
+    {
+      "path": "scripts/tests/publish-public-knowledge-seed.Tests.ps1",
+      "sha256": "ceb58b6bdebe19d5952db2774ed0392545680157173ca3754c92518ed598c661"
+    },
+    {
+      "path": "scripts/tests/release-boundaries.Tests.ps1",
+      "sha256": "0151feb7b6bc8cb03e58813209b24f166c75284cfa2761c85a00d633c3e88514"
+    },
+    {
+      "path": "scripts/tests/run-local-alignment-smoke.Tests.ps1",
+      "sha256": "41d354fb112c88d46aa6cc032fa4d7d61bdd911906f3bbc9f4cd7c381697f986"
+    },
+    {
+      "path": "scripts/tests/security-config.test.mjs",
+      "sha256": "8215bc5de1ff21832cd5bfbca409ebefbb1b98bf269cd82e8f1b145cb2888316"
+    },
+    {
+      "path": "scripts/tests/verify-local-data-fixtures.Tests.ps1",
+      "sha256": "2db6bb58adfed11ee1ec0d5deda120f71d207135b40d4ff1da872aac23e66082"
+    },
+    {
+      "path": "scripts/tests/verify-supply-chain.Tests.ps1",
+      "sha256": "9477c91c03ee06d6c93e55c838d73d1fc543e77c47a9158e8424bc763681024b"
+    },
+    {
+      "path": "scripts/tests/web-release-config.test.mjs",
+      "sha256": "c64348cc53969eebdfd3cece254c5aedb9797db2af07df8e5e2480ed0d1c1cd1"
+    },
+    {
+      "path": "scripts/tests/windows-overlay-automation.Tests.ps1",
+      "sha256": "beb02c8f3565d95a4a5351fe424b575534d8dabe98e5e45817cf2c52fc5302a7"
+    },
+    {
+      "path": "scripts/validate-poi-data.ps1",
+      "sha256": "11b93a66e6639fd78c227d05709f28e5fb992e5badc0b0c92c8876046a1a05a0"
+    },
+    {
+      "path": "scripts/verify-generated-clean.ps1",
+      "sha256": "4e7c54ff9901bbb989b509c603a97deb4fb1ef28e750b55b5fb6e2279672f9e7"
+    },
+    {
+      "path": "scripts/verify-local-data-fixtures.ps1",
+      "sha256": "7df72ce4e9d8bb96da7f6e0e7e5e8b25cc3962f570a1cdc3153cc9e6a7805139"
+    },
+    {
+      "path": "scripts/verify-palbeacon-cutover.ps1",
+      "sha256": "82fe1f28b27dd75538eebd3cbdd57925fbea36ff19784acf945d7463a82c0c6e"
+    },
+    {
+      "path": "scripts/verify-palbeacon-design-contract.mjs",
+      "sha256": "843930d636a989f061325b062d28aa325939894fde472b888f48a398cecaa3cc"
+    },
+    {
+      "path": "scripts/verify-palbeacon-usability-contract.mjs",
+      "sha256": "9c837b3274566bb69641085b3be5fc6abac69103cd35412d64f4a243a091ba83"
+    },
+    {
+      "path": "scripts/verify-protobuf-breaking.ps1",
+      "sha256": "777bab37c21d572f944bae624a30283b53c5c5e8ca5053979cf74c70e4e5953c"
+    },
+    {
+      "path": "scripts/verify-runtime-releases.ps1",
+      "sha256": "7ed5e57e97ca0b078d129aa1e3b19e984d4433582579d104d8086d08f5429f20"
+    },
+    {
+      "path": "scripts/verify-supply-chain.ps1",
+      "sha256": "27b33bce12c1ee72e323f0a49ab0b71d67694def58f52036544c4eb52d0060da"
+    },
+    {
+      "path": "third_party/THIRD_PARTY_NOTICES.md",
+      "sha256": "c9dd7f98bd0257566827ad21ff8a4a20ec5a028842aa11b40fcbf02cc8852d54"
+    },
+    {
+      "path": "third_party/palcalc.LICENSE.txt",
+      "sha256": "708d71dbca4e73db4cab6a64b2f0cc10785d50321f12ea3744e19cd9dba6c709"
+    },
+    {
+      "path": "third_party/palworld-save-parser.lock.json",
+      "sha256": "dfddfbdfc7954a6694e9681d29564ccd98b1e924d138f44e310fb4f523d0909e"
+    },
+    {
+      "path": "third_party/runtime-dependencies.json",
+      "sha256": "9e8cf9492b1d63711c9aa0a209d9319226982dca553c81b3b3ef035f8b0af511"
+    },
+    {
+      "path": "toolchains.lock.json",
+      "sha256": "67a2d00328977a85b32701ae332cbd4ac953678285b15d2eefb19ccdb7846832"
+    },
+    {
+      "path": "tools/pal-data-pack/Directory.Packages.props",
+      "sha256": "e1dfd64bd488f02aa00c70d107e0e930b1ff62ddd5f0b8e9d518a7550f8b9f66"
+    },
+    {
+      "path": "tools/pal-data-pack/NOTICE.md",
+      "sha256": "945b5997fada91d25d89e1e0e6e2cad0a099897b6cc827f4fa1028449f1622d1"
+    },
+    {
+      "path": "tools/pal-data-pack/PalDataPack.slnx",
+      "sha256": "6cbaa0069d2618df073771d458dafa8adc4b2f1e30dda1e3b1d100d0199a2ea0"
+    },
+    {
+      "path": "tools/pal-data-pack/src/PalDataPack/AssetContract.cs",
+      "sha256": "983062612c95ab0726ae4763d3850c71ff959282ec0b4c195e551ccdad92c32f"
+    },
+    {
+      "path": "tools/pal-data-pack/src/PalDataPack/AtomicPublisher.cs",
+      "sha256": "2da3c7fedee1a79c248b0fed45b3205e353715ac6dad6dd739362fe799390082"
+    },
+    {
+      "path": "tools/pal-data-pack/src/PalDataPack/BuildingIconExtractor.cs",
+      "sha256": "dffc0b88c77aae7f2d16401dfdceded44cdf6267b5e30e28ff97d0938b2ca944"
+    },
+    {
+      "path": "tools/pal-data-pack/src/PalDataPack/CatalogContract.cs",
+      "sha256": "519e9d37827f14ac1db1dc45fcbe75a352c35d125502ba708d9a8987f7cd80f7"
+    },
+    {
+      "path": "tools/pal-data-pack/src/PalDataPack/DataPackFailure.cs",
+      "sha256": "392e56e57856c13cb7f0e6fecbc79840a35a6cbdc153be4a271c214454c6bd61"
+    },
+    {
+      "path": "tools/pal-data-pack/src/PalDataPack/GameIconContract.cs",
+      "sha256": "441b1d6b3bd2afc9a4b82406ec948404250c65e7baa92e1f7c0874e3620f54f0"
+    },
+    {
+      "path": "tools/pal-data-pack/src/PalDataPack/GameIconExtractor.cs",
+      "sha256": "db5a3066f1df55c2fc91c30688bbe37528057f06ff8253e8b7662635a1cc5e4a"
+    },
+    {
+      "path": "tools/pal-data-pack/src/PalDataPack/GameIconLocalizationMatcher.cs",
+      "sha256": "1bbf90567fac499c8f28346ead6aa742a3389ba25586ed3f6894499de7b0bf77"
+    },
+    {
+      "path": "tools/pal-data-pack/src/PalDataPack/GameIconProbe.cs",
+      "sha256": "e1a3036153d50955ef8ca4560ca4b3fe004b54eb098a85e34d99535a892ea2f5"
+    },
+    {
+      "path": "tools/pal-data-pack/src/PalDataPack/Hashing.cs",
+      "sha256": "ef877db079e961ab9c44015df5da5f8ae2bb2e1b9a258b75f721e1a4f8231eee"
+    },
+    {
+      "path": "tools/pal-data-pack/src/PalDataPack/ItemIconContract.cs",
+      "sha256": "d88557fd8b8c07613037c3662e9eb7f62ab93f64e27a25cb720b0bdec878e6be"
+    },
+    {
+      "path": "tools/pal-data-pack/src/PalDataPack/ItemIconExtractor.cs",
+      "sha256": "0c7e2644476ecf211947c49bd0ff5e1a4a4f6ac10b0f06a5ce81b73cf8c5b299"
+    },
+    {
+      "path": "tools/pal-data-pack/src/PalDataPack/ItemIconProbe.cs",
+      "sha256": "ba0417f6dbd9861b519aac2e465eaab0b73ffbdf68f6fc94438fcd4a24b65982"
+    },
+    {
+      "path": "tools/pal-data-pack/src/PalDataPack/Manifest.cs",
+      "sha256": "0087038fa6146c6b1615998686dcbab9757c2f00620d5d4fe25a518ad59e62c5"
+    },
+    {
+      "path": "tools/pal-data-pack/src/PalDataPack/MapSpawnSearchIndexBuilder.cs",
+      "sha256": "e67d60010aee7dd9e79b1b4a5eb557cc43557469a4aae1a25368ca0c7528d526"
+    },
+    {
+      "path": "tools/pal-data-pack/src/PalDataPack/Normalizer.cs",
+      "sha256": "b6cfdfa8c252fcdf99568c116032bc5177645501558e802862e0f9b20e655e9f"
+    },
+    {
+      "path": "tools/pal-data-pack/src/PalDataPack/PackageSampleProbe.cs",
+      "sha256": "8cf0906d14f0f12a027cc4b1e397499684bc24c26b4e2eb6e77862e0e3dee70c"
+    },
+    {
+      "path": "tools/pal-data-pack/src/PalDataPack/PackageValidator.cs",
+      "sha256": "adc93a20bb776ba17e38f497df630da9038b8c40ed530fb26d5334f00fa9447c"
+    },
+    {
+      "path": "tools/pal-data-pack/src/PalDataPack/PalCanonicalMatchBuilder.cs",
+      "sha256": "1f86a5ba279e3b172c4b90cb66804ff43b65f1f1b8b28052f12cfef9ec651350"
+    },
+    {
+      "path": "tools/pal-data-pack/src/PalDataPack/PalDataPack.csproj",
+      "sha256": "5666f1f4872cba332e189b5d3dc3855cde5a82301d92604a38169dc24e398e45"
+    },
+    {
+      "path": "tools/pal-data-pack/src/PalDataPack/PalIconSourceLinkExtractor.cs",
+      "sha256": "dd0ac70200a8ee69f74e34e621964d2e88f7372ab03970af558e9c2eab2feb1c"
+    },
+    {
+      "path": "tools/pal-data-pack/src/PalDataPack/PalRelationMatchBuilder.cs",
+      "sha256": "94b8740afb6904e7452178435fd2daa07365216c11b87084385ce1efde3b3767"
+    },
+    {
+      "path": "tools/pal-data-pack/src/PalDataPack/Program.cs",
+      "sha256": "82aa93f77564136ebeafb202dd07b08a9660789e3a3b754761e1d72b43673b0e"
+    },
+    {
+      "path": "tools/pal-data-pack/src/PalDataPack/SecureInput.cs",
+      "sha256": "98fa3ea7f024f01ee96626d9b0cff4dbdd8b9c15bc5f9a8939ec276eedc301c0"
+    },
+    {
+      "path": "tools/pal-data-pack/src/PalDataPack/SourceContractProbe.cs",
+      "sha256": "cd3f000f32e93961ab699ab642c02700013c824c8627f7b712721b47f4974b88"
+    },
+    {
+      "path": "tools/pal-data-pack/src/PalDataPack/SteamInstallLocator.cs",
+      "sha256": "e8618caf92e34648cdc852201c5b1af2bff2c8cccbf464069bb28e19d99ddbe4"
+    },
+    {
+      "path": "tools/pal-data-pack/src/PalDataPack/VerifiedHumanCatalogExtractor.cs",
+      "sha256": "4a2b3a101c89e742a167593d8832d6ff82b86e2b4b9424a094883609815192c2"
+    },
+    {
+      "path": "tools/pal-data-pack/src/PalDataPack/VerifiedItemCatalogExtractor.cs",
+      "sha256": "3418be2914aaeac053c68b21b2dc9992fa7f2b5ba6b913d2bc3b8fc674eaf0fc"
+    },
+    {
+      "path": "tools/pal-data-pack/src/PalDataPack/VerifiedKoreanCatalogExtractor.cs",
+      "sha256": "63cfcb47d7518e455240a7bda3f83d8eac6f09f8cdcbdc329a28fbb8b583ca26"
+    },
+    {
+      "path": "tools/pal-data-pack/src/PalDataPack/VerifiedKoreanUiExtractor.cs",
+      "sha256": "e3b21db19fd67e390fb7a64bae14bfb5ad59a03ac4123b4e8704674a4c50de50"
+    },
+    {
+      "path": "tools/pal-data-pack/src/PalDataPack/VerifiedMapSpawnExtractor.cs",
+      "sha256": "a26e933f7f04fc0e34f6e4001056117cbec0e60a1fae9037e1934e82736cce40"
+    },
+    {
+      "path": "tools/pal-data-pack/src/PalDataPack/VerifiedPalBreedingExtractor.cs",
+      "sha256": "6ff6da30f92c02d3a70a4360a13d76f00e787dc73b51e2229da9a2d93d33b2be"
+    },
+    {
+      "path": "tools/pal-data-pack/src/PalDataPack/VerifiedWorldCatalogExtractor.cs",
+      "sha256": "1ee10af156f7e078237cf206da0d80ee37de307706aa27eb2c882d9065f52e1d"
+    },
+    {
+      "path": "tools/pal-data-pack/src/PalDataPack/packages.lock.json",
+      "sha256": "ba8bf40d4a155718a5714c902cc36b3f3dc97ed1a1ec8c78f8794b97ac950c56"
+    },
+    {
+      "path": "tools/pal-data-pack/tests/PalDataPack.Tests/AtomicPublishTests.cs",
+      "sha256": "ac1b1edc98646facf6ae869a173c1b53b0369d16dba6cda029b4cf17e72aa112"
+    },
+    {
+      "path": "tools/pal-data-pack/tests/PalDataPack.Tests/FullCapabilityFixtureTests.cs",
+      "sha256": "22d23c998f7fcf18075f5f8c41be06e9403a62a880fb8fe0cb78961116357308"
+    },
+    {
+      "path": "tools/pal-data-pack/tests/PalDataPack.Tests/GameIconExtractorTests.cs",
+      "sha256": "a23bdf4754c88b0a3cf76036cf02139d8494b14c3326aec02b7f9907803865ec"
+    },
+    {
+      "path": "tools/pal-data-pack/tests/PalDataPack.Tests/GlobalUsings.cs",
+      "sha256": "50436eb3a60162e0cfad749eddfb06f8908f821a90ca44532df946a53e071359"
+    },
+    {
+      "path": "tools/pal-data-pack/tests/PalDataPack.Tests/MapSpawnSearchIndexBuilderTests.cs",
+      "sha256": "0862e179b436acab2430a49f129710525a89d5b1df07b581d4fdea3b04388408"
+    },
+    {
+      "path": "tools/pal-data-pack/tests/PalDataPack.Tests/PackageSampleProbeTests.cs",
+      "sha256": "c19aa4b91584df1be80436a95fa04dacee7ef25d4903c44b33d84b786d34928f"
+    },
+    {
+      "path": "tools/pal-data-pack/tests/PalDataPack.Tests/PalCanonicalMatchBuilderTests.cs",
+      "sha256": "51435c3b5ccb31f64ab5c98ec8b870865d8073083c073b3eeb034acb0acbd0e2"
+    },
+    {
+      "path": "tools/pal-data-pack/tests/PalDataPack.Tests/PalDataPack.Tests.csproj",
+      "sha256": "e9805934c8d363f53a3a045a70b9ec07a6a9624cb0cade08c16845fad5477f5d"
+    },
+    {
+      "path": "tools/pal-data-pack/tests/PalDataPack.Tests/PalRelationMatchBuilderTests.cs",
+      "sha256": "c44e0c5e8050f8a2f05f7afa9f878d9e91d40c1968ceab82fc80fdbf01459566"
+    },
+    {
+      "path": "tools/pal-data-pack/tests/PalDataPack.Tests/ReferenceIntegrityTests.cs",
+      "sha256": "30e4241de93db1c683fb25685b8fdc77e9d5b442ea45d47ba3eb9f0a9288e8e6"
+    },
+    {
+      "path": "tools/pal-data-pack/tests/PalDataPack.Tests/SourceContractTests.cs",
+      "sha256": "98a59dc7812f55ec4700ef86afd1eb7ae94b05752b63ad63202a6d6400641dab"
+    },
+    {
+      "path": "tools/pal-data-pack/tests/PalDataPack.Tests/TestPaths.cs",
+      "sha256": "f3bc7979a0e9ce5bcec482695dd86448a16b14aeae9a373c48a82d7a25279018"
+    },
+    {
+      "path": "tools/pal-data-pack/tests/PalDataPack.Tests/VerifiedHumanCatalogTests.cs",
+      "sha256": "e263f8e5e9c73629fe8386818f169044d5b07dc0c1e0679c8fb93de5f32c71e9"
+    },
+    {
+      "path": "tools/pal-data-pack/tests/PalDataPack.Tests/VerifiedPalBreedingExtractorTests.cs",
+      "sha256": "cdaba20b5d37a5fc3313674b1c7b38ab968794c85703936f059d42e2899a2230"
+    },
+    {
+      "path": "tools/pal-data-pack/tests/PalDataPack.Tests/packages.lock.json",
+      "sha256": "03d1c0db2e855646d03e58ab04c89bb6d02ccb0fed8614b08e8570ceffa505b4"
+    },
+    {
+      "path": "tools/pal-map-pack/Directory.Packages.props",
+      "sha256": "e1dfd64bd488f02aa00c70d107e0e930b1ff62ddd5f0b8e9d518a7550f8b9f66"
+    },
+    {
+      "path": "tools/pal-map-pack/NOTICE.md",
+      "sha256": "f772f35fdb6bbf6f267b7f123e75d4d60b09b1b2660a599334cda008bc6f5315"
+    },
+    {
+      "path": "tools/pal-map-pack/PalMapPack.slnx",
+      "sha256": "93deea6ddd8ec89bcd9d36d7f970e38399a9c23bdc216cf395661e9b0e13b675"
+    },
+    {
+      "path": "tools/pal-map-pack/src/PalMapPack.Calibrator/LandmarkCaptureExporter.cs",
+      "sha256": "e165278f6c8201071f5e49749e9a350b14025702797db54d35feb9624219c053"
+    },
+    {
+      "path": "tools/pal-map-pack/src/PalMapPack.Calibrator/LandmarkCaptureSession.cs",
+      "sha256": "3b92163e0ac29fa70aaa6ea613ddb5bb68e118ac4e917be6edae6fc572e01e95"
+    },
+    {
+      "path": "tools/pal-map-pack/src/PalMapPack.Calibrator/LocalAlignmentCaptureCommand.cs",
+      "sha256": "b13f33c9cbfd7c116738054816637c7d38a948670c1ee28bb8ab9d034fbb3e4b"
+    },
+    {
+      "path": "tools/pal-map-pack/src/PalMapPack.Calibrator/LocalAlignmentCaptureForm.cs",
+      "sha256": "af7c1db273e6ecde4811afa176607f78d5342e769fa8da2515d8d346e419a37f"
+    },
+    {
+      "path": "tools/pal-map-pack/src/PalMapPack.Calibrator/LocalAlignmentCaptureSession.cs",
+      "sha256": "f5d596e26cbf53b9bc5b805d5cf3c4067a532c0ffb2504995fb9b3654fe26992"
+    },
+    {
+      "path": "tools/pal-map-pack/src/PalMapPack.Calibrator/LocalAlignmentObservationExporter.cs",
+      "sha256": "a63f4eeb3f65901001127926ea490e88f17d73abb8303214bf205bbab9948387"
+    },
+    {
+      "path": "tools/pal-map-pack/src/PalMapPack.Calibrator/MainForm.cs",
+      "sha256": "da41308630b381ca5a4c28489a397c42d84faf10f157617ba0e2b8aa3a0ce4d5"
+    },
+    {
+      "path": "tools/pal-map-pack/src/PalMapPack.Calibrator/PalMapPack.Calibrator.csproj",
+      "sha256": "eb8da970b88c2d0d38771b95ce983f589d2473aac48be14ca217b0e21e380b3c"
+    },
+    {
+      "path": "tools/pal-map-pack/src/PalMapPack.Calibrator/PrecisionMapCoordinateMapper.cs",
+      "sha256": "23ca1ef3e306ed0c006a9a4ba168673b0309d15d68b32d20f4980735fc5668e6"
+    },
+    {
+      "path": "tools/pal-map-pack/src/PalMapPack.Calibrator/Program.cs",
+      "sha256": "e4def895a59d1d45689d80aabd9851a4b9cb211f2229b258d8f87b526fc9d84d"
+    },
+    {
+      "path": "tools/pal-map-pack/src/PalMapPack.Calibrator/ZoomedImageCoordinateMapper.cs",
+      "sha256": "5e28808678d64a631b46e8014556d28f5e23a4ac77734afd1b45e4a0c096f376"
+    },
+    {
+      "path": "tools/pal-map-pack/src/PalMapPack.Calibrator/packages.lock.json",
+      "sha256": "ef7259b5fc2b80b038b9ea6b943e24c173418c47386d68b59e31e877ca4e31c9"
+    },
+    {
+      "path": "tools/pal-map-pack/src/PalMapPack/AssetCatalogProbe.cs",
+      "sha256": "0d3203bf13b749f46cec1e1516ef0d83ad99a0dcc3085876f401d672afbd4ac4"
+    },
+    {
+      "path": "tools/pal-map-pack/src/PalMapPack/AssetContract.cs",
+      "sha256": "49c62863274e8aa88b287bddc5b7274a5037e10b464854f63faa70163b48bd77"
+    },
+    {
+      "path": "tools/pal-map-pack/src/PalMapPack/AssetPaths.cs",
+      "sha256": "8c39d49db8e1de2f18a4d39247f16e35c3d3320646f62f3f489ae0124a3dad9a"
+    },
+    {
+      "path": "tools/pal-map-pack/src/PalMapPack/BossPoiTableReader.cs",
+      "sha256": "60485b9dc6f81ed55074f5953bb7ff3b8ad81c2152c2c65f97bc80e62efac896"
+    },
+    {
+      "path": "tools/pal-map-pack/src/PalMapPack/CalibrationPreviewBuilder.cs",
+      "sha256": "fab7290259bd044c4f5fc3977e2a92d990e42c88cd077e79f00d1d3d6d32d85f"
+    },
+    {
+      "path": "tools/pal-map-pack/src/PalMapPack/CoordinateSolver.cs",
+      "sha256": "3a7fbdefa35da6451b8d9b251d2be3dbc47030124b87d089732027d4e8cde3fe"
+    },
+    {
+      "path": "tools/pal-map-pack/src/PalMapPack/Cue4ParseMapAssetReader.cs",
+      "sha256": "50bcf2366172e95f0dd9a4036c245b88fb9a9942c667a2cb363284ffc76c0071"
+    },
+    {
+      "path": "tools/pal-map-pack/src/PalMapPack/Cue4ParsePoiAdapter.cs",
+      "sha256": "c8decd71f3f4280a90a1162628849a22f2759f39006be76c9bfb6d5eaf3c04dd"
+    },
+    {
+      "path": "tools/pal-map-pack/src/PalMapPack/IMapAssetReader.cs",
+      "sha256": "08d57d80ab5db7dd6c3aee34b29d30d9e37ef547e6eff473eac4c0a634433c46"
+    },
+    {
+      "path": "tools/pal-map-pack/src/PalMapPack/ManifestWriter.cs",
+      "sha256": "eed806a33bd975790a127f8f85d97d625a21fd66ccc0c7b225bdd1680e7197f7"
+    },
+    {
+      "path": "tools/pal-map-pack/src/PalMapPack/MapPackBuilder.cs",
+      "sha256": "84ee7eedc6eaa7373ab69aa909574d482715edc97f8fc3b2a8a930573a92c9b6"
+    },
+    {
+      "path": "tools/pal-map-pack/src/PalMapPack/MapPackValidator.cs",
+      "sha256": "157695e0ffe614dfee849027f625441b8716b46d6dfdc6bd23c9edd7d8ae6ae8"
+    },
+    {
+      "path": "tools/pal-map-pack/src/PalMapPack/PalMapPack.csproj",
+      "sha256": "5666f1f4872cba332e189b5d3dc3855cde5a82301d92604a38169dc24e398e45"
+    },
+    {
+      "path": "tools/pal-map-pack/src/PalMapPack/PlacedWorldPoiReader.cs",
+      "sha256": "ea78c6875cf901bb880cd251a89b0a0ed24e0ea723236949180ffcb4e5826483"
+    },
+    {
+      "path": "tools/pal-map-pack/src/PalMapPack/PoiCandidateDiscoveryDocument.cs",
+      "sha256": "18e9212bf337e86da4cf9489a82b685ddf016ec500bf28bb9c5c719b3c74370c"
+    },
+    {
+      "path": "tools/pal-map-pack/src/PalMapPack/PoiExtractor.cs",
+      "sha256": "3fc641051484f9887b3e71b02856facea62e6ce9601f94a7b601d4cd865f8e55"
+    },
+    {
+      "path": "tools/pal-map-pack/src/PalMapPack/Program.cs",
+      "sha256": "2c77a3be4be8222a93e1eb4db64f85c08587480de203e615213a30f2ce3d9df6"
+    },
+    {
+      "path": "tools/pal-map-pack/src/PalMapPack/ProtectedFileIO.cs",
+      "sha256": "17be398ec80145480f98e7f2d50e3e3b178c7723604eefc08187db1ac5e0ee89"
+    },
+    {
+      "path": "tools/pal-map-pack/src/PalMapPack/SecurePaths.cs",
+      "sha256": "f6505cd17b2672b86afbd2b616d09cc699db90233501c735143f8665b4253ba3"
+    },
+    {
+      "path": "tools/pal-map-pack/src/PalMapPack/SteamInstallLocator.cs",
+      "sha256": "3342da645648776a9027dcb96e6fe306c6368bcf74d032aa859308bd97b4407a"
+    },
+    {
+      "path": "tools/pal-map-pack/src/PalMapPack/TilePyramidBuilder.cs",
+      "sha256": "209fe620c1733e72119b3d37f31476564510d32c4087cdc095db97eeae0507b4"
+    },
+    {
+      "path": "tools/pal-map-pack/src/PalMapPack/packages.lock.json",
+      "sha256": "ba8bf40d4a155718a5714c902cc36b3f3dc97ed1a1ec8c78f8794b97ac950c56"
+    },
+    {
+      "path": "tools/pal-map-pack/tests/PalMapPack.Tests/AtomicPublishTests.cs",
+      "sha256": "4254855232cb204a64097dc719f07e65d7726b4b5c7a4ffd8a55a32cc58df80b"
+    },
+    {
+      "path": "tools/pal-map-pack/tests/PalMapPack.Tests/BossPoiTableReaderTests.cs",
+      "sha256": "34b77d882ecfc63a7b8f41f872d9ac315bbbc6e1ce18276fcf857792d80810bd"
+    },
+    {
+      "path": "tools/pal-map-pack/tests/PalMapPack.Tests/CalibrationPreviewTests.cs",
+      "sha256": "20e60bcb2b5ca22da32b80ca4ec7944fa3e6c58b0110fbf2effe3ae9704848e2"
+    },
+    {
+      "path": "tools/pal-map-pack/tests/PalMapPack.Tests/CommandPipelineTests.cs",
+      "sha256": "488cd9d4f408cd676e9fb23826f92ff5c745adf391f3d1dadef1ca8dd9e8b3b2"
+    },
+    {
+      "path": "tools/pal-map-pack/tests/PalMapPack.Tests/CoordinateSolverTests.cs",
+      "sha256": "c429e2095aca761c2728d6bacf110efdc8049e0fa5db8126c8c093500b096351"
+    },
+    {
+      "path": "tools/pal-map-pack/tests/PalMapPack.Tests/ExitCodeTests.cs",
+      "sha256": "b8abc787acc93eb2644bf3513db1de47846a843eff54ff9a546b91569c75f86d"
+    },
+    {
+      "path": "tools/pal-map-pack/tests/PalMapPack.Tests/FixtureAssetReader.cs",
+      "sha256": "8dd426fc769567a37cdb07a9aac969e49862aac1f46a12af02c500f21b0b8364"
+    },
+    {
+      "path": "tools/pal-map-pack/tests/PalMapPack.Tests/GateDocumentationTests.cs",
+      "sha256": "4b8c2e35f175116ad585d3ee920fabe8f859bac9fd15026fdeac3454a564348b"
+    },
+    {
+      "path": "tools/pal-map-pack/tests/PalMapPack.Tests/GlobalUsings.cs",
+      "sha256": "50436eb3a60162e0cfad749eddfb06f8908f821a90ca44532df946a53e071359"
+    },
+    {
+      "path": "tools/pal-map-pack/tests/PalMapPack.Tests/LandmarkCaptureSessionTests.cs",
+      "sha256": "e19943357a3a628faf513a8895d02ae22adf9b236dcb4ab564b0160ee1724f88"
+    },
+    {
+      "path": "tools/pal-map-pack/tests/PalMapPack.Tests/LocalAlignmentCaptureCommandTests.cs",
+      "sha256": "b16e8c2909ccde9d2a580595c2ec8b366a56c873c943276636aadd1ce9da5ecf"
+    },
+    {
+      "path": "tools/pal-map-pack/tests/PalMapPack.Tests/LocalAlignmentCaptureFormModelTests.cs",
+      "sha256": "9e664f1373c7a68712ef59d31a5ae8fb64b924f552a825cedf2b5645e1437c30"
+    },
+    {
+      "path": "tools/pal-map-pack/tests/PalMapPack.Tests/LocalAlignmentCaptureSessionTests.cs",
+      "sha256": "b0285aa3dc44f4c5093ca21b51a5e91e5a61982eb53ed3fdb58d0a4bd7591f4f"
+    },
+    {
+      "path": "tools/pal-map-pack/tests/PalMapPack.Tests/LocalAlignmentObservationExporterTests.cs",
+      "sha256": "86420f6fb9cbba8dac4e712a83fb6de7475e6d9fead62dc71510734360a2b509"
+    },
+    {
+      "path": "tools/pal-map-pack/tests/PalMapPack.Tests/LocalGameContractTests.cs",
+      "sha256": "d4b5b858ee71eb05f08bb9d581e9648ae5d859e1c00ed18d748bfef91ad1cf88"
+    },
+    {
+      "path": "tools/pal-map-pack/tests/PalMapPack.Tests/ManifestTests.cs",
+      "sha256": "a8f7aa33acc636f1571fab171ad5df2f292efe95c0a35e09b990d140f2b48786"
+    },
+    {
+      "path": "tools/pal-map-pack/tests/PalMapPack.Tests/MapRegionTests.cs",
+      "sha256": "921483998c93200c2b0b9e7210b385758864d60b9b7cabd45915dc841bf81c67"
+    },
+    {
+      "path": "tools/pal-map-pack/tests/PalMapPack.Tests/PalMapPack.Tests.csproj",
+      "sha256": "a32288ba52bbb56422ecd42e68cb5ed694a237abbb52f38045c2827eaef8f8c5"
+    },
+    {
+      "path": "tools/pal-map-pack/tests/PalMapPack.Tests/PlacedWorldPoiReaderTests.cs",
+      "sha256": "f2d7acc467c98896b278cd512f20094399dbc04eb9926d7ad9f8ffab2e1863f6"
+    },
+    {
+      "path": "tools/pal-map-pack/tests/PalMapPack.Tests/PoiExtractorTests.cs",
+      "sha256": "8995ac09541b261fc4c1b768f683e476160628b074fdee37231eaffd2462cc3c"
+    },
+    {
+      "path": "tools/pal-map-pack/tests/PalMapPack.Tests/PrecisionMapCoordinateMapperTests.cs",
+      "sha256": "4d9aa78c450266bd41a62cef6e30a07bdbf5a00d113befebc299afdad202b9a5"
+    },
+    {
+      "path": "tools/pal-map-pack/tests/PalMapPack.Tests/ProtectedFileIOTests.cs",
+      "sha256": "e5040cdd2f919586125dd27817444c3f99b8b3c9c385e32c23e0afb83b32f588"
+    },
+    {
+      "path": "tools/pal-map-pack/tests/PalMapPack.Tests/TilePyramidTests.cs",
+      "sha256": "8840f293e21e31e6f3ff77f6a5e5a450ca8e47c09352879e42fe5d8976e89f6b"
+    },
+    {
+      "path": "tools/pal-map-pack/tests/PalMapPack.Tests/TransformContractValidationTests.cs",
+      "sha256": "806ce172f33c41f90d2346424d69d2870859730413a4e53e1cb1a36250bb94fb"
+    },
+    {
+      "path": "tools/pal-map-pack/tests/PalMapPack.Tests/fixtures/local-alignment-observation-canonical-matrix.jsonl",
+      "sha256": "48b3b748e6b009645b9ace68802771ea54fbd3bbdc8665af782f9e9df641d8ee"
+    },
+    {
+      "path": "tools/pal-map-pack/tests/PalMapPack.Tests/fixtures/local-alignment-observation-canonical.json",
+      "sha256": "c9f6bad85dd4138933a6d84c5af263b8a8676676543ac9354b490ad60fd8e231"
+    },
+    {
+      "path": "tools/pal-map-pack/tests/PalMapPack.Tests/packages.lock.json",
+      "sha256": "66bc15132377a6c55a0500ca017413a20f1caf00a8a1400aac16663408ff8377"
+    },
+    {
+      "path": "tools/pal-map-pack/tests/fixtures/transform-parity.json",
+      "sha256": "89bd0d062de9db8a1e82faaec83f5467788b8b7541da1950da54469d0ab02dff"
+    }
+  ],
+  "excludedFileCount": 3980
+}

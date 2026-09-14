@@ -1,0 +1,68 @@
+# Local toolchains and task orchestration scratch data
+.worktrees/
+.tools/
+cloudflare/node_modules/
+cloudflare/.wrangler/
+/.wrangler/
+/testResults.xml
+/.local-qa/
+# Wrangler and local shell credentials. Sanitized examples stay trackable.
+cloudflare/.dev.vars
+cloudflare/.dev.vars.*
+!cloudflare/.dev.vars.example
+cloudflare/.env
+cloudflare/.env.*
+cloudflare/*.secrets.*
+!cloudflare/*.secrets.example
+apps/pal-companion-win-ui/test/**/failures/
+/.fvm/
+.tmp/
+.benchmarks/
+/log/
+# Build output
+target/
+artifacts/
+.cargo-audit/
+.cargo-deny/
+.dart_tool/
+build/
+tools/**/bin/
+tools/**/obj/
+node_modules/
+.pnpm-store/
+**/.svelte-kit/
+**/dist/
+**/storybook-static/
+**/playwright-report/
+**/test-results/
+
+# Retired local caches from the removed TypeScript protocol package
+/packages/pal_protocol_ts/
+
+# Palworld and generated map data
+*.pak
+*.ucas
+*.utoc
+*.usmap
+*.sav
+datasets/
+tiles/
+!assets/palbeacon/game/native-map-pack/**/tiles/
+!assets/palbeacon/game/native-map-pack/**/tiles/**
+!apps/pal-companion-win-ui/assets/game/map/tiles/
+!apps/pal-companion-win-ui/assets/game/map/tiles/**
+!apps/pal-companion-win-ui/assets/game/map/tree/tiles/
+!apps/pal-companion-win-ui/assets/game/map/tree/tiles/**
+!tests/fixtures/map-pack-valid/tiles/
+!tests/fixtures/map-pack-valid/tiles/**
+
+# Credentials, certificates, and local environment files
+certs/
+keys/
+config/local/
+*.pfx
+*.p12
+*.pem
+*.key
+.env*
+!cloudflare/.env.example

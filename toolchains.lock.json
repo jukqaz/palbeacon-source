@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "rust": {
+    "version": "1.97.1",
+    "release_track": "stable",
+    "update_policy": "latest_patch",
+    "manager": "rustup",
+    "manager_version": "1.29.0",
+    "target": "x86_64-pc-windows-msvc",
+    "components": ["clippy", "rustfmt"],
+    "wasm_target": "wasm32-unknown-unknown"
+  },
+  "mise": {
+    "version": "2026.7.16",
+    "release_track": "stable",
+    "update_policy": "latest_release"
+  },
+  "dotnet": {
+    "sdk": "10.0.302",
+    "channel": "10.0",
+    "release_track": "lts",
+    "update_policy": "latest_sdk",
+    "roll_forward": "disable",
+    "manager": "mise"
+  },
+  "node": {
+    "version": "24.19.0",
+    "release_track": "lts",
+    "update_policy": "latest_lts",
+    "manager": "mise",
+    "pnpm": "11.19.0",
+    "global_packages": {
+      "@napi-rs/keyring": "1.3.0"
+    },
+    "usage": "sveltekit_tauri_and_cloudflare_tooling"
+  },
+  "release_policy_verified_on": "2026-08-13",
+  "protoc": {"provider": "protoc-bin-vendored", "crate_version": "3.2.0"},
+  "prost": {"version": "0.14.4"},
+  "tonic": {"version": "0.14.6"},
+  "wasm_bindgen": {"crate_and_cli_version": "0.2.126"},
+  "cargo_deny": {"version": "0.20.2"},
+  "cargo_audit": {"version": "0.22.2"},
+  "pester": {"version": "5.7.1"}
+}

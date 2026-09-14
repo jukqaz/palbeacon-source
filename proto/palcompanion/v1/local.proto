@@ -1,0 +1,263 @@
+syntax = "proto3";
+
+package palcompanion.v1;
+
+import "palcompanion/v1/analysis.proto";
+import "palcompanion/v1/common.proto";
+import "palcompanion/v1/map.proto";
+
+enum ClientRole {
+  CLIENT_ROLE_UNSPECIFIED = 0;
+  CLIENT_ROLE_FLUTTER_UI = 1;
+  CLIENT_ROLE_OVERLAY = 2;
+}
+
+enum OverlaySettingField {
+  OVERLAY_SETTING_FIELD_UNSPECIFIED = 0;
+  OVERLAY_SETTING_FIELD_ENABLED = 1;
+  OVERLAY_SETTING_FIELD_AUTO_SHOW = 2;
+  OVERLAY_SETTING_FIELD_ROTATION_MODE = 3;
+  OVERLAY_SETTING_FIELD_INPUT_MODE = 4;
+  OVERLAY_SETTING_FIELD_DISPLAY_MODE = 5;
+  OVERLAY_SETTING_FIELD_OPACITY = 6;
+  OVERLAY_SETTING_FIELD_DIAMETER_PX = 7;
+  OVERLAY_SETTING_FIELD_ZOOM = 8;
+  OVERLAY_SETTING_FIELD_NORMALIZED_X = 9;
+  OVERLAY_SETTING_FIELD_NORMALIZED_Y = 10;
+  OVERLAY_SETTING_FIELD_FPS_PROFILE = 11;
+  OVERLAY_SETTING_FIELD_POI_FILTERS = 12;
+  OVERLAY_SETTING_FIELD_HOTKEY_BINDINGS = 13;
+}
+
+enum SettingsApplyStatus {
+  SETTINGS_APPLY_STATUS_UNSPECIFIED = 0;
+  SETTINGS_APPLY_STATUS_APPLIED = 1;
+  SETTINGS_APPLY_STATUS_VERSION_CONFLICT = 2;
+  SETTINGS_APPLY_STATUS_VALIDATION_REJECTED = 3;
+  SETTINGS_APPLY_STATUS_HOTKEY_CONFLICT = 4;
+}
+
+enum HotkeyAction {
+  HOTKEY_ACTION_UNSPECIFIED = 0;
+  HOTKEY_ACTION_OVERLAY_VISIBILITY = 1;
+  HOTKEY_ACTION_EXPANDED_MAP = 2;
+  HOTKEY_ACTION_TEMPORARY_INTERACTION = 3;
+  HOTKEY_ACTION_INTERACTION_LOCK = 4;
+}
+
+enum StartupStage {
+  STARTUP_STAGE_UNSPECIFIED = 0;
+  STARTUP_STAGE_IDLE = 1;
+  STARTUP_STAGE_GAME_DETECTED = 2;
+  STARTUP_STAGE_WINDOW_ATTACHED = 3;
+  STARTUP_STAGE_WAITING_FOR_POSITION = 4;
+  STARTUP_STAGE_LIVE = 5;
+  STARTUP_STAGE_SUSPENDED = 6;
+  STARTUP_STAGE_RECOVERING = 7;
+}
+
+enum PositionSource {
+  POSITION_SOURCE_UNSPECIFIED = 0;
+  POSITION_SOURCE_REPLAY = 1;
+  POSITION_SOURCE_SERVER_AGENT = 2;
+}
+
+enum GateErrorCode {
+  GATE_ERROR_CODE_UNSPECIFIED = 0;
+  GATE_ERROR_CODE_CLIENT_BUILD_UNKNOWN = 1;
+  GATE_ERROR_CODE_MAP_PACK_MISSING = 2;
+  GATE_ERROR_CODE_MAP_BUILD_MISMATCH = 3;
+  GATE_ERROR_CODE_MAP_INTEGRITY_FAILED = 4;
+  GATE_ERROR_CODE_AGENT_DISCONNECTED = 5;
+  GATE_ERROR_CODE_AGENT_IDENTITY_MISMATCH = 6;
+  GATE_ERROR_CODE_AGENT_PROFILE_MISMATCH = 7;
+  GATE_ERROR_CODE_POSITION_SUBJECT_UNAVAILABLE = 8;
+  GATE_ERROR_CODE_HEADING_UNAVAILABLE = 9;
+  GATE_ERROR_CODE_PROTOCOL_INCOMPATIBLE = 10;
+}
+
+enum OverlayCommandKind {
+  OVERLAY_COMMAND_KIND_UNSPECIFIED = 0;
+  OVERLAY_COMMAND_KIND_START = 1;
+  OVERLAY_COMMAND_KIND_STOP = 2;
+  OVERLAY_COMMAND_KIND_RESTART = 3;
+  OVERLAY_COMMAND_KIND_SHOW = 4;
+  OVERLAY_COMMAND_KIND_HIDE = 5;
+  OVERLAY_COMMAND_KIND_ENTER_INTERACTIVE = 6;
+  OVERLAY_COMMAND_KIND_EXIT_INTERACTIVE = 7;
+  OVERLAY_COMMAND_KIND_OPEN_EXPANDED = 8;
+  OVERLAY_COMMAND_KIND_CLOSE_EXPANDED = 9;
+  OVERLAY_COMMAND_KIND_ZOOM_IN = 10;
+  OVERLAY_COMMAND_KIND_ZOOM_OUT = 11;
+  OVERLAY_COMMAND_KIND_TOGGLE_ROTATION = 12;
+  OVERLAY_COMMAND_KIND_LOCK = 13;
+  OVERLAY_COMMAND_KIND_TOGGLE_VISIBILITY = 14;
+  OVERLAY_COMMAND_KIND_TOGGLE_FAST_TRAVEL = 15;
+  OVERLAY_COMMAND_KIND_TOGGLE_BOSS = 16;
+  OVERLAY_COMMAND_KIND_TOGGLE_WANTED = 17;
+  OVERLAY_COMMAND_KIND_TOGGLE_DUNGEON = 18;
+  OVERLAY_COMMAND_KIND_TOGGLE_TOWER = 19;
+  OVERLAY_COMMAND_KIND_TOGGLE_EGG = 20;
+  OVERLAY_COMMAND_KIND_TOGGLE_RESOURCES = 21;
+  OVERLAY_COMMAND_KIND_TOGGLE_SALVAGE = 22;
+}
+
+enum OverlayCommandStatus {
+  OVERLAY_COMMAND_STATUS_UNSPECIFIED = 0;
+  OVERLAY_COMMAND_STATUS_APPLIED = 1;
+  OVERLAY_COMMAND_STATUS_NO_OP = 2;
+  OVERLAY_COMMAND_STATUS_REJECTED = 3;
+  OVERLAY_COMMAND_STATUS_FAILED = 4;
+}
+
+enum ProtocolErrorCode {
+  PROTOCOL_ERROR_CODE_UNSPECIFIED = 0;
+  PROTOCOL_ERROR_CODE_NONE = 1;
+  PROTOCOL_ERROR_CODE_UNSUPPORTED_VERSION = 2;
+  PROTOCOL_ERROR_CODE_INVALID_CONNECTION_ID = 3;
+  PROTOCOL_ERROR_CODE_INVALID_TRACE_ID = 4;
+  PROTOCOL_ERROR_CODE_INVALID_ROLE = 5;
+  PROTOCOL_ERROR_CODE_UNEXPECTED_PAYLOAD = 6;
+  PROTOCOL_ERROR_CODE_INVALID_SETTINGS = 7;
+  PROTOCOL_ERROR_CODE_VERSION_CONFLICT = 8;
+  PROTOCOL_ERROR_CODE_HOTKEY_CONFLICT = 9;
+  PROTOCOL_ERROR_CODE_VALIDATION_FAILED = 10;
+}
+
+message LocalEnvelope {
+  uint32 protocol_version = 1;
+  bytes connection_id = 2;
+  uint64 message_id = 3;
+  optional uint64 reply_to_message_id = 4;
+
+  oneof payload {
+    ClientHello client_hello = 20;
+    SettingsPatch settings_patch = 21;
+    SettingsAck settings_ack = 22;
+    CoreStatusFrame core_status = 23;
+    PositionFrame position = 24;
+    RenderSnapshotFrame render_snapshot = 25;
+    OverlayCommand overlay_command = 26;
+    OverlayCommandResult overlay_command_result = 27;
+    RenderApplied render_applied = 28;
+    ProtocolError error = 29;
+    CompanionRequest product_request = 30;
+    CompanionResponse product_response = 31;
+    SettingsQuery settings_query = 32;
+    SettingsSnapshot settings_snapshot = 33;
+    MapViewIntentV1 map_view_intent = 34;
+    MapViewStateUpdateV1 map_view_update = 35;
+  }
+}
+
+message ClientHello {
+  ClientRole role = 1;
+  uint32 process_id = 2;
+  uint32 minimum_protocol_version = 3;
+  uint32 maximum_protocol_version = 4;
+}
+
+message SettingsPatch {
+  bytes trace_id = 1;
+  uint64 expected_settings_version = 2;
+  OverlaySettings candidate = 3;
+  repeated OverlaySettingField changed_fields = 4;
+}
+
+message SettingsQuery {
+  bytes trace_id = 1;
+}
+
+message SettingsSnapshot {
+  bytes trace_id = 1;
+  uint64 settings_version = 2;
+  OverlaySettings settings = 3;
+}
+
+message HotkeyConflict {
+  HotkeyAction action = 1;
+  HotkeyAction conflicting_action = 2;
+  HotkeyChord chord = 3;
+}
+
+message SettingsAck {
+  bytes trace_id = 1;
+  SettingsApplyStatus status = 2;
+  uint64 applied_version = 3;
+  OverlaySettings effective_settings = 4;
+  repeated HotkeyConflict hotkey_conflicts = 5;
+}
+
+message GateError {
+  GateErrorCode code = 1;
+  string field = 2;
+  string offending_value = 3;
+}
+
+message CoreStatusFrame {
+  StartupStage startup_stage = 1;
+  bool game_connected = 2;
+  bool window_connected = 3;
+  bool overlay_connected = 4;
+  bool position_connected = 5;
+  Freshness freshness = 6;
+  bool heading_available = 7;
+  PositionSource position_source = 8;
+  string client_build_id = 9;
+  string map_build_id = 10;
+  bytes map_pack_hash = 11;
+  bytes agent_server_fingerprint = 12;
+  string agent_server_version = 13;
+  bytes agent_gate_profile_hash = 14;
+  bytes last_source_boot_id = 15;
+  uint64 last_source_sequence = 16;
+  optional GateError gate_error = 17;
+}
+
+message PositionFrame {
+  bytes trace_id = 1;
+  PositionData position = 2;
+  Freshness freshness = 3;
+}
+
+message RenderSnapshotFrame {
+  bytes trace_id = 1;
+  bytes source_boot_id = 2;
+  uint64 source_sequence = 3;
+  uint64 settings_version = 4;
+  WindowSnapshot window = 5;
+  OverlaySettings settings = 6;
+  PositionData position = 7;
+  Freshness freshness = 8;
+}
+
+message OverlayCommand {
+  bytes trace_id = 1;
+  OverlayCommandKind command = 2;
+  uint64 expected_settings_version = 3;
+}
+
+message OverlayCommandResult {
+  bytes trace_id = 1;
+  OverlayCommandStatus status = 2;
+  bool visible = 3;
+  InputMode input_mode = 4;
+  DisplayMode display_mode = 5;
+  uint64 settings_version = 6;
+  ProtocolErrorCode error_code = 7;
+  OverlaySettings effective_settings = 8;
+}
+
+message RenderApplied {
+  bytes trace_id = 1;
+  bytes source_boot_id = 2;
+  uint64 sequence = 3;
+  uint64 settings_version = 4;
+  uint64 first_presented_local_qpc = 5;
+}
+
+message ProtocolError {
+  ProtocolErrorCode code = 1;
+  string field = 2;
+  string offending_value = 3;
+}

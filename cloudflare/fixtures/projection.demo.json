@@ -1,0 +1,45 @@
+{
+  "projection_id": "1111111111111111111111111111111111111111111111111111111111111111",
+  "sync_id": "2222222222222222222222222222222222222222222222222222222222222222",
+  "owner_subject": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "world_id": "streamline-main",
+  "game_build_id": "24181527",
+  "dataset_version": "palworld-1.0.1-build-24181527",
+  "parser_version": "pal-core-projection-v1",
+  "projected_at": "2026-07-23T14:24:00+09:00",
+  "profile": {
+    "level": 42,
+    "experience": 123456,
+    "hp": 4280,
+    "stamina": 230,
+    "attack": 118,
+    "defense": 462,
+    "work_speed": 100,
+    "carry_weight": 1200
+  },
+  "pals": [
+    {
+      "pal_instance_id": "3333333333333333333333333333333333333333333333333333333333333333",
+      "species_id": "Quivern",
+      "level": 38,
+      "gender": "male",
+      "rank": 2,
+      "iv_hp": 91,
+      "iv_attack": 84,
+      "iv_defense": 88,
+      "location_kind": "party",
+      "container_ordinal": 0,
+      "slot_index": 0,
+      "passive_ids": ["Swift", "Runner", "InfiniteStamina"]
+    }
+  ],
+  "inventory": [
+    {
+      "container_kind": "player_main",
+      "container_ordinal": 0,
+      "slot_index": 0,
+      "item_id": "PalOil",
+      "quantity": 73
+    }
+  ]
+}

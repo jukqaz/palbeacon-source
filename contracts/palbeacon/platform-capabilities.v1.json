@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "platforms": {
+    "web": {
+      "public_catalog": true,
+      "wiki": true,
+      "plans": true,
+      "local_save": false,
+      "server_profiles": false,
+      "overlay_control": false,
+      "settings": false
+    },
+    "windows": {
+      "public_catalog": true,
+      "wiki": true,
+      "plans": true,
+      "local_save": true,
+      "server_profiles": true,
+      "overlay_control": true,
+      "settings": true
+    }
+  }
+}

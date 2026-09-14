@@ -1,0 +1,76 @@
+[workspace]
+resolver = "2"
+members = ["crates/*"]
+exclude = ["patches/hudhook-0.9.2"]
+
+[workspace.package]
+edition = "2024"
+license = "MIT"
+rust-version = "1.97"
+
+[workspace.dependencies]
+base64 = "0.22"
+bytes = "1"
+hudhook = { version = "=0.9.2", default-features = false }
+keyring = { version = "=3.6.3", default-features = false, features = ["windows-native"] }
+petgraph = "0.8"
+prost = "=0.14.4"
+prost-build = "=0.14.4"
+protoc-bin-vendored = "=3.2.0"
+reqwest = { version = "0.12", default-features = false, features = ["http2", "json", "rustls-tls"] }
+ring = "=0.17.14"
+rusqlite = { version = "=0.40.1", features = ["bundled"] }
+secrecy = "=0.10.3"
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["arbitrary_precision"] }
+sha2 = "=0.10.9"
+shared_memory = "=0.12.4"
+ssh2 = "=0.9.6"
+subtle = "2"
+thiserror = "2"
+tokio = { version = "1", features = ["macros", "net", "rt-multi-thread", "sync", "time"] }
+tokio-util = { version = "=0.7.18", features = ["rt"] }
+tonic = "=0.14.6"
+tonic-prost = "=0.14.6"
+tonic-prost-build = "=0.14.6"
+tracing = "0.1"
+wasm-bindgen = "=0.2.126"
+windows = "0.62"
+windows-sys = { version = "=0.61.2", features = [
+    "Win32_Foundation",
+    "Win32_Graphics_Gdi",
+    "Win32_System_LibraryLoader",
+    "Win32_System_Threading",
+    "Win32_UI_HiDpi",
+    "Win32_UI_Input_KeyboardAndMouse",
+    "Win32_UI_Shell",
+    "Win32_UI_WindowsAndMessaging",
+] }
+zeroize = "=1.9.0"
+
+[profile.dev]
+debug = "line-tables-only"
+incremental = false
+
+[profile.dev.package."*"]
+debug = false
+
+[profile.dev.build-override]
+debug = false
+
+[profile.test]
+debug = "line-tables-only"
+incremental = false
+
+[profile.test.package."*"]
+debug = false
+
+[profile.test.build-override]
+debug = false
+
+# hudhook 0.9.2 leaves a DX12 texture in PIXEL_SHADER_RESOURCE state after
+# its first upload, but replace_texture copies into it again without restoring
+# COPY_DEST first. Keep the dependency API/version unchanged while carrying the
+# narrow upstream-compatible resource-state fix locally.
+[patch.crates-io]
+hudhook = { path = "patches/hudhook-0.9.2" }

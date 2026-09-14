@@ -1,0 +1,37 @@
+{
+  "schema": "pal-public-media-policy-v1",
+  "bucket_name": "palbeacon-media",
+  "key_prefix": "public/v1",
+  "route_prefix": "/media/v2",
+  "assets": [
+    {
+      "logical_id": "brand.app_mark",
+      "source_path": "assets/palbeacon/brand/generated/v2/app-mark-square-v2.png",
+      "public_name": "app-mark-square-v2.png",
+      "content_type": "image/png",
+      "sha256": "9a8422b91a69b78b84e6d2ee7422a8047c055595b57bcf59a20404a2833f5e91",
+      "distribution_scope": "public_web_approved"
+    },
+    {
+      "logical_id": "brand.empty_map",
+      "source_path": "assets/palbeacon/brand/generated/v2/empty-map-v2.webp",
+      "public_name": "empty-map-v2.webp",
+      "content_type": "image/webp",
+      "sha256": "9c4f84c6fe484df6966202e9eba5cf3452018a6e38833e4194a76faa0dc3fd6a",
+      "distribution_scope": "public_web_approved"
+    },
+    {
+      "logical_id": "brand.splash_exploration",
+      "source_path": "assets/palbeacon/brand/generated/v2/splash-exploration-v2.webp",
+      "public_name": "splash-exploration-v2.webp",
+      "content_type": "image/webp",
+      "sha256": "aa1f224214edb8783f3dd0ce550bbc6c77b9b2a88c18ca7fb9b8e37b6cd86d94",
+      "distribution_scope": "public_web_approved"
+    }
+  ],
+  "blocked_scopes": [
+    "local_windows_only",
+    "private_alpha",
+    "unverified"
+  ]
+}

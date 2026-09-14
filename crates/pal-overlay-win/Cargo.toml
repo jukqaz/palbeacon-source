@@ -1,0 +1,70 @@
+[package]
+name = "pal-overlay-win"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+publish = false
+
+[features]
+default = []
+map-runtime = ["dep:pal-state"]
+test-harness = ["map-runtime", "dep:pal-map-pack-store"]
+approved-map-pack-runtime = [
+    "local-readonly-position-runtime",
+    "dep:pal-map-pack-store",
+]
+development-live-agent = [
+    "map-runtime",
+    "dep:pal-protected-file",
+    "dep:pal-telemetry",
+    "dep:serde",
+    "dep:sha2",
+    "dep:tokio",
+    "dep:toml",
+    "dep:zeroize",
+]
+local-readonly-position-runtime = [
+    "map-runtime",
+    "dep:pal-overlay-control",
+    "dep:pal-protected-file",
+    "dep:serde",
+    "dep:serde_json",
+    "dep:sha2",
+    "pal-windows/development-readonly-process-memory",
+]
+development-local-readonly-position = ["local-readonly-position-runtime"]
+development-live-performance-diagnostic = ["development-local-readonly-position"]
+development-local-alignment-diagnostic = ["development-local-readonly-position"]
+
+[dependencies]
+image = { version = "0.25", default-features = false, features = ["jpeg", "png", "webp"] }
+pal-build-contract = { path = "../pal-build-contract" }
+pal-domain = { path = "../pal-domain" }
+pal-fullscreen-bridge = { path = "../pal-fullscreen-bridge" }
+pal-map-pack-store = { path = "../pal-map-pack-store", optional = true }
+pal-overlay-control = { path = "../pal-overlay-control", optional = true }
+pal-protocol = { path = "../pal-protocol" }
+pal-protected-file = { path = "../pal-protected-file", optional = true }
+pal-render = { path = "../pal-render" }
+pal-state = { path = "../pal-state", optional = true }
+pal-telemetry = { path = "../pal-telemetry", optional = true }
+pal-windows = { path = "../pal-windows" }
+pal-windows-ipc = { path = "../pal-windows-ipc" }
+serde = { workspace = true, optional = true }
+serde_json = { workspace = true, optional = true }
+sha2 = { workspace = true, optional = true }
+thiserror.workspace = true
+tokio = { workspace = true, optional = true }
+toml = { version = "0.9", optional = true }
+windows-sys = { workspace = true, features = [
+    "Win32_Graphics_Gdi",
+    "Win32_Storage_FileSystem",
+] }
+zeroize = { version = "1", optional = true }
+
+[dev-dependencies]
+pal-core-win = { path = "../pal-core-win" }
+rcgen = "0.14"
+serde_json.workspace = true
+tempfile = "3"

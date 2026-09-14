@@ -1,0 +1,217 @@
+{
+  "schema_version": 1,
+  "authority": {
+    "document": "DESIGN.md",
+    "start_marker": "<!-- PALBEACON_DESIGN_CONTRACT_START -->",
+    "end_marker": "<!-- PALBEACON_DESIGN_CONTRACT_END -->",
+    "history_heading": "## 변경 기록"
+  },
+  "stack": {
+    "web_ui": "apps/palbeacon-ui",
+    "windows_shell": "apps/palbeacon-desktop",
+    "component_validation": "vitest_playwright",
+    "tokens": "contracts/palbeacon/ui.tokens.json",
+    "runtime_tokens": "apps/palbeacon-ui/src/app.css"
+  },
+  "viewports": [
+    { "id": "compact", "project": "compact-chrome", "width": 320, "height": 720 },
+    { "id": "mobile", "project": "mobile-chrome", "width": 390, "height": 844 },
+    { "id": "tablet", "project": "tablet-chrome", "width": 768, "height": 1024 },
+    { "id": "desktop", "project": "desktop-chrome", "width": 1440, "height": 900 },
+    { "id": "desktop_webkit", "project": "desktop-webkit", "width": 1440, "height": 900 }
+  ],
+  "states": {
+    "source": "contracts/palbeacon/ui-states.v1.json",
+    "required": [
+      "loading",
+      "empty",
+      "stale",
+      "error",
+      "unsupported",
+      "offline",
+      "build_mismatch",
+      "unverified"
+    ]
+  },
+  "browser_validation": {
+    "component_tests": [
+      "apps/palbeacon-ui/src/lib/catalog/CatalogBoard.test.ts",
+      "apps/palbeacon-ui/src/lib/catalog/BuildingCatalogBoard.test.ts",
+      "apps/palbeacon-ui/src/lib/catalog/ItemCatalogBoard.test.ts",
+      "apps/palbeacon-ui/src/lib/catalog/PalCatalogBoard.test.ts",
+      "apps/palbeacon-ui/src/lib/shared/workspace/workspace.test.ts",
+      "apps/palbeacon-ui/src/lib/personal/personal-data.test.ts",
+      "apps/palbeacon-ui/src/lib/connection/ConnectionProfileBoard.test.ts",
+      "apps/palbeacon-ui/src/lib/connection/OverlayBoard.test.ts",
+      "apps/palbeacon-ui/src/lib/technology/TechnologyBoard.test.ts",
+      "apps/palbeacon-ui/src/lib/tools/ToolsBoard.test.ts",
+      "apps/palbeacon-ui/src/lib/tools/plan-workspace.test.ts"
+    ],
+    "route_test": "apps/palbeacon-ui/e2e/technology.spec.ts",
+    "storybook_forbidden": true
+  },
+  "route_audit": {
+    "source": "contracts/palbeacon/routes.v1.json",
+    "test": "apps/palbeacon-ui/e2e/technology.spec.ts",
+    "platform": "web",
+    "migration_status": "implemented"
+  },
+  "presentation_rules": [
+    {
+      "id": "korean_exact_data_allowlist",
+      "severity": "P0",
+      "rule": "운영 UI는 active exact-build의 공식 한국어 게임 정보, 검증된 계산 결과, 호환되는 사용자 데이터와 필수 한국어 행동만 표시한다.",
+      "enforcement": "component test, route interaction test와 사용자 노출 감사"
+    },
+    {
+      "id": "hide_internal_values",
+      "severity": "P0",
+      "rule": "raw ID, 영문 fallback, build ID, hash, schema, rule ID, method ID, 오류 원문, 로컬 경로와 개발·디버그·테스트 문구를 운영 화면에 노출하지 않는다.",
+      "enforcement": "route audit와 사용자 노출 정적 감사"
+    },
+    {
+      "id": "hide_diagnostic_states",
+      "severity": "P1",
+      "rule": "정상·검증 완료뿐 아니라 오래됨, 미확인, 빌드 불일치, provenance 같은 진단 상태명도 사용자 화면에 노출하지 않는다. 안전하지 않은 값과 기능은 숨기고 필요한 복구 행동만 한글로 표시한다.",
+      "enforcement": "route 상태 fixture, 숨김 회귀 테스트와 사용자 노출 감사"
+    },
+    {
+      "id": "no_duplicate_fact",
+      "severity": "P1",
+      "rule": "같은 사실을 제목, 배지, 본문, 상세에 의미 없이 반복하지 않는다.",
+      "enforcement": "route 메뉴별 리뷰"
+    },
+    {
+      "id": "no_explanatory_ui",
+      "severity": "P1",
+      "rule": "설계 이유, 화면 구조, 검증 방식과 개발 상태 설명은 사용자 UI에 렌더하지 않고 리뷰 문서와 대화에만 남긴다.",
+      "enforcement": "component test와 route 사용자 노출 감사"
+    },
+    {
+      "id": "search_result_detail_handoff",
+      "severity": "P1",
+      "rule": "통합 검색의 팰·아이템·기술·스킬·건축물 결과는 한글 검색어와 정확한 선택을 유지한 해당 도감 상세 링크로 제공한다. 전용 경로가 없는 결과만 같은 화면 상세를 열고, 닫으면 선택한 결과로 포커스를 복구한다.",
+      "enforcement": "CatalogBoard component test와 UQ-SEARCH-01 route interaction test"
+    },
+    {
+      "id": "atlas_matrix_visual_language",
+      "severity": "P1",
+      "rule": "승인된 Atlas Matrix 방향에 따라 다크 네이비 평면 구조선과 cyan accent를 사용한다. accent는 현재 선택, 포커스와 주행동에만 쓰고 장식 hero, 넓은 그라데이션, 의미 없는 상태 카드를 만들지 않는다. 데스크톱 대량 탐색은 필터 rail, 조밀한 데이터 캔버스와 선택 상세 tray를 한 시야에 조합한다.",
+      "enforcement": "UI token 검증, 메뉴별 browser interaction과 5개 viewport 시각 감사"
+    },
+    {
+      "id": "game_first_progressive_disclosure",
+      "severity": "P1",
+      "rule": "게임 보조 화면은 실제 게임 맥락과 결과·미리보기를 설정과 상태 카드보다 먼저 크게 보여준다. 첫 화면에는 현재 작업에 필요한 선택만 두고 성능·입력·진단 설정은 숨기며, 핵심 단축키만 해당 설정 가까이에 둔다. 검증된 게임 자산이 없으면 생성 이미지나 다른 항목의 이미지를 대신 넣지 않는다.",
+      "enforcement": "ConnectionProfileBoard·OverlayBoard component test와 Windows 1024·1440px·200% 실화면 감사"
+    },
+    {
+      "id": "human_number_format",
+      "severity": "P1",
+      "rule": "의미 없는 소수점과 sentinel을 숨기고 정확한 정수로 표현할 수 있으면 정수로 표시한다.",
+      "enforcement": "formatter unit test와 화면 fixture"
+    },
+    {
+      "id": "hide_unsupported_capability",
+      "severity": "P1",
+      "rule": "지도·도감·계획·검색의 공통 위치는 Web과 Windows에서 유지하고, 내 데이터·서버·오버레이·앱 설정은 Windows의 별도 PC 메뉴에만 한 번씩 둔다. 현재 플랫폼에서 지원하지 않는 기능과 빈 메뉴 슬롯을 숨기며 운영 화면에 비활성 호환 안내를 만들지 않는다.",
+      "enforcement": "platform capability contract, Web shell E2E와 Windows Tauri navigation E2E"
+    },
+    {
+      "id": "compact_primary_navigation",
+      "severity": "P1",
+      "rule": "320–719px 하단 1차 탐색은 홈·지도·도감·계획을 아이콘과 한글 라벨로 함께 표시하고, 활성 항목은 상단 표시선·아이콘·aria-current를 함께 사용한다. safe area를 포함한 64px 이상의 터치 영역과 같은 높이의 본문 여백으로 콘텐츠를 가리지 않는다.",
+      "enforcement": "AppShell compact Web E2E, WCAG 감사와 320·390px 실화면 검수"
+    },
+    {
+      "id": "exact_build_provenance",
+      "severity": "P1",
+      "rule": "게임 이름, 수치, 이미지와 관계는 active exact-build 출처를 사용하고 미확인 값·이미지·영문 이름을 추정하거나 대체하지 않는다.",
+      "enforcement": "data contract와 provenance test"
+    },
+    {
+      "id": "compose_once_for_decisions",
+      "severity": "P1",
+      "rule": "여러 레코드의 관계와 요약은 도메인 계층에서 한 번 조합하고 화면은 사용자 판단과 근거를 역할별로 표시한다.",
+      "enforcement": "domain composition unit test와 route 메뉴별 리뷰"
+    },
+    {
+      "id": "workspace_continuity",
+      "severity": "P1",
+      "rule": "최근 본 항목, 저장 항목과 진행 중인 비교·계획은 실제 기록이 있을 때만 공용 작업 트레이와 홈에 표시하고 route 이동 뒤에도 유지한다. 한글명과 가능한 다음 행동만 노출하며 raw ID와 저장소 키는 숨긴다.",
+      "enforcement": "workspace store unit test, AppShell·홈 component test와 Web route handoff E2E"
+    },
+    {
+      "id": "transparent_planning_criteria",
+      "severity": "P1",
+      "rule": "팀 구성과 팰 비교는 사용자가 선택한 기준의 exact 값을 직접 비교한다. 숨은 가중 종합 점수를 공식 게임 추천처럼 표현하지 않고 작업·이동은 한 화면의 기준 전환으로 제공한다.",
+      "enforcement": "tools domain·component test와 팀 구성·팰 비교 사용자 여정"
+    },
+    {
+      "id": "personal_save_projection",
+      "severity": "P0",
+      "rule": "Windows에서 사용자가 명시적으로 선택한 캐릭터의 exact 세이브 데이터만 공개 도감·계획 위에 보강한다. 현재 계약으로 확인되는 보유 팰 수와 부모 교배 가능 여부만 표시하고 아이템·재료 재고, 다른 소유자, 내부 UID와 세이브 원문은 노출하거나 추정하지 않는다. Web과 선택 전 상태에서는 개인 상태와 조작을 숨긴다.",
+      "enforcement": "personal data store·OwnedPalPanel·PalCatalogBoard·ToolsBoard component test와 Windows 사용자 여정"
+    },
+    {
+      "id": "pal_catalog_graphical_comparison_modes",
+      "severity": "P1",
+      "rule": "팰 도감은 검증된 실제 초상 그리드를 기본 탐색으로, 같은 결과의 연속 목록을 비교 보기로 제공하며 검색·필터·정렬·선택을 전환 뒤에도 유지한다. 1023px 이하에서는 24종씩 확장하고 상세를 순차 화면으로 연다. 상세 개요는 주요 작업·활동·식사량을 먼저 보여주고, 작업은 한 행씩, 스킬은 해금 진행 순서로, 획득은 일반·보스 드롭 그룹으로 표시하며 100% 확률은 확정으로 읽는다. 지원되지 않는 route handoff 행동은 만들지 않는다.",
+      "enforcement": "PalCatalogBoard component test, Web route interaction test와 5개 viewport 시각 감사"
+    },
+    {
+      "id": "item_catalog_exact_decision_rows",
+      "severity": "P1",
+      "rule": "아이템 도감은 actual image 그래피컬 그리드를 기본 탐색으로, 같은 결과의 조밀한 행을 비교 보기로 제공하고 분류·한글 희귀도·얻는 법 필터와 이름·희귀도·기준가 정렬을 공유한다. 그리드는 한글명·분류·희귀도·대표 획득 단서만, 목록은 기준가·묶음·무게까지 표시하고 설명은 상세에만 둔다. raw 등급 숫자와 내부 토큰은 숨기고 상세는 데이터가 있는 정보·제작·드롭·상점·기술 탭만 연다. 같은 팰·변형·수량·확률의 드롭과 같은 화폐·가격·수량·재고의 상점 제안은 도메인에서 한 번 합친다. 1023px 이하에서는 24개씩 확장하고 필터 sheet와 포커스가 복구되는 순차 상세를 사용한다.",
+      "enforcement": "ItemCatalogBoard domain·component test, Web route interaction test와 5개 viewport 시각 감사"
+    },
+    {
+      "id": "technology_catalog_level_lanes",
+      "severity": "P1",
+      "rule": "기술 도감은 exact-build 실제 아이콘과 한국어 정보로 일반·고대 레인을 분리하고 검색하지 않을 때 선택 레벨부터 최대 4개 레벨 밴드를 이어서 표시한다. 분류 변경 시 해당 레인에 기술이 있는 가장 가까운 레벨로 이동하고 검색은 일치하는 모든 레벨을 표시한다. 한국어 이름이 없는 해금 항목·조건과 내부 토큰 설명은 숨기며 1023px 이하에서는 목록과 포커스가 복구되는 순차 상세를 사용한다.",
+      "enforcement": "TechnologyBoard domain·component test, Web route interaction test와 5개 viewport 시각 감사"
+    },
+    {
+      "id": "building_catalog_game_menu",
+      "severity": "P1",
+      "rule": "건축물 도감은 exact-build의 게임 대분류·하위 분류·정렬 순서와 실제 이미지를 사용해 현재 게임 건축 메뉴처럼 분류 탭·하위 그룹·조밀한 슬롯으로 표시한다. 슬롯은 한글명과 확인된 해금 레벨만, 상세는 내구도·방어·전력·설명·필요 재료만 표시한다. 보유 재료·배치 가능 여부·즐겨찾기를 추정하지 않고 raw 분류 코드·작업량·배치 플래그·내부 ID를 숨기며 1023px 이하에서는 포커스가 복구되는 순차 상세를 사용한다.",
+      "enforcement": "BuildingCatalogBoard domain·component test, Web route interaction test와 5개 viewport 시각 감사"
+    },
+    {
+      "id": "map_public_filter_coverage",
+      "severity": "P0",
+      "rule": "지도는 현재 지역에 좌표가 있는 exact POI와 공개 승인 레이어 분류를 위치·적·수집품·등장인물·자원 그룹에서 모두 선택할 수 있게 한다. merged 분류는 검증된 상위 분류에 합치고 hidden_until_verified와 빈 분류는 숨긴다. 숫자 클러스터는 만들지 않으며 확대 수준에 따른 개별 marker 충돌 정리만 사용한다.",
+      "enforcement": "map data and component tests, 5개 viewport 검색·필터·pan·zoom 실화면 감사"
+    },
+    {
+      "id": "native_circular_minimap",
+      "severity": "P0",
+      "rule": "Windows 미니맵은 게임 화면 왼쪽 위의 원형 실제 지도이며 중앙 cyan pointer, 가까운 exact-build POI와 얇은 bezel만 표시한다. 북쪽 고정은 pointer를, 진행 방향은 지도를 회전하고 PC 지도의 exact POI 필터를 단일 상태로 사용한다. 5초 이상 stale이면 마지막 위치와 pointer만 숨긴다.",
+      "enforcement": "Rust viewport·raster·freshness·filter tests, Windows FHD·QHD·4K·150% 실화면 감사"
+    },
+    {
+      "id": "overlay_settings_preview_first",
+      "severity": "P1",
+      "rule": "Windows 오버레이 설정은 native renderer와 같은 원형 미니맵을 실제 게임 맥락 안에서 크게 미리 보여주고, 옆에는 원형 지도 specimen과 표시·방향·크기·지도 선명도만 둔다. PC 지도 필터는 읽기 전용 단일 상태로 동기화하고 설정 화면에서 다시 만들지 않는다. 단축키는 오버레이 표시 전환과 북쪽 고정·진행 방향 전환 두 개만 제공하고 Ctrl·Alt·Shift·Win 조합을 지원한다. 확대 지도·FPS·입력 방식·진단 정보는 숨기며 변경은 명시적인 적용으로 확정한다.",
+      "enforcement": "OverlayBoard component·hotkey validation test와 Windows 1024·1440px·150% 실화면 감사"
+    },
+    {
+      "id": "windows_game_connection_task_flow",
+      "severity": "P1",
+      "rule": "Windows 내 데이터 화면은 게임 찾기, 세이브 보호 복사, 내 데이터 열기의 한 흐름으로 구성한다. 게임 인식은 한 줄 맥락으로만 표시하고 세이브에는 실제 월드 이름·플레이어 수·읽기 쉬운 용량과 행동을, 내 데이터에는 실제 캐릭터 이름·레벨·보유 팰과 다음 행동을 우선한다. raw 파일명·경로·빌드·프로세스·프로필 ID와 확인되지 않은 초상·로고는 숨긴다.",
+      "enforcement": "ConnectionProfileBoard component test와 Windows 1024·1440px·200% 실화면 감사"
+    },
+    {
+      "id": "production_test_surface_isolation",
+      "severity": "P0",
+      "rule": "테스트·fixture·mock·진단 데이터는 내부 검증에만 유지하고 운영 route, 메뉴와 사용자 문구에서 격리한다.",
+      "enforcement": "production build audit와 route E2E"
+    }
+  ],
+  "visual_regression": {
+    "status": "pending_approved_baseline",
+    "runner": "windows",
+    "update_policy": "manual_review_only",
+    "decision_record": "docs/architecture/ADR-0016-quality-gates-and-supply-chain.md"
+  }
+}

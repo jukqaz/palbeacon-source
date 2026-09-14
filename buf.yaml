@@ -1,0 +1,21 @@
+version: v2
+
+modules:
+  - path: proto
+
+lint:
+  use:
+    - STANDARD
+  ignore_only:
+    # Preserve the pre-existing public telemetry API while enforcing STANDARD
+    # naming for every newly added service and RPC.
+    SERVICE_SUFFIX:
+      - proto/palcompanion/v1/telemetry.proto
+    RPC_REQUEST_STANDARD_NAME:
+      - proto/palcompanion/v1/telemetry.proto
+    RPC_RESPONSE_STANDARD_NAME:
+      - proto/palcompanion/v1/telemetry.proto
+
+breaking:
+  use:
+    - FILE

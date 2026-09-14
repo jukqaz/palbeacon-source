@@ -1,0 +1,27 @@
+[package]
+name = "pal-telemetry"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+async-stream = "0.3"
+futures-core = "0.3"
+getrandom = "0.4"
+pal-domain = { path = "../pal-domain" }
+pal-protocol = { path = "../pal-protocol" }
+pal-state = { path = "../pal-state" }
+prost.workspace = true
+rustls = { version = "0.23", default-features = false, features = ["ring", "std", "tls12"] }
+sha2.workspace = true
+thiserror.workspace = true
+tokio.workspace = true
+tokio-stream = { version = "0.1", features = ["net", "sync"] }
+tonic = { version = "0.14", features = ["tls-ring", "tls-connect-info"] }
+x509-parser = "0.18"
+zeroize = "1"
+
+[dev-dependencies]
+rcgen = "0.14"
+tokio = { workspace = true, features = ["test-util"] }

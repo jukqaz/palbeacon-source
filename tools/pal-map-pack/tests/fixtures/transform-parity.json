@@ -1,0 +1,32 @@
+{
+  "producer": "PalMapPack.CoordinateSolver",
+  "schema_version": 1,
+  "matrix": [[0.5, 0.1, 512.0], [-0.2, 0.7, 512.0]],
+  "points": [
+    {"world_x": -830.2702702702702, "world_y": -968.6486486486486, "expected_map_x": 0.0, "expected_map_y": 0.0},
+    {"world_x": -345.94594594594594, "world_y": -830.2702702702702, "expected_map_x": 256.0, "expected_map_y": 0.0},
+    {"world_x": 138.3783783783784, "world_y": -691.8918918918919, "expected_map_x": 512.0, "expected_map_y": 0.0},
+    {"world_x": 622.7027027027026, "world_y": -553.5135135135135, "expected_map_x": 768.0, "expected_map_y": 0.0},
+    {"world_x": 1107.027027027027, "world_y": -415.1351351351351, "expected_map_x": 1024.0, "expected_map_y": 0.0},
+    {"world_x": -899.4594594594594, "world_y": -622.7027027027027, "expected_map_x": 0.0, "expected_map_y": 256.0},
+    {"world_x": -415.1351351351351, "world_y": -484.3243243243243, "expected_map_x": 256.0, "expected_map_y": 256.0},
+    {"world_x": 69.1891891891892, "world_y": -345.94594594594594, "expected_map_x": 512.0, "expected_map_y": 256.0},
+    {"world_x": 553.5135135135134, "world_y": -207.56756756756755, "expected_map_x": 768.0, "expected_map_y": 256.0},
+    {"world_x": 1037.837837837838, "world_y": -69.18918918918918, "expected_map_x": 1024.0, "expected_map_y": 256.0},
+    {"world_x": -968.6486486486486, "world_y": -276.7567567567568, "expected_map_x": 0.0, "expected_map_y": 512.0},
+    {"world_x": -484.3243243243243, "world_y": -138.3783783783784, "expected_map_x": 256.0, "expected_map_y": 512.0},
+    {"world_x": 0.0, "world_y": 0.0, "expected_map_x": 512.0, "expected_map_y": 512.0},
+    {"world_x": 484.3243243243243, "world_y": 138.3783783783784, "expected_map_x": 768.0, "expected_map_y": 512.0},
+    {"world_x": 968.6486486486486, "world_y": 276.7567567567568, "expected_map_x": 1024.0, "expected_map_y": 512.0},
+    {"world_x": -1037.837837837838, "world_y": 69.18918918918918, "expected_map_x": 0.0, "expected_map_y": 768.0},
+    {"world_x": -553.5135135135134, "world_y": 207.56756756756755, "expected_map_x": 256.0, "expected_map_y": 768.0},
+    {"world_x": -69.1891891891892, "world_y": 345.94594594594594, "expected_map_x": 512.0, "expected_map_y": 768.0},
+    {"world_x": 415.1351351351351, "world_y": 484.3243243243243, "expected_map_x": 768.0, "expected_map_y": 768.0},
+    {"world_x": 899.4594594594594, "world_y": 622.7027027027027, "expected_map_x": 1024.0, "expected_map_y": 768.0},
+    {"world_x": -1107.027027027027, "world_y": 415.1351351351351, "expected_map_x": 0.0, "expected_map_y": 1024.0},
+    {"world_x": -622.7027027027026, "world_y": 553.5135135135135, "expected_map_x": 256.0, "expected_map_y": 1024.0},
+    {"world_x": -138.3783783783784, "world_y": 691.8918918918919, "expected_map_x": 512.0, "expected_map_y": 1024.0},
+    {"world_x": 345.94594594594594, "world_y": 830.2702702702702, "expected_map_x": 768.0, "expected_map_y": 1024.0},
+    {"world_x": 830.2702702702702, "world_y": 968.6486486486486, "expected_map_x": 1024.0, "expected_map_y": 1024.0}
+  ]
+}

@@ -1,0 +1,23 @@
+[package]
+name = "pal-wire"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+publish = false
+
+[package.metadata.cargo-machete]
+ignored = [
+    "prost-build",
+    "protoc-bin-vendored",
+] # Used by build.rs; cargo-machete does not inspect build scripts.
+
+[dependencies]
+pal-data-types = { path = "../pal-data-types" }
+prost.workspace = true
+sha2.workspace = true
+thiserror.workspace = true
+
+[build-dependencies]
+prost-build.workspace = true
+protoc-bin-vendored.workspace = true

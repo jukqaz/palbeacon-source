@@ -1,0 +1,55 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["import", "node", "promise", "typescript", "unicorn", "oxc", "vitest"],
+  "categories": {
+    "correctness": "error",
+    "suspicious": "error",
+    "perf": "error"
+  },
+  "ignorePatterns": [
+    ".svelte-kit/**",
+    "build/**",
+    "coverage/**",
+    "node_modules/**",
+    "playwright-report/**",
+    "src/lib/generated/**",
+    "static/generated/**",
+    "storybook-static/**",
+    "test-results/**"
+  ],
+  "options": {
+    "denyWarnings": true,
+    "reportUnusedDisableDirectives": "error"
+  },
+  "overrides": [
+    {
+      "files": ["**/*.test.ts", "**/*.spec.ts"],
+      "rules": {
+        "unicorn/consistent-function-scoping": "off"
+      }
+    },
+    {
+      "files": ["scripts/**/*.mjs"],
+      "rules": {
+        "no-await-in-loop": "off"
+      }
+    },
+    {
+      "files": ["**/*.d.ts"],
+      "rules": {
+        "unicorn/require-module-specifiers": "off"
+      }
+    }
+  ],
+  "rules": {
+    "import/no-unassigned-import": "off",
+    "no-underscore-dangle": ["error", { "allow": ["__TAURI_INTERNALS__"] }]
+  },
+  "env": {
+    "browser": true,
+    "builtin": true,
+    "node": true,
+    "svelte": true,
+    "vitest": true
+  }
+}

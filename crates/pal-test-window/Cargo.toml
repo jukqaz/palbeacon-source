@@ -1,0 +1,20 @@
+[package]
+name = "pal-test-window"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+publish = false
+
+[[bin]]
+name = "Palworld-Win64-Shipping"
+path = "src/main.rs"
+
+[[bin]]
+name = "pal-test-rhi-host"
+path = "src/bin/pal-test-rhi-host.rs"
+
+[dependencies]
+hudhook = { workspace = true, features = ["dx11", "dx12"] }
+pal-windows = { path = "../pal-windows" }
+windows-sys.workspace = true

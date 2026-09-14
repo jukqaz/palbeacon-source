@@ -1,0 +1,369 @@
+syntax = "proto3";
+
+package palcompanion.v2;
+
+import "palcompanion/v2/catalog.proto";
+import "palcompanion/v2/profile.proto";
+
+message ReadContext {
+  string game_build_id = 1;
+  bytes dataset_manifest_id = 2;
+  bytes personal_snapshot_id = 3;
+  string solver_version = 4;
+  uint64 deadline_ms = 5;
+  uint64 node_budget = 6;
+}
+
+enum AnalysisQualityLevel {
+  ANALYSIS_QUALITY_LEVEL_UNSPECIFIED = 0;
+  ANALYSIS_QUALITY_LEVEL_EXACT = 1;
+  ANALYSIS_QUALITY_LEVEL_MODEL = 2;
+  ANALYSIS_QUALITY_LEVEL_MEASURED = 3;
+  ANALYSIS_QUALITY_LEVEL_UNKNOWN = 4;
+}
+
+message AnalysisQuality {
+  AnalysisQualityLevel level = 1;
+  string model_id = 2;
+  repeated string unknown_fact_ids = 3;
+}
+
+message EvidenceFactV1 {
+  string fact_id = 1;
+  string entity_kind = 2;
+  string entity_id = 3;
+  optional sint64 integer_value = 4;
+  optional string related_entity_id = 5;
+}
+
+message CalculationStepV1 {
+  uint32 ordinal = 1;
+  string operation = 2;
+  repeated string input_fact_ids = 3;
+  optional sint64 integer_result = 4;
+}
+
+message SourceReferenceV1 {
+  string source_id = 1;
+  string entity_version = 2;
+  bytes source_hash = 3;
+}
+
+message EvidencePacket {
+  bytes evidence_ref = 1;
+  bytes personal_snapshot_id = 2;
+  repeated bytes pal_instance_ids = 3;
+  ReadContext context = 4;
+  repeated EvidenceFactV1 facts = 5;
+  repeated CalculationStepV1 calculation_steps = 6;
+  repeated SourceReferenceV1 sources = 7;
+  AnalysisQuality quality = 8;
+  repeated string warning_codes = 9;
+}
+
+message WorldSettingsInput {
+  uint32 enemy_drop_multiplier_ppm = 1;
+  uint32 gather_drop_multiplier_ppm = 2;
+  uint32 resource_respawn_multiplier_ppm = 3;
+  uint32 work_speed_multiplier_ppm = 4;
+  uint32 egg_hatch_time_multiplier_ppm = 5;
+}
+
+message FarmRunEvidence {
+  string method_id = 1;
+  uint64 observed_quantity = 2;
+  uint64 duration_ms = 3;
+  uint32 world_multiplier_ppm = 4;
+  uint64 observed_at_unix_ms = 5;
+}
+
+message BreedingSolveInput {
+  repeated BreedingRuleV1 rules = 1;
+  repeated string available_species_ids = 2;
+  string target_species_id = 3;
+  uint32 maximum_generations = 4;
+  uint64 node_budget = 5;
+}
+
+message OwnedBreedingSolveInput {
+  BreedingSolveInput species_graph = 1;
+  repeated OwnedPal owned_pals = 2;
+  repeated string required_passive_ids = 3;
+  repeated string forbidden_passive_ids = 4;
+  optional uint32 minimum_iv_hp = 5;
+  optional uint32 minimum_iv_attack = 6;
+  optional uint32 minimum_iv_defense = 7;
+}
+
+message RecipeSolveInput {
+  repeated CatalogRecipeRecord recipes = 1;
+  repeated InventorySlot inventory = 2;
+  string target_item_id = 3;
+  uint64 target_quantity = 4;
+  uint64 node_budget = 5;
+}
+
+message FarmingMethodInput {
+  AcquisitionMethodV1 method = 1;
+  optional uint64 model_duration_ms = 2;
+  repeated string requirement_ids = 3;
+}
+
+message FarmingSolveInput {
+  string target_item_id = 1;
+  uint64 target_quantity = 2;
+  uint64 owned_quantity = 3;
+  repeated FarmingMethodInput methods = 4;
+  repeated CatalogRecipeRecord recipes = 5;
+  repeated InventorySlot inventory = 6;
+  WorldSettingsInput world_settings = 7;
+  repeated FarmRunEvidence measured_runs = 8;
+  uint64 node_budget = 9;
+}
+
+message MountCandidateInput {
+  OwnedPal pal = 1;
+  uint32 base_ride_sprint_speed = 2;
+  uint32 base_stamina = 3;
+  sint32 speed_modifier_ppm = 4;
+  sint32 stamina_modifier_ppm = 5;
+}
+
+message MountComparisonInput {
+  repeated MountCandidateInput candidates = 1;
+  string objective = 2;
+  uint64 node_budget = 3;
+}
+
+message OwnedPalEvaluationInput {
+  OwnedPal pal = 1;
+  CatalogSpeciesRecord species = 2;
+  repeated CatalogSkillRecord skills = 3;
+  string objective = 4;
+  uint64 node_budget = 5;
+}
+
+message BaseAnalysisInput {
+  repeated BaseSnapshot bases = 1;
+  repeated OwnedPal owned_pals = 2;
+  repeated CatalogSpeciesRecord species = 3;
+  WorldSettingsInput world_settings = 4;
+  uint64 node_budget = 5;
+}
+
+message ProgressionAnalysisInput {
+  CharacterProfile character = 1;
+  ProgressionSnapshot progression = 2;
+  repeated CatalogTechnologyRecord technologies = 3;
+  repeated CatalogBuildingRecord buildings = 4;
+  uint64 node_budget = 5;
+}
+
+message OwnedPalCursor {
+  bytes personal_snapshot_id = 1;
+  string species_id = 2;
+  bytes instance_id = 3;
+}
+
+message ListOwnedPalsRequest {
+  ReadContext context = 1;
+  optional string species_id = 2;
+  optional OwnedPalCursor cursor = 3;
+  uint32 page_size = 4;
+}
+
+message ListOwnedPalsResponse {
+  repeated OwnedPal pals = 1;
+  optional OwnedPalCursor next_cursor = 2;
+  bytes personal_snapshot_id = 3;
+}
+
+message GetOwnedPalRequest {
+  ReadContext context = 1;
+  bytes instance_id = 2;
+}
+
+message GetOwnedPalResponse {
+  optional OwnedPal pal = 1;
+  bytes personal_snapshot_id = 2;
+}
+
+message FindOwnedBreedingPlanRequest {
+  ReadContext context = 1;
+  string target_species_id = 2;
+  uint32 max_steps = 3;
+  optional OwnedBreedingSolveInput resolved_input = 4;
+}
+
+message BreedingPlanStep {
+  string species_id = 1;
+  optional bytes owned_instance_id = 2;
+}
+
+message FindOwnedBreedingPlanResponse {
+  repeated BreedingPlanStep steps = 1;
+  bytes personal_snapshot_id = 2;
+  EvidencePacket evidence = 3;
+  AnalysisQuality quality = 4;
+}
+
+message CatalogPageCursor {
+  string game_build_id = 1;
+  bytes dataset_manifest_id = 2;
+  string entity_kind = 3;
+  string stable_key = 4;
+}
+
+message SearchCatalogRequest {
+  ReadContext context = 1;
+  string query = 2;
+  repeated string category_ids = 3;
+  optional CatalogPageCursor cursor = 4;
+  uint32 page_size = 5;
+}
+
+message CatalogSearchRowV1 {
+  string entity_kind = 1;
+  string entity_id = 2;
+  string display_name = 3;
+  CatalogFactV1 fact = 4;
+}
+
+message SearchCatalogResponse {
+  repeated CatalogSearchRowV1 rows = 1;
+  optional CatalogPageCursor next_cursor = 2;
+  EvidencePacket evidence = 3;
+  AnalysisQuality quality = 4;
+}
+
+message CompareFarmingMethodsRequest {
+  ReadContext context = 1;
+  FarmingSolveInput input = 2;
+}
+
+message FarmingMethodResultV1 {
+  string method_id = 1;
+  uint64 remaining_quantity = 2;
+  optional uint64 expected_attempts = 3;
+  optional uint64 expected_duration_ms = 4;
+  optional uint64 total_currency_cost = 5;
+  AnalysisQuality quality = 6;
+}
+
+message CompareFarmingMethodsResponse {
+  repeated FarmingMethodResultV1 methods = 1;
+  EvidencePacket evidence = 2;
+  AnalysisQuality quality = 3;
+}
+
+message AnalyzeBaseRequest {
+  ReadContext context = 1;
+  BaseAnalysisInput input = 2;
+}
+
+message AnalysisFindingV1 {
+  string finding_code = 1;
+  string entity_id = 2;
+  optional sint64 integer_value = 3;
+  AnalysisQuality quality = 4;
+}
+
+message AnalyzeBaseResponse {
+  repeated AnalysisFindingV1 findings = 1;
+  EvidencePacket evidence = 2;
+  AnalysisQuality quality = 3;
+}
+
+message AnalyzeProgressionRequest {
+  ReadContext context = 1;
+  ProgressionAnalysisInput input = 2;
+}
+
+message AnalyzeProgressionResponse {
+  repeated AnalysisFindingV1 findings = 1;
+  EvidencePacket evidence = 2;
+  AnalysisQuality quality = 3;
+}
+
+message CompareOwnedMountsRequest {
+  ReadContext context = 1;
+  MountComparisonInput input = 2;
+}
+
+message MountComparisonResultV1 {
+  bytes pal_instance_id = 1;
+  uint64 effective_speed_ppm = 2;
+  uint64 effective_stamina_ppm = 3;
+  uint64 objective_score_ppm = 4;
+  AnalysisQuality quality = 5;
+}
+
+message CompareOwnedMountsResponse {
+  repeated MountComparisonResultV1 mounts = 1;
+  EvidencePacket evidence = 2;
+  AnalysisQuality quality = 3;
+}
+
+message EvaluateOwnedPalRequest {
+  ReadContext context = 1;
+  OwnedPalEvaluationInput input = 2;
+}
+
+message EvaluateOwnedPalResponse {
+  repeated AnalysisFindingV1 findings = 1;
+  EvidencePacket evidence = 2;
+  AnalysisQuality quality = 3;
+}
+
+enum ToolErrorCode {
+  TOOL_ERROR_CODE_UNSPECIFIED = 0;
+  TOOL_ERROR_CODE_INVALID_REQUEST = 1;
+  TOOL_ERROR_CODE_SNAPSHOT_NOT_FOUND = 2;
+  TOOL_ERROR_CODE_NOT_FOUND = 3;
+  TOOL_ERROR_CODE_BUDGET_EXHAUSTED = 4;
+  TOOL_ERROR_CODE_UNAVAILABLE = 5;
+  TOOL_ERROR_CODE_BUILD_MISMATCH = 6;
+  TOOL_ERROR_CODE_BUILD_COMPATIBILITY_UNKNOWN = 7;
+  TOOL_ERROR_CODE_SNAPSHOT_CHANGED = 8;
+  TOOL_ERROR_CODE_FEATURE_NOT_RELEASED = 9;
+}
+
+message ToolError {
+  ToolErrorCode code = 1;
+  string field = 2;
+}
+
+message CompanionRequest {
+  bytes trace_id = 1;
+  oneof query {
+    ListOwnedPalsRequest list_owned_pals = 10;
+    GetOwnedPalRequest get_owned_pal = 11;
+    FindOwnedBreedingPlanRequest find_owned_breeding_plan = 12;
+    SearchCatalogRequest search_catalog = 13;
+    CompareFarmingMethodsRequest compare_farming_methods = 14;
+    AnalyzeBaseRequest analyze_base = 15;
+    AnalyzeProgressionRequest analyze_progression = 16;
+    CompareOwnedMountsRequest compare_owned_mounts = 17;
+    EvaluateOwnedPalRequest evaluate_owned_pal = 18;
+  }
+}
+
+message CompanionResponse {
+  bytes trace_id = 1;
+  oneof result {
+    ListOwnedPalsResponse list_owned_pals = 10;
+    GetOwnedPalResponse get_owned_pal = 11;
+    FindOwnedBreedingPlanResponse find_owned_breeding_plan = 12;
+    SearchCatalogResponse search_catalog = 13;
+    CompareFarmingMethodsResponse compare_farming_methods = 14;
+    AnalyzeBaseResponse analyze_base = 15;
+    AnalyzeProgressionResponse analyze_progression = 16;
+    CompareOwnedMountsResponse compare_owned_mounts = 17;
+    EvaluateOwnedPalResponse evaluate_owned_pal = 18;
+    ToolError error = 20;
+  }
+}
+
+message CompanionRequestSetV1 {
+  repeated CompanionRequest requests = 1;
+}

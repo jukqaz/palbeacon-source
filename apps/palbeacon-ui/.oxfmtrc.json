@@ -1,0 +1,21 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "singleQuote": true,
+  "trailingComma": "all",
+  "printWidth": 100,
+  "sortPackageJson": false,
+  "svelte": {
+    "sortOrder": "options-scripts-markup-styles"
+  },
+  "ignorePatterns": [
+    "node_modules",
+    ".svelte-kit",
+    "build",
+    "storybook-static",
+    "static/generated",
+    "src/lib/generated",
+    "coverage",
+    "playwright-report",
+    "test-results"
+  ]
+}

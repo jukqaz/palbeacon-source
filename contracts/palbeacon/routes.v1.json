@@ -1,0 +1,306 @@
+{
+  "schema_version": 1,
+  "navigation": {
+    "primary": [
+      {
+        "id": "home",
+        "path": "/",
+        "label_ko": "홈",
+        "availability": ["web", "windows"],
+        "scope": "common",
+        "visibility": "compact",
+        "active_route_ids": ["explore.home"]
+      },
+      {
+        "id": "map",
+        "path": "/map/",
+        "label_ko": "지도",
+        "availability": ["web", "windows"],
+        "scope": "common",
+        "visibility": "all",
+        "active_route_ids": ["explore.map"]
+      },
+      {
+        "id": "catalog",
+        "path": "/pals/",
+        "label_ko": "도감",
+        "availability": ["web", "windows"],
+        "scope": "common",
+        "visibility": "all",
+        "active_group": "catalog"
+      },
+      {
+        "id": "plan",
+        "path": "/plan/",
+        "label_ko": "계획",
+        "availability": ["web", "windows"],
+        "scope": "common",
+        "visibility": "all",
+        "active_group": "plan"
+      },
+      {
+        "id": "pc",
+        "path": "/connection/profile/",
+        "label_ko": "내 게임",
+        "availability": ["windows"],
+        "scope": "windows",
+        "visibility": "desktop",
+        "active_group": "pc"
+      }
+    ],
+    "utilities": [
+      {
+        "id": "search",
+        "path": "/search/",
+        "label_ko": "검색",
+        "availability": ["web", "windows"],
+        "active_route_ids": ["explore.search"]
+      }
+    ],
+    "secondary": [
+      {
+        "group": "catalog",
+        "label_ko": "도감",
+        "items": [
+          {
+            "id": "pals",
+            "path": "/pals/",
+            "label_ko": "팰",
+            "active_route_ids": ["catalog.pals"]
+          },
+          {
+            "id": "items",
+            "path": "/items/",
+            "label_ko": "아이템",
+            "active_route_ids": ["catalog.items"]
+          },
+          {
+            "id": "skills",
+            "path": "/skills/active/",
+            "label_ko": "스킬",
+            "active_route_ids": ["catalog.skills.active", "catalog.skills.passive"]
+          },
+          {
+            "id": "technology",
+            "path": "/technology/",
+            "label_ko": "기술",
+            "active_route_ids": ["catalog.technology"]
+          },
+          {
+            "id": "buildings",
+            "path": "/buildings/",
+            "label_ko": "건축물",
+            "active_route_ids": ["catalog.buildings"]
+          }
+        ]
+      },
+      {
+        "group": "plan",
+        "label_ko": "계획",
+        "items": [
+          {
+            "id": "team",
+            "path": "/plan/",
+            "label_ko": "팀 구성",
+            "active_route_ids": ["plan.home"]
+          },
+          {
+            "id": "breeding",
+            "path": "/plan/breeding/",
+            "label_ko": "교배",
+            "active_route_ids": ["plan.breeding"]
+          },
+          {
+            "id": "compare",
+            "path": "/plan/compare/",
+            "label_ko": "팰 비교",
+            "active_route_ids": ["plan.compare"]
+          },
+          {
+            "id": "materials",
+            "path": "/plan/materials/",
+            "label_ko": "재료",
+            "active_route_ids": ["plan.materials"]
+          }
+        ]
+      },
+      {
+        "group": "pc",
+        "label_ko": "내 게임",
+        "items": [
+          {
+            "id": "profile",
+            "path": "/connection/profile/",
+            "label_ko": "내 데이터",
+            "active_route_ids": ["pc.profile"]
+          },
+          {
+            "id": "servers",
+            "path": "/connection/servers/",
+            "label_ko": "서버",
+            "active_route_ids": ["pc.servers"]
+          },
+          {
+            "id": "overlay",
+            "path": "/connection/overlay/",
+            "label_ko": "오버레이",
+            "active_route_ids": ["pc.overlay"]
+          },
+          {
+            "id": "settings",
+            "path": "/settings/",
+            "label_ko": "앱 설정",
+            "active_route_ids": ["pc.settings"]
+          }
+        ]
+      }
+    ]
+  },
+  "routes": [
+    {
+      "id": "legal.fan_notice",
+      "path": "/fan-content-notice/",
+      "group": "explore",
+      "label_ko": "팬 프로젝트 이용 고지",
+      "availability": ["web", "windows"],
+      "navigation": false,
+      "migration_status": "implemented"
+    },
+    {
+      "id": "explore.home",
+      "path": "/",
+      "group": "explore",
+      "label_ko": "탐색",
+      "availability": ["web", "windows"],
+      "migration_status": "implemented"
+    },
+    {
+      "id": "explore.search",
+      "path": "/search/",
+      "group": "explore",
+      "label_ko": "통합 검색",
+      "availability": ["web", "windows"],
+      "migration_status": "implemented"
+    },
+    {
+      "id": "explore.map",
+      "path": "/map/",
+      "group": "explore",
+      "label_ko": "지도",
+      "availability": ["web", "windows"],
+      "migration_status": "implemented"
+    },
+    {
+      "id": "catalog.pals",
+      "path": "/pals/",
+      "group": "catalog",
+      "label_ko": "팰 도감",
+      "availability": ["web", "windows"],
+      "migration_status": "implemented"
+    },
+    {
+      "id": "catalog.items",
+      "path": "/items/",
+      "group": "catalog",
+      "label_ko": "아이템 도감",
+      "availability": ["web", "windows"],
+      "migration_status": "implemented"
+    },
+    {
+      "id": "catalog.skills.active",
+      "path": "/skills/active/",
+      "group": "catalog",
+      "label_ko": "액티브 스킬",
+      "availability": ["web", "windows"],
+      "migration_status": "implemented"
+    },
+    {
+      "id": "catalog.skills.passive",
+      "path": "/skills/passive/",
+      "group": "catalog",
+      "label_ko": "패시브 스킬",
+      "availability": ["web", "windows"],
+      "migration_status": "implemented"
+    },
+    {
+      "id": "catalog.buildings",
+      "path": "/buildings/",
+      "group": "catalog",
+      "label_ko": "건축물 도감",
+      "availability": ["web", "windows"],
+      "migration_status": "implemented"
+    },
+    {
+      "id": "catalog.technology",
+      "path": "/technology/",
+      "group": "catalog",
+      "label_ko": "기술 도감",
+      "availability": ["web", "windows"],
+      "migration_status": "implemented"
+    },
+    {
+      "id": "plan.home",
+      "path": "/plan/",
+      "group": "plan",
+      "label_ko": "팀 구성",
+      "availability": ["web", "windows"],
+      "migration_status": "implemented"
+    },
+    {
+      "id": "plan.breeding",
+      "path": "/plan/breeding/",
+      "group": "plan",
+      "label_ko": "교배 계산",
+      "availability": ["web", "windows"],
+      "migration_status": "implemented"
+    },
+    {
+      "id": "plan.compare",
+      "path": "/plan/compare/",
+      "group": "plan",
+      "label_ko": "팰 비교",
+      "availability": ["web", "windows"],
+      "migration_status": "implemented"
+    },
+    {
+      "id": "plan.materials",
+      "path": "/plan/materials/",
+      "group": "plan",
+      "label_ko": "재료 계산",
+      "availability": ["web", "windows"],
+      "migration_status": "implemented"
+    },
+    {
+      "id": "pc.profile",
+      "path": "/connection/profile/",
+      "group": "pc",
+      "label_ko": "내 데이터",
+      "availability": ["windows"],
+      "migration_status": "implemented"
+    },
+    {
+      "id": "pc.servers",
+      "path": "/connection/servers/",
+      "group": "pc",
+      "label_ko": "전용 서버",
+      "availability": ["windows"],
+      "migration_status": "implemented"
+    },
+    {
+      "id": "pc.overlay",
+      "path": "/connection/overlay/",
+      "group": "pc",
+      "label_ko": "오버레이",
+      "availability": ["windows"],
+      "migration_status": "implemented"
+    },
+    {
+      "id": "pc.settings",
+      "path": "/settings/",
+      "group": "pc",
+      "label_ko": "앱 설정",
+      "availability": ["windows"],
+      "migration_status": "implemented"
+    }
+  ]
+}

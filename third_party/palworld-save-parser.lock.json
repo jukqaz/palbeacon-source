@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-07-24",
+  "verdict": "private_alpha_conditional",
+  "distribution_gate": "blocked_until_gpl_source_bundle_and_license_review_are_complete",
+  "worker": {
+    "package": "pal-save-parser-worker",
+    "execution": "separate_read_only_subprocess",
+    "network_access_used": false,
+    "input": "verified_content_addressed_staged_save_only",
+    "output_limit_bytes": 33554432,
+    "pal_limit": 20000
+  },
+  "catalog_worker": {
+    "package": "pal-catalog-worker",
+    "execution": "separate_bounded_subprocess",
+    "network_access_used": false,
+    "input": "bounded Korean or internal catalog query",
+    "output_limit_bytes": 8388608,
+    "source": "pinned psp-core static catalog",
+    "quality": "unknown",
+    "search_fields": [
+      "Korean species name",
+      "internal species id",
+      "Paldeck number",
+      "element",
+      "work suitability",
+      "active skill"
+    ],
+    "limitations": [
+      "exact current-server Build match is not yet proven",
+      "static values are for internal comparison until the Build gate passes"
+    ]
+  },
+  "evidence_worker": {
+    "package": "pal-evidence-worker",
+    "execution": "separate_bounded_subprocess",
+    "network_access_used": false,
+    "input": "question plus locally selected catalog and owned Pal rows",
+    "output_limit_bytes": 2097152,
+    "model_used": false,
+    "privacy": [
+      "raw owner identifiers are not accepted",
+      "private Pal instance ids are hashed into projection identity and never used as evidence ids",
+      "only bounded evidence and a prompt digest are returned"
+    ],
+    "limitations": [
+      "Cloudflare Access and Workers AI are not connected in this local worker",
+      "fallback output lists verified evidence instead of imitating a model answer"
+    ]
+  },
+  "providers": [
+    {
+      "name": "psp-core",
+      "repository": "https://github.com/oMaN-Rod/palworld-save-pal",
+      "version": "1.2.0",
+      "revision": "d9ccf27a56fbcf6cc538ca37c1e713417a10e925",
+      "source_archive_sha256": "f303ed6c576dc5acb09a185fa4d7cba0636a5b4066f083d9aee3f3fc187794df",
+      "declared_license": "MIT",
+      "license_evidence": "README.md section License",
+      "license_evidence_sha256": "2b50f2a76d52b107ab37495d52372d138841850beb577c52d7bd79c730fb5fd4",
+      "license_file_present": false,
+      "static_catalog": {
+        "source_directory": "data/json",
+        "pals_sha256": "7ed73e0518b74af7cb72ebed688e903587b21b2d644be8dda9b26aa7c007f512",
+        "korean_names_sha256": "a79f1b55c64f72e5e155061b1f4027fe44689331e806b96de002e9b2531d00cd",
+        "passive_skills_sha256": "3085aee5328fe8e90418f5f682a4379ae4131b3a038a6f83f1780e2ef08f7033",
+        "korean_passive_names_sha256": "1e6a9df3a4b6226a5b0bc5486bb01ed21409f81224530cc3cb33203761bf3f79",
+        "active_skills_sha256": "61b68d1b33f9abaea3e8c8d4be44ae37fe3c4240ccfad2d6a8b3433e6ffaaefa",
+        "korean_active_skill_names_sha256": "e08d189f05f8e9403b366f573fb6122a22c3b793efe709b110ce1b5e887f78f2",
+        "selected_fields": [
+          "internal species id",
+          "Paldeck number",
+          "Korean localized species name",
+          "internal passive id and Korean localized name",
+          "internal active skill id and Korean localized name"
+        ],
+        "distribution_status": "private_alpha_only_pending_final_content_and_license_review"
+      },
+      "selected_modules": [
+        "session::SaveSession::load",
+        "domain::world::character_map",
+        "domain::pal::pal_dto_from_entry",
+        "dto::pal::PalDto"
+      ],
+      "excluded_capabilities": [
+        "save editing",
+        "save encoding",
+        "HTTP server",
+        "desktop shell",
+        "database writer"
+      ]
+    },
+    {
+      "name": "uesave",
+      "repository": "https://github.com/oMaN-Rod/uesave-rs",
+      "version": "0.7.1",
+      "revision": "a5271781df0ed021d72e5ad6eab1c59d5199451c",
+      "source_archive_sha256": "33df4184cf88d03055a4c5b59248292c0e3624e7b95822d0749e4d48e73fa06a",
+      "declared_license": "MIT",
+      "license_file_present": true,
+      "license_sha256": "df748f33f0bdcd69255cb038cbcdf0ebdf5f5b3986ad8991ed7535097920dcf4",
+      "cargo_lock_pin_verified": true
+    },
+    {
+      "name": "ooz-rs",
+      "repository": "https://github.com/palworld-save-pal/ooz-rs",
+      "version": "0.1.0",
+      "revision": "c197be7a4b49b2f37f339888da1c10ab87780c19",
+      "source_archive_without_submodules_sha256": "f1880b67d6c44ffcc74e1727c4a73de825276509b5720c908406481aef30003b",
+      "declared_license": "GPL-3.0-or-later",
+      "license_file_present": false,
+      "submodules": [
+        {
+          "repository": "https://github.com/oMaN-Rod/ooz",
+          "revision": "b938f47dd2e7ade6a503993ab30e0cde734bbd47"
+        },
+        {
+          "repository": "https://github.com/simd-everywhere/simde",
+          "revision": "dd0b662fd8cf4b1617dbbb4d08aa053e512b08e4"
+        },
+        {
+          "repository": "https://github.com/nemequ/munit.git",
+          "revision": "da8f73412998e4f1adf1100dc187533a51af77fd"
+        }
+      ],
+      "cargo_lock_pin_verified": true
+    }
+  ],
+  "validation": {
+    "fixture": "palworld-save-pal/tests/fixtures/saves/v1_relics",
+    "fixture_game_generation": "Palworld 1.0",
+    "verified_behaviors": [
+      "staged manifest and content hashes are checked before parsing",
+      "no personal Pal rows are returned before owner selection",
+      "all selected rows match the selected owner UID",
+      "species ids resolve case-insensitively to the pinned Korean name and Paldeck number",
+      "catalog lookup resolves Korean names, Paldeck numbers, elements, work suitability and active skills",
+      "catalog output is de-duplicated case-insensitively and carries an explicit unverified Build warning",
+      "natural Korean questions reuse structured catalog terms without a language model",
+      "assistant evidence combines relevant catalog and owner-scoped Pal rows with bounded output",
+      "assistant fallback preserves evidence when the model is unavailable and does not expose private instance ids",
+      "The Tauri WebView remains responsive while the parser subprocess runs",
+      "stdout and stderr are bounded",
+      "the parser subprocess is killed after two minutes"
+    ],
+    "commands": [
+      "cargo test -p pal-save-parser-worker --locked",
+      "cargo test -p pal-save-parser-worker --locked staged_external_fixture_is_owner_scoped -- --ignored --nocapture",
+      "cargo clippy -p pal-save-parser-worker --all-targets --locked -- -D warnings",
+      "cargo test -p pal-catalog-worker --locked",
+      "cargo clippy -p pal-catalog-worker --all-targets --locked -- -D warnings",
+      "cargo test -p pal-evidence-worker --locked",
+      "cargo clippy -p pal-evidence-worker --all-targets --locked -- -D warnings"
+    ]
+  },
+  "limitations": [
+    "The upstream psp-core repository declares MIT in README but has no complete LICENSE file at the pinned revision.",
+    "ooz-rs declares GPL-3.0-or-later and is linked into the parser worker through the upstream uesave oodle feature.",
+    "The current package is suitable only for local private alpha validation until a complete corresponding source bundle and final license review are supplied.",
+    "Dimensional and Global Pal Storage need a later owner-scoped adapter."
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "main-window",
+  "description": "Minimum core capability for the local PalBeacon window.",
+  "windows": ["main"],
+  "permissions": [
+    "core:default",
+    "autostart:allow-is-enabled",
+    "autostart:allow-enable",
+    "autostart:allow-disable",
+    "dialog:allow-open"
+  ]
+}

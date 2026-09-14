@@ -1,0 +1,49 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "PalBeacon",
+  "version": "0.1.0",
+  "identifier": "dev.palbeacon.companion",
+  "build": {
+    "beforeDevCommand": "pnpm --dir ../palbeacon-ui dev",
+    "devUrl": "http://127.0.0.1:5173",
+    "beforeBuildCommand": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File ../../scripts/prepare-palbeacon-desktop.ps1",
+    "frontendDist": "../../palbeacon-ui/build"
+  },
+  "app": {
+    "withGlobalTauri": false,
+    "windows": [
+      {
+        "label": "main",
+        "title": "PalBeacon",
+        "width": 1440,
+        "height": 900,
+        "minWidth": 1024,
+        "minHeight": 720,
+        "center": true,
+        "resizable": true,
+        "fullscreen": false,
+        "transparent": false
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; img-src 'self' asset: http://asset.localhost; style-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self' ipc: http://ipc.localhost https://palbeacon.jukqaz.xyz; script-src 'self'"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["nsis"],
+    "externalBin": [
+      "binaries/pal-save-parser-worker",
+      "binaries/pal-core",
+      "binaries/pal-overlay",
+      "binaries/pal-fullscreen-injector"
+    ],
+    "resources": {
+      "../../../assets/save-parser/": "save-parser-data/",
+      "../../../target/palbeacon-runtime-resources/map-pack/": "map-pack/",
+      "binaries/pal-fullscreen-rhi-probe.dll": "pal-fullscreen-rhi-probe.dll",
+      "binaries/pal-fullscreen-overlay-dx11.dll": "pal-fullscreen-overlay-dx11.dll",
+      "binaries/pal-fullscreen-overlay-dx12.dll": "pal-fullscreen-overlay-dx12.dll"
+    }
+  }
+}

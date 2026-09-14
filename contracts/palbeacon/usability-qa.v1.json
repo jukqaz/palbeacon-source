@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "authority": {
+    "design": "DESIGN.md",
+    "routes": "contracts/palbeacon/routes.v1.json",
+    "skill": ".agents/skills/palbeacon-usability-qa/SKILL.md",
+    "method": ".agents/skills/palbeacon-usability-qa/references/method.md"
+  },
+  "tooling": {
+    "manual_browser": "codex-in-app-browser",
+    "journey_runner": "@playwright/test",
+    "accessibility_engine": "@axe-core/playwright",
+    "test": "apps/palbeacon-ui/e2e/usability.spec.ts",
+    "visual_baseline_policy": "manual_review_only"
+  },
+  "thresholds": {
+    "minimum_target_css_px": 24,
+    "preferred_primary_target_css_px": 44,
+    "reflow_width_css_px": 320,
+    "text_scale_percent": 200,
+    "maximum_backtracks": 0
+  },
+  "journeys": [
+    {
+      "id": "UQ-SEARCH-01",
+      "goal_ko": "한글 이름으로 게임 정보를 찾아 해당 도감 상세를 연다.",
+      "entry": "/",
+      "routes": ["/", "/search/", "/pals/"],
+      "platforms": ["web", "windows"],
+      "projects": ["desktop-chrome", "mobile-chrome"],
+      "max_actions": 3,
+      "automated": true
+    },
+    {
+      "id": "UQ-PALS-01",
+      "goal_ko": "팰을 필터링해 상세를 확인하고 목록 맥락으로 돌아온다.",
+      "entry": "/pals/",
+      "routes": ["/pals/"],
+      "platforms": ["web", "windows"],
+      "projects": ["desktop-chrome", "mobile-chrome"],
+      "max_actions": 5,
+      "automated": true
+    },
+    {
+      "id": "UQ-ITEMS-01",
+      "goal_ko": "아이템을 한글로 찾아 구매·제작 관계를 확인하고 목록으로 돌아온다.",
+      "entry": "/items/",
+      "routes": ["/items/"],
+      "platforms": ["web", "windows"],
+      "projects": ["desktop-chrome", "mobile-chrome"],
+      "max_actions": 4,
+      "automated": true
+    },
+    {
+      "id": "UQ-TECHNOLOGY-01",
+      "goal_ko": "기술·해금 항목을 찾아 일반·고대 구분과 요구 조건을 확인한다.",
+      "entry": "/technology/",
+      "routes": ["/technology/"],
+      "platforms": ["web", "windows"],
+      "projects": ["desktop-chrome", "mobile-chrome"],
+      "max_actions": 3,
+      "automated": true
+    },
+    {
+      "id": "UQ-BUILDINGS-01",
+      "goal_ko": "건축물을 한글로 찾아 필요한 재료를 확인하고 같은 대상으로 재료 계산을 이어간다.",
+      "entry": "/buildings/",
+      "routes": ["/buildings/", "/plan/materials/"],
+      "platforms": ["web", "windows"],
+      "projects": ["desktop-chrome", "mobile-chrome"],
+      "max_actions": 4,
+      "automated": true
+    },
+    {
+      "id": "UQ-MAP-01",
+      "goal_ko": "한글 위치를 찾아 지도 상세를 확인한다.",
+      "entry": "/map/",
+      "routes": ["/map/"],
+      "platforms": ["web", "windows"],
+      "projects": ["desktop-chrome", "mobile-chrome", "compact-chrome", "tablet-chrome"],
+      "max_actions": 3,
+      "automated": true
+    },
+    {
+      "id": "UQ-MATERIALS-01",
+      "goal_ko": "목표 건축물과 수량을 선택해 정확한 재료 합계를 확인하고 필요한 아이템 상세를 연다.",
+      "entry": "/plan/materials/",
+      "routes": ["/plan/materials/", "/items/"],
+      "platforms": ["web", "windows"],
+      "projects": ["desktop-chrome", "mobile-chrome"],
+      "max_actions": 3,
+      "automated": true
+    },
+    {
+      "id": "UQ-BREEDING-01",
+      "goal_ko": "두 부모 팰을 선택해 검증된 교배 결과를 확인한다.",
+      "entry": "/plan/breeding/",
+      "routes": ["/plan/breeding/"],
+      "platforms": ["web", "windows"],
+      "projects": ["desktop-chrome", "mobile-chrome"],
+      "max_actions": 2,
+      "automated": true
+    },
+    {
+      "id": "UQ-COMPARE-01",
+      "goal_ko": "한 화면에서 작업·이동 기준을 전환해 팰의 실제 수치를 비교한다.",
+      "entry": "/plan/compare/",
+      "routes": ["/plan/compare/"],
+      "platforms": ["web", "windows"],
+      "projects": ["desktop-chrome", "mobile-chrome"],
+      "max_actions": 2,
+      "automated": true
+    },
+    {
+      "id": "UQ-WORKSPACE-01",
+      "goal_ko": "도감에서 본 항목을 저장하고 메뉴를 이동한 뒤 홈에서 다시 연다.",
+      "entry": "/pals/",
+      "routes": ["/pals/", "/"],
+      "platforms": ["web", "windows"],
+      "projects": ["desktop-chrome", "mobile-chrome"],
+      "max_actions": 5,
+      "automated": true
+    },
+    {
+      "id": "UQ-PLAN-FILE-01",
+      "goal_ko": "현재 계획을 파일로 저장하고 다시 불러와 입력을 복구한다.",
+      "entry": "/plan/materials/",
+      "routes": ["/plan/materials/"],
+      "platforms": ["web", "windows"],
+      "projects": ["desktop-chrome"],
+      "max_actions": 4,
+      "automated": true
+    },
+    {
+      "id": "UQ-PERSONAL-01",
+      "goal_ko": "Windows에서 캐릭터를 선택하고 도감·계획에서 실제 보유 팰만 확인한다.",
+      "entry": "/connection/profile/",
+      "routes": ["/connection/profile/", "/pals/", "/plan/"],
+      "platforms": ["windows"],
+      "projects": ["desktop-chrome"],
+      "max_actions": 6,
+      "automated": false
+    },
+    {
+      "id": "UQ-NAV-01",
+      "goal_ko": "작은 화면에서 네 개의 주요 목적지로 오조작 없이 이동한다.",
+      "entry": "/",
+      "routes": ["/", "/map/", "/pals/", "/plan/"],
+      "platforms": ["web", "windows"],
+      "projects": ["compact-chrome", "mobile-chrome"],
+      "max_actions": 1,
+      "automated": true
+    },
+    {
+      "id": "UQ-WINDOWS-NAV-01",
+      "goal_ko": "Windows에서 공통 탐색 위치를 유지한 채 PC 전용 기능과 앱 설정을 한 묶음에서 연다.",
+      "entry": "/",
+      "routes": ["/", "/connection/profile/", "/settings/"],
+      "platforms": ["windows"],
+      "projects": ["desktop-chrome"],
+      "max_actions": 2,
+      "automated": false
+    }
+  ],
+  "manual_route_coverage": [
+    "/",
+    "/fan-content-notice/",
+    "/search/",
+    "/map/",
+    "/pals/",
+    "/items/",
+    "/skills/active/",
+    "/skills/passive/",
+    "/technology/",
+    "/buildings/",
+    "/plan/",
+    "/plan/breeding/",
+    "/plan/compare/",
+    "/plan/materials/"
+  ],
+  "known_gaps": []
+}

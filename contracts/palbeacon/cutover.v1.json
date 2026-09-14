@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "canonical_stack": {
+    "web_ui": "apps/palbeacon-ui",
+    "windows_shell": "apps/palbeacon-desktop",
+    "route_and_platform_contracts": "contracts/palbeacon",
+    "build_workflow": ".github/workflows/palbeacon-svelte-tauri.yml"
+  },
+  "history_reference": {
+    "checkpoint_commit": "50ff6b2d86a39f51be5934bed1d666d66f63940a",
+    "removed_executable_surfaces": [
+      "apps/pal-companion-win-ui",
+      "apps/pal-companion-widgetbook",
+      "packages/pal_map_contract",
+      "packages/pal_protocol",
+      "crates/pal-flutter-bridge",
+      "crates/pal-companion-win"
+    ],
+    "design_reference": "docs/design/palbeacon-atlas-matrix-2026-08-24/README.md"
+  },
+  "release_policy": {
+    "web": "static_sveltekit_output",
+    "windows": "local_tauri_bundle",
+    "public_windows_requires_valid_authenticode": true,
+    "updater_enabled": false,
+    "updater_reason": "Signing keys and an approved release endpoint are not configured."
+  }
+}

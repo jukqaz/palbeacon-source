@@ -1,0 +1,24 @@
+{
+  "name": "@palbeacon/desktop",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tauri dev",
+    "build": "tauri build",
+    "format:check": "cargo fmt --manifest-path src-tauri/Cargo.toml -- --check",
+    "check": "cargo check --manifest-path src-tauri/Cargo.toml --locked",
+    "test": "cargo test --manifest-path src-tauri/Cargo.toml --locked",
+    "lint": "cargo clippy --manifest-path src-tauri/Cargo.toml --all-targets --locked -- -D warnings",
+    "test:e2e:windows": "wdio run ./wdio.conf.ts"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "2.11.4",
+    "@wdio/cli": "9.31.8",
+    "@wdio/jasmine-framework": "9.31.7",
+    "@wdio/local-runner": "9.31.7",
+    "@wdio/spec-reporter": "9.31.2",
+    "@wdio/tauri-service": "1.4.0",
+    "webdriverio": "9.31.8"
+  }
+}

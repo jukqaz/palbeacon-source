@@ -1,0 +1,79 @@
+syntax = "proto3";
+
+package palcompanion.v1;
+
+service PositionTelemetry {
+  rpc GetDescriptor(DescriptorRequest) returns (AgentDescriptor);
+  rpc Subscribe(SubscribeRequest) returns (stream TelemetryEnvelope);
+  rpc ClockProbe(ClockProbeRequest) returns (ClockProbeResponse);
+}
+
+message DescriptorRequest {
+  uint32 protocol_version = 1;
+}
+
+message ResumeCursor {
+  bytes boot_id = 1;
+  uint64 sequence = 2;
+}
+
+message SubscribeRequest {
+  uint32 protocol_version = 1;
+  string world_alias = 2;
+  bytes subject_id = 3;
+  ResumeCursor resume = 4;
+}
+
+message ClockProbeRequest {
+  uint32 protocol_version = 1;
+  bytes nonce = 2;
+  int64 client_send_unix_ms = 3;
+}
+
+message ClockProbeResponse {
+  bytes nonce = 1;
+  int64 client_send_unix_ms = 2;
+  int64 agent_receive_unix_ms = 3;
+  int64 agent_send_unix_ms = 4;
+}
+
+message AgentDescriptor {
+  uint32 protocol_version = 1;
+  string agent_version = 2;
+  string rest_server_version = 3;
+  string server_fingerprint = 4;
+  string gate_profile_sha256 = 5;
+  uint32 selected_interval_ms = 6;
+  string world_alias = 7;
+  CoordinateSpace coordinate_space = 8;
+  string coordinate_profile_sha256 = 9;
+}
+
+enum CoordinateSpace {
+  COORDINATE_SPACE_UNSPECIFIED = 0;
+  COORDINATE_SPACE_OFFICIAL_GAME_DATA_WORLD_V1 = 1;
+}
+
+enum HeadingSource {
+  HEADING_SOURCE_UNSPECIFIED = 0;
+  HEADING_SOURCE_ROTATION_Z_VALIDATED = 1;
+  HEADING_SOURCE_MOTION_VECTOR_DIAGNOSTIC = 2;
+}
+
+message TelemetryEnvelope {
+  uint32 protocol_version = 1;
+  string world_alias = 2;
+  bytes subject_id = 3;
+  bytes boot_id = 4;
+  uint64 sequence = 5;
+  int64 rest_completed_at_unix_ms = 6;
+  uint32 age_at_emit_ms = 7;
+  double position_x = 8;
+  double position_y = 9;
+  double position_z = 10;
+  optional float heading_degrees = 11;
+  HeadingSource heading_source = 12;
+  bytes trace_id = 13;
+  CoordinateSpace coordinate_space = 14;
+  string coordinate_profile_sha256 = 15;
+}

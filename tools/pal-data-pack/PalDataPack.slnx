@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="src/PalDataPack/PalDataPack.csproj" />
+  <Project Path="tests/PalDataPack.Tests/PalDataPack.Tests.csproj" />
+</Solution>

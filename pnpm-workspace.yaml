@@ -1,0 +1,36 @@
+packages:
+  - apps/palbeacon-ui
+  - apps/palbeacon-desktop
+  - cloudflare
+
+# Official releases only; compatibility and advisory regressions are covered by
+# scripts/tests/security-config.test.mjs. Remove when upstream ranges catch up.
+overrides:
+  "@wdio/tauri-service@1.4.0>webdriverio": "9.31.8"
+  "@wdio/tauri-service@1.4.0>@wdio/globals": "9.31.3"
+  "@wdio/utils@9.31.7>@puppeteer/browsers": "3.2.2"
+  "@sveltejs/kit@2.70.2>cookie": "0.7.2"
+
+allowBuilds:
+  "@hugeicons/svelte": false
+  "@parcel/watcher": true
+  # The locked Tauri service resolves a matching EdgeDriver at test runtime;
+  # package postinstall downloads are intentionally disabled.
+  edgedriver: false
+  esbuild: true
+  # PalBeacon has no Gecko E2E lane.
+  geckodriver: false
+  workerd: true
+
+minimumReleaseAge: 1440
+minimumReleaseAgeStrict: true
+strictPeerDependencies: true
+
+minimumReleaseAgeExclude:
+  - jscpd-darwin-arm64@5.0.16
+  - jscpd-darwin-x64@5.0.16
+  - jscpd-linux-arm64-gnu@5.0.16
+  - jscpd-linux-x64-gnu@5.0.16
+  - jscpd-linux-x64-musl@5.0.16
+  - jscpd-windows-x64-msvc@5.0.16
+  - jscpd@5.0.16

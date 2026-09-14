@@ -1,0 +1,21 @@
+* text=auto eol=lf
+
+# Runtime manifests hash the exact extracted bytes, including JSON line endings.
+/assets/save-parser/**/*.json -text whitespace=cr-at-eol
+/assets/palbeacon/game/native-map-pack/** -text whitespace=cr-at-eol
+/assets/palbeacon/game/native-map-pack/README.md text eol=lf
+
+/tests/fixtures/contracts/wire-v1/*.pb binary
+/tests/fixtures/contracts/wire-v1/*.sha256 binary
+/tests/fixtures/contracts/wire-v1/*.json text eol=lf
+/tests/fixtures/local-data/**/*.pb binary
+/tests/fixtures/local-data/save-synthetic-v1/*.sha256 binary
+/tests/fixtures/local-data/private-cloud-catalog-v1/hashes.sha256 text eol=lf
+/tests/fixtures/local-data/**/*.json text eol=lf
+/tests/fixtures/local-data/**/*.ndjson text eol=lf
+/packages/pal_protocol/lib/src/generated/**/*.dart text eol=lf
+/packages/pal_map_contract/lib/src/generated/**/*.dart text eol=lf
+/contracts/map/v1/*.json text eol=lf
+/apps/pal-companion-win-ui/assets/game/map/*.json text eol=lf
+/proto/**/*.proto text eol=lf
+/tools/pal-map-pack/tests/PalMapPack.Tests/fixtures/*.jsonl text eol=lf

@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="src/PalMapPack/PalMapPack.csproj" />
+  <Project Path="src/PalMapPack.Calibrator/PalMapPack.Calibrator.csproj" />
+  <Project Path="tests/PalMapPack.Tests/PalMapPack.Tests.csproj" />
+</Solution>

@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "language": "ko",
+  "game_build_id": "24575825",
+  "contract_sha256": "f8626800e86b26ccf6755d2e3e7a839203daccb5fd917ea23740a190ffe56dd3",
+  "taxonomy_sha256": "c98e73cbeded515e6004ff3ce40bddc3a52c9b3cb0fd8523d7d85313d9790006",
+  "poi_sha256": "592b16f2bf2f8f05205a7d790aa8ea74df3ea4ca448cea07877923f368fb96f3",
+  "taxonomy_group_count": 5,
+  "poi_kind_count": 48,
+  "poi_count": 432
+}

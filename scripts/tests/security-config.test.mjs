@@ -18,6 +18,20 @@ assert.ok(utilityManifest, "WDIO utility package must be installed");
 const utilityRequire = createRequire(realpathSync(utilityManifest));
 const kitRequire = createRequire(uiRequire.resolve("@sveltejs/kit/package.json"));
 
+test("both Rust lockfiles reject the vulnerable TLS handshake release range", () => {
+  for (const path of ["Cargo.lock", "apps/palbeacon-desktop/src-tauri/Cargo.lock"]) {
+    const lock = readFileSync(resolve(root, path), "utf8");
+    const versions = [...lock.matchAll(/name = "rustls"\r?\nversion = "(\d+)\.(\d+)\.(\d+)"/g)];
+    assert.ok(versions.length > 0, path);
+    for (const [, major, minor, patch] of versions) {
+      assert.ok(
+        Number(major) > 0 || Number(minor) > 23 || (Number(minor) === 23 && Number(patch) >= 45),
+        `${path} must not restore RUSTSEC-2026-0285`,
+      );
+    }
+  }
+});
+
 test("SvelteKit uses the patched cookie API and rejects delimiter injection", () => {
   const cookie = kitRequire("cookie");
   assert.equal(

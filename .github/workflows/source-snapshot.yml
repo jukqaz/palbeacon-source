@@ -20,3 +20,9 @@ jobs:
       - run: node verify-publication.mjs
       - run: pnpm install --frozen-lockfile
       - run: pnpm quality:security
+      - name: Install pinned Rust audit tool on the Linux runner
+        run: |
+          rustup toolchain install 1.97.1 --profile minimal
+          cargo +1.97.1 install cargo-audit --version 0.22.2 --locked --target x86_64-unknown-linux-gnu
+      - name: Audit the shared Rust workspace lockfile
+        run: cargo +1.97.1 audit --file Cargo.lock

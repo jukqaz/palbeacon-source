@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "sourceCommit": "5b7d4bf05160f744e64b48725003f330aba67355",
+  "sourceCommit": "c136dea6e1e12a0a345d3039aad136a5d218cbb4",
   "scope": "source-only; no original history, game assets, private operations, or binary artifacts",
   "files": [
     {
@@ -37,7 +37,7 @@
     },
     {
       "path": "Cargo.lock",
-      "sha256": "7a933df6fcaf09b76bd9654f9422b1b735b2123451f6e72bf62c1f6736bcb4a0"
+      "sha256": "0d8e8e627b43253d0c73be3cff9256afe1414011ceb2bcdbeee7273dc558c5d2"
     },
     {
       "path": "Cargo.toml",
@@ -65,7 +65,7 @@
     },
     {
       "path": "apps/palbeacon-desktop/src-tauri/Cargo.lock",
-      "sha256": "b57def2a329224a9b3049a260c1d1008904c01b95902fa36b312ed72ea2359ad"
+      "sha256": "8eef4d0c602f0be995d598c7b4605c5f883c3aac583de9bff007c207d49f5755"
     },
     {
       "path": "apps/palbeacon-desktop/src-tauri/Cargo.toml",
@@ -2497,7 +2497,7 @@
     },
     {
       "path": "scripts/tests/security-config.test.mjs",
-      "sha256": "8215bc5de1ff21832cd5bfbca409ebefbb1b98bf269cd82e8f1b145cb2888316"
+      "sha256": "fd531712669cd3581a74dc859a9e3c583b08a6a735430e67ba99389d24fb5a5d"
     },
     {
       "path": "scripts/tests/verify-local-data-fixtures.Tests.ps1",
@@ -2565,7 +2565,7 @@
     },
     {
       "path": "third_party/runtime-dependencies.json",
-      "sha256": "9e8cf9492b1d63711c9aa0a209d9319226982dca553c81b3b3ef035f8b0af511"
+      "sha256": "b081d76634c7952fde396f82f04f2cf9064ab660d9056a1704877f8e06cf2f66"
     },
     {
       "path": "toolchains.lock.json",

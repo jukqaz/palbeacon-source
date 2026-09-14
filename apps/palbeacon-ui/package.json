@@ -23,16 +23,16 @@
     "capture:flow-qa": "node scripts/capture-flow-qa.mjs"
   },
   "dependencies": {
-    "@hugeicons/core-free-icons": "4.2.3",
-    "@hugeicons/svelte": "1.1.4",
+    "@hugeicons/core-free-icons": "4.3.2",
+    "@hugeicons/svelte": "1.1.5",
     "@panzoom/panzoom": "4.6.2",
-    "@tanstack/svelte-virtual": "3.13.35",
+    "@tanstack/svelte-virtual": "3.13.38",
     "@tauri-apps/api": "2.11.1",
     "@tauri-apps/plugin-autostart": "2.5.1",
-    "@tauri-apps/plugin-dialog": "2.7.2",
-    "bits-ui": "2.18.1",
+    "@tauri-apps/plugin-dialog": "2.7.3",
+    "bits-ui": "2.19.2",
     "svelte-sonner": "1.2.1",
-    "valibot": "1.4.2"
+    "valibot": "1.5.0"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.13.0",
